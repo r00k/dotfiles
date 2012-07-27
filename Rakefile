@@ -1,5 +1,13 @@
 require 'rake'
 
+desc "Zip all the old files" 
+task :backup do
+  system %Q{mkdir "$HOME/backup-dotfiles"}
+  files = Dir['*']
+  files = files.map { |file_name| "~/.#{file_name}" }.join(' ')
+  system %Q{zip -r ~/backup-dotfiles/backup-#{Time.now}.zip #{files}}
+end
+
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
