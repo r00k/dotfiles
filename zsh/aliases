@@ -7,12 +7,10 @@ elif [[ $platform == 'Darwin' ]]; then
 fi
 
 alias amend="git commit --amend"
-alias asu="cd ~/code/rails/activesupport"
 alias aliases='vim ~/.dotfiles/zsh/aliases'
-alias b='ssh -t ben@benorenstein.com screen -rd irc'
+alias b='cd ~/code/belighted'
 alias bake='bundle exec rake'
 alias be='bundle exec'
-alias ben='ssh ben@benorenstein.com'
 alias bi='bundle install'
 alias be='bundle exec'
 alias bu='bundle update'
@@ -43,14 +41,12 @@ alias grc='git rebase --continue'
 alias grake='rspec --drb spec/ && cucumber --drb features/'
 alias gurad='guard'
 alias h='heroku'
-alias he='cd ~/code/hacker-engine'
 alias hpush='git push heroku'
 alias irb='irb --readline -r irb/completion'
-alias journal='vim ~/Dropbox/docs/journal/2011.txt'
 alias killruby='killall -9 ruby'
 alias killrudy='killall -9 ruby'
 alias newscreen="screen -S foo"
-alias l='cd ~/code/levelup'
+alias p='cd ~/code/perso'
 alias pc='production-console'
 alias parallel='rake parallel:prepare test:parallel_with_specs'
 alias patch='git format-patch HEAD^ --stdout > patch.diff'
@@ -58,7 +54,6 @@ alias prepdb='dbprep'
 alias remore='!! | more'
 alias reguard='killall -9 ruby ; guard'
 alias rerake='!! && rake'
-alias restart_apache="sudo /etc/init.d/apache2 restart"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias retagwithcoffee='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp * && coffeetags -R -f >> tags'
 alias repush="gpr && gpush"
@@ -69,22 +64,20 @@ alias rdm="be rake db:migrate"
 alias rdtp="be rake db:test:prepare"
 alias rs='bundle install && rails server -p 3001'
 alias safepush='git pull --rebase && bundle install && rdm && rake && git push'
-alias sfh='cd ~/code/speaking-for-hackers-book'
 alias shpush='rake && hpush'
 alias sc='staging-console'
 alias so='source ~/.dotfiles/zsh/aliases'
 alias sp='safepush'
-alias speaking='cd ~/Dropbox/speaking'
 alias ss='ruby app.rb'
 alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
 alias staging='git push heroku-staging master'
 alias track='git checkout -t'
 alias u='cd ..'
-alias v='cd ~/code/vertical-server'
+alias unicorn="unicorn_rails -c config/unicorn.rb"
+alias v='mvim'
+alias vc='mvim .'
 alias vi='vim'
-alias vu='cd ~/code/vim-university'
-alias y='cd ~/code/ybuy'
 
 # Heroku staging
 alias staging-console='heroku run console --remote staging'

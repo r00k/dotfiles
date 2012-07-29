@@ -45,3 +45,12 @@ load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV']
 #   require 'logger'
 #   RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
 # end
+require 'rubygems'
+#nice history and color
+gem 'blackwinter-wirble' # blackwinter branch has history_uniq fixes
+require 'wirble'
+Wirble::History::DEFAULTS[:history_uniq] = 'reverse'
+
+Wirble.init
+Wirble.colorize
+IRB.conf[:USE_READLINE] = true

@@ -44,7 +44,7 @@ task :install do
 end
 
 def replace_file(file)
-  system %Q{rm "$HOME/.#{file}"}
+  system %Q{rm -rf "$HOME/.#{file}"}
   link_file(file)
 end
 

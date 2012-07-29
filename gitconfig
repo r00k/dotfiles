@@ -1,16 +1,19 @@
 [user]
-	name = Ben Orenstein
-	email = ben.orenstein@gmail.com 
+	name = Yannick Schutz
+	email = yannick.schutz@gmail.com 
 [alias]
 	co = checkout
-        cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+  cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 
 [color "diff"]
-        meta = yellow 
+  meta = yellow 
 
 [core]
 	excludesfile = ~/.gitignore
@@ -19,7 +22,19 @@
 	whitespace = nowarn
 
 [alias]
-      lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  ci = commit
+  st = status
+  co = checkout
+  cob = checkout -b
+  d = diff
+  ps = push
+  pl = pull
+  poule = pull
+  m = merge
+  ms = merge --squash
+  b = branch
+  rb = rebase
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [help]
 	autocorrect = 1
 [branch]
@@ -30,4 +45,4 @@
 [rerere]
 	enabled = 1
 [github]
-	user = r00k
+	user = eatcpcks

@@ -24,6 +24,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'koron/nyancat-vim'
+Bundle 'scrooloose/nerdtree'
 
 " ================
 " Ruby stuff
@@ -77,7 +78,6 @@ map <Leader>rt q:?!ruby<cr><cr>
 map <Leader>rw :%s/\s\+$//<cr>:w<cr>
 map <Leader>sc :sp db/schema.rb<cr>
 map <Leader>sg :sp<cr>:grep 
-map <Leader>sj :call OpenJasmineSpecInBrowser()<cr>
 map <Leader>sm :RSmodel 
 map <Leader>sp yss<p>
 map <Leader>snip :e ~/.vim/snippets/ruby.snippets<CR>
@@ -285,16 +285,6 @@ autocmd User Rails Rnavcommand jspec       spec/javascripts                   -g
 " Don't add the comment prefix when I hit enter or o/O on a comment line.
 set formatoptions-=or
 
-
-function! OpenJasmineSpecInBrowser()
-  let filename = expand('%')
-  "                  substitute(exprsson, pattern,            substitution,    flags)
-  let url_fragment = substitute(filename, "spec/javascripts", "evergreen/run", "")
-  let host_fragment = "http://localhost:3001/"
-  let url = host_fragment . url_fragment
-  silent exec "!open ~/bin/chrome" url
-endfunction
-
 " set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 let g:CommandTMaxHeight=50
@@ -371,3 +361,7 @@ if has("autocmd")
   augroup END
 
 endif " has("autocmd")
+
+if filereadable(expand("~/.vimrc.after"))
+  source ~/.vimrc.after
+endif
