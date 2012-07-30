@@ -69,6 +69,8 @@ map <Leader>i mmgg=G`m<CR>
 map <Leader>j :CommandT app/assets/javascripts<cr>client/
 map <Leader>l oconsole.log 'debugging'<esc>:w<cr>
 map <Leader>m :Rmodel 
+""Quick vim regex to convert hashrocket (=>) 1.8 to colon syntax (:) 1.9:
+nmap <leader>nh :%s/\v:(\w+) \=\>/\1:/g<cr>
 map <Leader>o :call RunCurrentLineInTest()<CR>
 map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 map <Leader>ra :%s/

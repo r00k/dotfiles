@@ -6,8 +6,7 @@ set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
 autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
 :set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
-""Quick vim regex to convert hashrocket (=>) 1.8 to colon syntax (:) 1.9:
-nmap <leader>rh :%s/\v:(\w+) \=\>/\1:/g<cr>
+
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
     let _s=@/
@@ -27,7 +26,6 @@ let mapleader = ","
 let g:mapleader = ","
 
 
-#show trailing spaces
-set listchars=tab:>-,trail:-
-set list
-
+"show trailing spaces
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
