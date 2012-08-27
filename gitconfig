@@ -1,8 +1,8 @@
 [user]
-	name = Yannick Schutz
-	email = yannick.schutz@gmail.com 
+  name = Yannick Schutz
+  email = yannick.schutz@gmail.com 
 [alias]
-	co = checkout
+  co = checkout
   cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
 [color]
   diff = auto
@@ -13,13 +13,13 @@
   pager = true
 
 [color "diff"]
-  meta = yellow 
+  meta = yellow
 
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim --noplugin
+  excludesfile = ~/.gitignore
+  editor = v
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 
 [alias]
   ci = commit
@@ -36,13 +36,13 @@
   rb = rebase
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [branch]
-	autosetupmerge = true
-        autosetuprebase = always
+  autosetupmerge = true
+  autosetuprebase = always
 [push]
-	default = current
+  default = current
 [rerere]
-	enabled = 1
+  enabled = 1
 [github]
-	user = eatcpcks
+  user = ys

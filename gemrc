@@ -1,9 +1,10 @@
---- 
-:sources: 
-- http://rubygems.org
-:benchmark: false
-:update_sources: true
+---
 :backtrace: false
-gem: --no-ri --no-rdoc
+:benchmark: false
 :bulk_threshold: 1000
+:sources:
+- http://rubygems.org
+- http://yannick_schutz_at_gmail_com:483cc88bd3@modules.locomotivecms.com
+:update_sources: true
 :verbose: true
+gem: --no-ri --no-rdoc

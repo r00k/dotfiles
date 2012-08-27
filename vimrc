@@ -25,6 +25,12 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'koron/nyancat-vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tangledhelix/vim-octopress.git'
+Bundle 'godlygeek/tabular'
+Bundle 'nono/vim-handlebars'
+Bundle 'tpope/vim-haml'
+Bundle 'bbommarito/vim-slim'
+Bundle 'skwp/vim-rspec'
 
 " ================
 " Ruby stuff
@@ -37,10 +43,20 @@ augroup myfiletypes
   autocmd!
   " autoindent with two spaces, always expand tabs
   autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+  "octopress
+  autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=octopress
 augroup END
 " ================
 
 let mapleader = ","
+let g:mapleader = ","
+
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
 
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
@@ -48,7 +64,7 @@ vmap <Leader>bed "td?describe<cr>obed<tab><esc>"tpkdd/end<cr>o<esc>:nohl<cr>
 map <Leader>cc :!cucumber --drb %<CR>
 map <Leader>cu :Tabularize /\|<CR>
 map <Leader>co ggVG"*y
-map <Leader>cc :Rjcollection client/
+" map <Leader>cc :Rjcollection client/
 map <Leader>cj :Rjspec client/
 map <Leader>cm :Rjmodel client/
 map <Leader>ct :Rtemplate client/
@@ -68,7 +84,7 @@ map <Leader>h :CommandT<CR>
 map <Leader>i mmgg=G`m<CR>
 map <Leader>j :CommandT app/assets/javascripts<cr>client/
 map <Leader>l oconsole.log 'debugging'<esc>:w<cr>
-map <Leader>m :Rmodel 
+map <Leader>m :Rmodel
 ""Quick vim regex to convert hashrocket (=>) 1.8 to colon syntax (:) 1.9:
 nmap <leader>nh :%s/\v:(\w+) \=\>/\1:/g<cr>
 map <Leader>o :call RunCurrentLineInTest()<CR>
@@ -79,22 +95,22 @@ map <Leader>rf :CommandTFlush<CR>
 map <Leader>rt q:?!ruby<cr><cr>
 map <Leader>rw :%s/\s\+$//<cr>:w<cr>
 map <Leader>sc :sp db/schema.rb<cr>
-map <Leader>sg :sp<cr>:grep 
-map <Leader>sm :RSmodel 
+map <Leader>sg :sp<cr>:grep
+map <Leader>sm :RSmodel
 map <Leader>sp yss<p>
 map <Leader>snip :e ~/.vim/snippets/ruby.snippets<CR>
 map <Leader>so :so %<cr>
 map <Leader>sq j<c-v>}klllcs<esc>:wq<cr>
 map <Leader>ss ds)i <esc>:w<cr>
 map <Leader>st :!ruby -Itest % -n "//"<left><left>
-map <Leader>su :RSunittest 
-map <Leader>sv :RSview 
+map <Leader>su :RSunittest
+map <Leader>sv :RSview
 map <Leader>t :call RunCurrentTest()<CR>
 map <Leader>y :!rspec --drb %<cr>
 map <Leader>u :Runittest<cr>
 map <Leader>vc :RVcontroller<cr>
 map <Leader>vf :RVfunctional<cr>
-map <Leader>vg :vsp<cr>:grep 
+map <Leader>vg :vsp<cr>:grep
 map <Leader>vi :tabe ~/.vimrc<CR>
 map <Leader>vu :RVunittest<CR>
 map <Leader>vm :RVmodel<cr>
@@ -116,6 +132,12 @@ map <C-t> <esc>:tabnew<CR>
 map <C-x> <C-w>c
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
@@ -142,10 +164,19 @@ set smarttab
 set noincsearch
 set ignorecase smartcase
 set laststatus=2  " Always show status line.
-set number 
-set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
+set number
+"set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
 set autoindent " always set autoindenting on
 set bg=light
+set shell=zsh
+set shellcmdflag=-ci
+
+set guifont=Monaco:h12
+let g:NERDTreeWinPos = "right"
+set guioptions-=T " Removes top toolbar
+set guioptions-=r " Removes right hand scroll bar
+set go-=L " Removes left hand scroll bar
+
 
 " Set the tag file search order
 set tags=./tags;
@@ -169,14 +200,14 @@ let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;
 highlight StatusLine ctermfg=blue ctermbg=yellow
 
 " Format xml files
-au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null" 
+au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
 
 set nofoldenable " Say no to code folding...
 
 command! Q q " Bind :Q to :q
-command! Qall qall 
+command! Qall qall
 
 
 " Disable Ex mode
@@ -186,7 +217,7 @@ map Q <Nop>
 map K <Nop>
 
 " When loading text files, wrap them and don't split up words.
-au BufNewFile,BufRead *.txt setlocal wrap 
+au BufNewFile,BufRead *.txt setlocal wrap
 au BufNewFile,BufRead *.txt setlocal lbr
 
 " Better? completion on command line
@@ -364,6 +395,25 @@ if has("autocmd")
 
 endif " has("autocmd")
 
-if filereadable(expand("~/.vimrc.after"))
-  source ~/.vimrc.after
-endif
+autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
+:set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
+
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+"show trailing spaces
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
+
+color codeschool
