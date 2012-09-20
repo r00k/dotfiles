@@ -1,7 +1,15 @@
---type-add
-ruby=.haml,.feature,.scss,.coffee
+--type-add=ruby=.rake,.rsel,.builder
+--type-add=html=.html.erb,.html.haml,.html.slim
+--type-add=js=.js.erb,.js.coffee
+--type-add=css=.sass,.scss
+--type-set=feature=.feature
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
+--sort-files
+--no-sql
+--color
+--follow
+--group

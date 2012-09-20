@@ -31,6 +31,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-haml'
 Bundle 'bbommarito/vim-slim'
 Bundle 'skwp/vim-rspec'
+Bundle 'mattn/gist-vim'
 
 " ================
 " Ruby stuff
@@ -51,12 +52,12 @@ augroup END
 let mapleader = ","
 let g:mapleader = ","
 
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+nmap <Leader>a=> :Tabularize /=><CR>
+vmap <Leader>a=> :Tabularize /=><CR>
 
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
@@ -170,8 +171,8 @@ set autoindent " always set autoindenting on
 set bg=light
 set shell=zsh
 set shellcmdflag=-ci
-
-set guifont=Monaco:h12
+set colorcolumn=120
+set guifont=Bitstream\ Vera\ Sans\ Mono:h12
 let g:NERDTreeWinPos = "right"
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar

@@ -63,3 +63,7 @@ source $HOME/.dotfiles/zsh/functions
 export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 # rbenv
 eval "$(rbenv init -)"
+
+if [ -f `brew --prefix`/etc/autojump ]; then
+  . `brew --prefix`/etc/autojump
+fi

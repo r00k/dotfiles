@@ -1,6 +1,6 @@
 [user]
   name = Yannick Schutz
-  email = yannick.schutz@gmail.com 
+  email = yannick.schutz@gmail.com
 [alias]
   co = checkout
   cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
@@ -17,7 +17,7 @@
 
 [core]
   excludesfile = ~/.gitignore
-  editor = v
+  editor = vim
 [apply]
   whitespace = nowarn
 
