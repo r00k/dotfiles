@@ -1,2 +1,2 @@
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="bin:$HOME/.rvm/bin:$HOME/.rvm/gems/ruby-1.9.2-p180/bin:$HOME/.rvm/gems/ruby-1.9.2-p180@global/bin:$HOME/.rvm/rubies/default/bin:$HOME/bin:/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/texbin:/usr/local/git/bin:/usr/X11/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
