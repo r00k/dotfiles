@@ -1,6 +1,6 @@
 [user]
-  name = Yannick Schutz
-  email = yannick.schutz@gmail.com
+	name = Yannick Schutz
+	email = yannick.schutz@gmail.com
 [alias]
   co = checkout
   cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
@@ -34,7 +34,7 @@
   ms = merge --squash
   b = branch
   rb = rebase
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [help]
   autocorrect = 1
 [branch]
@@ -46,3 +46,6 @@
   enabled = 1
 [github]
   user = ys
+  password = !security find-generic-password -wgs io.yannick.conf.github | tr -d '\n'
+[mergetool]
+	keepBackup = true
