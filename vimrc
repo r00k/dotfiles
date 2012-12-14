@@ -22,7 +22,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'wincent/Command-T'
 Bundle 'koron/nyancat-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tangledhelix/vim-octopress.git'
@@ -32,6 +31,9 @@ Bundle 'tpope/vim-haml'
 Bundle 'bbommarito/vim-slim'
 Bundle 'skwp/vim-rspec'
 Bundle 'mattn/gist-vim'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
 
 " ================
 " Ruby stuff
@@ -48,6 +50,13 @@ augroup myfiletypes
   autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=octopress
 augroup END
 " ================
+" NERDTREE STUFF
+"
+"let g:nerdtree_tabs_open_on_gui_startup = 1
+"let g:nerdtree_tabs_smart_startup_focus = 1
+"let g:nerdtree_tabs_open_on_new_tab = 1
+"let g:nerdtree_tabs_focus_on_files = 1
+
 
 let mapleader = ","
 let g:mapleader = ","
@@ -75,15 +84,14 @@ map <Leader>d odebugger<cr>puts 'debugger'<esc>:w<cr>
 map <Leader>dr :e ~/Dropbox<cr>
 map <Leader>ec :e ~/code/
 map <Leader>gac :Gcommit -m -a ""<LEFT>
-map <Leader>gc :Gcommit -m ""<LEFT>
-map <Leader>gr :e ~/Dropbox/docs/journal<CR>
-map <Leader>gs :Gstatus<CR>
+map <leader>g :CtrlP<CR>
+map <leader>gv :CtrlP app/views/<CR>
+map <leader>gc :CtrlP app/controllers/<CR>
+map <leader>gm :CtrlP app/models/<CR>
 map <Leader>f :call OpenFactoryFile()<CR>
 map <Leader>fix :cnoremap % %<CR>
 map <Leader>fa :sp test/factories.rb<CR>
-map <Leader>h :CommandT<CR>
 map <Leader>i mmgg=G`m<CR>
-map <Leader>j :CommandT app/assets/javascripts<cr>client/
 map <Leader>l oconsole.log 'debugging'<esc>:w<cr>
 map <Leader>m :Rmodel
 ""Quick vim regex to convert hashrocket (=>) 1.8 to colon syntax (:) 1.9:
@@ -118,6 +126,8 @@ map <Leader>vm :RVmodel<cr>
 map <Leader>vv :RVview<cr>
 map <Leader>w <C-w>w
 map <Leader>x :exec getline(".")<cr>
+map <Leader>z :NERDTreeToggle<cr>
+nnoremap <leader><leader> <c-^>
 
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
@@ -135,10 +145,10 @@ map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
 " Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+"nnoremap <Left> :echoe "Use h"<CR>
+"nnoremap <Right> :echoe "Use l"<CR>
+"nnoremap <Up> :echoe "Use k"<CR>
+"nnoremap <Down> :echoe "Use j"<CR>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
@@ -177,7 +187,15 @@ let g:NERDTreeWinPos = "right"
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
+set showbreak=↪
 
+set winwidth=84
+" We have to have a winheight bigger than we want to set winminheight. But if
+" we set winheight to be huge before winminheight, the winminheight set will
+" fail.
+set winheight=5
+set winminheight=5
+set winheight=999
 
 " Set the tag file search order
 set tags=./tags;
