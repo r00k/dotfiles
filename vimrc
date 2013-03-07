@@ -22,7 +22,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'koron/nyancat-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tangledhelix/vim-octopress.git'
 Bundle 'godlygeek/tabular'
@@ -34,6 +33,12 @@ Bundle 'mattn/gist-vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-endwise'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Raimondi/delimitMate'
+Bundle 'corntrace/bufexplorer'
+Bundle 'tpope/vim-rbenv'
+Bundle 'rodjek/vim-puppet'
 
 " ================
 " Ruby stuff
@@ -75,6 +80,7 @@ map <Leader>cc :!cucumber --drb %<CR>
 map <Leader>cu :Tabularize /\|<CR>
 map <Leader>co ggVG"*y
 " map <Leader>cc :Rjcollection client/
+map <Leader>a :A<CR>
 map <Leader>cj :Rjspec client/
 map <Leader>cm :Rjmodel client/
 map <Leader>ct :Rtemplate client/
@@ -197,6 +203,8 @@ set winheight=5
 set winminheight=5
 set winheight=999
 
+set mouse=nicr
+
 " Set the tag file search order
 set tags=./tags;
 
@@ -214,6 +222,8 @@ set noesckeys
 
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
+" Ag instead of Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Highlight the status line
 highlight StatusLine ctermfg=blue ctermbg=yellow
