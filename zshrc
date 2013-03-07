@@ -66,7 +66,8 @@ source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
 
 # Customize to your needs...
-export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/bin:/sbin:/usr/local/bin:/usr/local/sbin:/bin:/usr/sbin:/usr/X11/bin
+export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/sbin:/usr/local/bin:/usr/local/sbin:/bin:/usr/sbin:/usr/X11/bin:$PATH
 # rbenv
 eval "$(rbenv init - --no-rehash)"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+export PATH=/usr/local/heroku/bin:$PATH
