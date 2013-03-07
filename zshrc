@@ -9,7 +9,6 @@ ZSH_THEME="yann_ck"
 
 # Never know when you're gonna need to popd!
 setopt AUTO_PUSHD
-
 # Allow completing of the remainder of a command
 bindkey "^N" insert-last-word
 
@@ -58,7 +57,7 @@ export RUBY_HEAP_FREE_MIN=500000
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler)
+plugins=(brew osx git rails3 ruby rbenv bundler)
 
 source $ZSH/oh-my-zsh.sh
 
