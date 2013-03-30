@@ -65,9 +65,14 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
 
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/sbin:/bin:/usr/sbin:/usr/X11/bin:$PATH
 # Customize to your needs...
-export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/sbin:/usr/local/bin:/usr/local/sbin:/bin:/usr/sbin:/usr/X11/bin:$PATH
 # rbenv
 eval "$(rbenv init - --no-rehash)"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 export PATH=/usr/local/heroku/bin:$PATH
+
+
+# Wrap git automatically by adding the following to ~/.zshrc:
+
+eval "$(hub alias -s)"
