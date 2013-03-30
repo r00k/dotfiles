@@ -31,7 +31,8 @@ Bundle 'bbommarito/vim-slim'
 Bundle 'skwp/vim-rspec'
 Bundle 'mattn/gist-vim'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'kien/ctrlp.vim'
+"Bundle 'kien/ctrlp.vim'
+Bundle 'wincent/Command-T'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'Lokaltog/vim-easymotion'
@@ -90,11 +91,23 @@ map <Leader>d odebugger<cr>puts 'debugger'<esc>:w<cr>
 map <Leader>dr :e ~/Dropbox<cr>
 map <Leader>ec :e ~/code/
 map <Leader>gac :Gcommit -m -a ""<LEFT>
-map <leader>g :CtrlP<CR>
-map <leader>gv :CtrlP app/views/<CR>
-map <leader>gc :CtrlP app/controllers/<CR>
-map <leader>gm :CtrlP app/models/<CR>
-map <Leader>f :call OpenFactoryFile()<CR>
+"map <leader>g :CtrlP<CR>
+"map <leader>gv :CtrlP app/views/<CR>
+"map <leader>gc :CtrlP app/controllers/<CR>
+"map <leader>gm :CtrlP app/models/<CR>
+map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
+map <leader>gs :CommandTFlush<cr>\|:CommandT public/stylesheets/sass<cr>
+map <leader>gf :CommandTFlush<cr>\|:CommandT features<cr>
+map <leader>gg :topleft 100 :split Gemfile<cr>
+map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+"map <Leader>f :call OpenFactoryFile()<CR>
 map <Leader>fix :cnoremap % %<CR>
 map <Leader>fa :sp test/factories.rb<CR>
 map <Leader>i mmgg=G`m<CR>
