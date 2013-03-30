@@ -163,11 +163,13 @@ map <C-x> <C-w>c
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
+inoremap jj <ESC>
+
 " Get off my lawn
-"nnoremap <Left> :echoe "Use h"<CR>
-"nnoremap <Right> :echoe "Use l"<CR>
-"nnoremap <Up> :echoe "Use k"<CR>
-"nnoremap <Down> :echoe "Use j"<CR>
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
@@ -200,8 +202,8 @@ set autoindent " always set autoindenting on
 set bg=light
 set shell=zsh
 set shellcmdflag=-ci
-set colorcolumn=120
-set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+set colorcolumn=80
+set guifont=Bitstream\ Vera\ Sans\ Mono:h14
 let g:NERDTreeWinPos = "right"
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
