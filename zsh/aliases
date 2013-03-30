@@ -28,6 +28,7 @@ alias d='cd ~/.dotfiles'
 alias dbprep='rdm && rdtp'
 alias dr='cd ~/Dropbox'
 alias drop='cd ~/Dropbox'
+alias esstart="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
 alias fr="foreman run -e .env.$0 $1"
 alias flushdns='dscacheutil -flushcache'
 alias -g G='| grep'
