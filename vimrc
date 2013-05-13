@@ -166,9 +166,6 @@ set tags=./tags;
 " Use Silver Searcher instead of grep
 set grepprg=ag
 
-" Get rid of the delay when hitting esc!
-set noesckeys
-
 " Make the omnicomplete text readable
 :highlight PmenuSel ctermfg=black
 
