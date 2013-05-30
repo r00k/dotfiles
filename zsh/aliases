@@ -46,6 +46,7 @@ alias gdc='git diff --cached'
 alias get='sudo apt-get install'
 alias gg='git lg'
 alias gpush='git push'
+alias gpull='git pull'
 alias gpsuh='git push'
 alias gpreb='git pull --rebase'
 alias grebc='git rebase --continue'
@@ -98,8 +99,8 @@ alias track='git checkout -t'
 alias td='grc powder applog'
 alias u='cd ..'
 alias unicorn="unicorn_rails -c config/unicorn.rb"
-alias v='mvim'
-alias vc='mvim .'
+alias v='vim'
+alias vc='vim .'
 alias vi='vim'
 
 # Heroku staging

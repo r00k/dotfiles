@@ -1,6 +1,9 @@
 #!/usr/bin/ruby
 require 'irb/completion'
 require 'irb/ext/save-history'
+require "awesome_print"
+ap object, options = {}
+
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
@@ -14,7 +17,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'

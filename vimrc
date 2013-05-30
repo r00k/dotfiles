@@ -1,6 +1,7 @@
+
 " Use Pathogen:
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
 
 " ========================================================================
 " Vundle stuff
@@ -12,34 +13,32 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles
-Bundle 'ervandew/supertab'
+"Bundle 'kien/ctrlp.vim'
+Bundle 'bbommarito/vim-slim'
+Bundle 'corntrace/bufexplorer'
+Bundle 'godlygeek/tabular'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'lokaltog/vim-easymotion'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'raimondi/delimitMate'
+Bundle 'rodjek/vim-puppet'
+Bundle 'scrooloose/nerdtree'
+Bundle 'skwp/vim-rspec'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rbenv'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tangledhelix/vim-octopress.git'
-Bundle 'godlygeek/tabular'
-Bundle 'nono/vim-handlebars'
-Bundle 'tpope/vim-haml'
-Bundle 'bbommarito/vim-slim'
-Bundle 'skwp/vim-rspec'
-Bundle 'mattn/gist-vim'
-Bundle 'jistr/vim-nerdtree-tabs'
-"Bundle 'kien/ctrlp.vim'
 Bundle 'wincent/Command-T'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-endwise'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Raimondi/delimitMate'
-Bundle 'corntrace/bufexplorer'
-Bundle 'tpope/vim-rbenv'
-Bundle 'rodjek/vim-puppet'
+Bundle 'jwhitley/vim-matchit'
+Bundle 'ecomba/vim-ruby-refactoring'
 
 " ================
 " Ruby stuff
@@ -134,6 +133,9 @@ map <Leader>st :!ruby -Itest % -n "//"<left><left>
 map <Leader>su :RSunittest
 map <Leader>sv :RSview
 map <Leader>t :call RunCurrentTest()<CR>
+map <Leader>tf :call RunForemanCurrentTest()<CR>
+map <Leader>tl :call RunForemanCurrentLineInTest()<CR>
+map <Leader>tt :call RunCurrentLineInTest()<CR>
 map <Leader>y :!rspec --drb %<cr>
 map <Leader>u :Runittest<cr>
 map <Leader>vc :RVcontroller<cr>
@@ -166,10 +168,14 @@ map <C-p> :cp<CR>
 inoremap jj <ESC>
 
 " Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+nmap <Left> <<
+nmap <Right> >>
+vmap <Left> <gv
+vmap <Right> >gv
+nmap <Up> [e
+nmap <Down> ]e
+vmap <Up> [egv
+vmap <Down> ]egv
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
@@ -183,8 +189,8 @@ set showcmd		" display incomplete commands
 set autoindent
 set showmatch
 set nowrap
-set backupdir=~/.tmp
-set directory=~/.tmp " Don't clutter my dirs up with swp and tmp files
+set backupdir=~/.vim/_backup/    " where to put backup files.
+set directory=~/.vim/_temp/      " where to put swap files.
 set autoread
 set wmh=0
 set viminfo+=!
@@ -232,6 +238,10 @@ set grepprg=ack
 " Get rid of the delay when hitting esc!
 set noesckeys
 
+" Gist options
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+
 " Make the omnicomplete text readable
 :highlight PmenuSel ctermfg=black
 
@@ -242,9 +252,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Highlight the status line
 highlight StatusLine ctermfg=blue ctermbg=yellow
-
-" Format xml files
-au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
 
@@ -286,6 +293,37 @@ function! MergeTabs()
 endfunction
 
 nmap <C-W>u :call MergeTabs()<CR>
+" Checkthis tests
+"
+function! RunForemanCurrentTest()
+  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
+  if in_test_file
+    call SetTestFile()
+
+    if match(expand('%'), '\.feature$') != -1
+      call SetTestRunner("!foreman run -e .env.test cucumber")
+      exec g:bjo_test_runner g:bjo_test_file
+    elseif match(expand('%'), '_spec\.rb$') != -1
+      call SetTestRunner("!foreman run -e .env.test rspec")
+      exec g:bjo_test_runner g:bjo_test_file
+    else
+      call SetTestRunner("!foreman run -e .env.test ruby -Itest")
+      exec g:bjo_test_runner g:bjo_test_file
+    endif
+  else
+    exec g:bjo_test_runner g:bjo_test_file
+  endif
+endfunction
+
+function! RunForemanCurrentLineInTest()
+  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
+  if in_test_file
+    call SetTestFileWithLine()
+  end
+
+  exec "!foreman run -e .env.test rspec" g:bjo_test_file . ":" . g:bjo_test_file_line
+endfunction
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Test-running stuff
@@ -352,12 +390,12 @@ nmap j gj
 
 
 " Set up some useful Rails.vim bindings for working with Backbone.js
-autocmd User Rails Rnavcommand template    app/assets/templates               -glob=**/*  -suffix=.jst.ejs
-autocmd User Rails Rnavcommand jmodel      app/assets/javascripts/models      -glob=**/*  -suffix=.coffee
-autocmd User Rails Rnavcommand jview       app/assets/javascripts/views       -glob=**/*  -suffix=.coffee
-autocmd User Rails Rnavcommand jcollection app/assets/javascripts/collections -glob=**/*  -suffix=.coffee
-autocmd User Rails Rnavcommand jrouter     app/assets/javascripts/routers     -glob=**/*  -suffix=.coffee
-autocmd User Rails Rnavcommand jspec       spec/javascripts                   -glob=**/*  -suffix=.coffee
+"autocmd User Rails Rnavcommand template    app/assets/templates               -glob=**/*  -suffix=.jst.ejs
+"autocmd User Rails Rnavcommand jmodel      app/assets/javascripts/models      -glob=**/*  -suffix=.coffee
+"autocmd User Rails Rnavcommand jview       app/assets/javascripts/views       -glob=**/*  -suffix=.coffee
+"autocmd User Rails Rnavcommand jcollection app/assets/javascripts/collections -glob=**/*  -suffix=.coffee
+"autocmd User Rails Rnavcommand jrouter     app/assets/javascripts/routers     -glob=**/*  -suffix=.coffee
+"autocmd User Rails Rnavcommand jspec       spec/javascripts                   -glob=**/*  -suffix=.coffee
 
 " Don't add the comment prefix when I hit enter or o/O on a comment line.
 set formatoptions-=or
@@ -371,11 +409,8 @@ let g:CommandTMatchWindowAtTop=1
 " situations.
 set timeoutlen=500
 
-" Don't go past 100 chars on levelup:
-autocmd BufNewFile,BufRead /Users/ben/code/levelup/*.rb set colorcolumn=100
-
 " Remove trailing whitespace on save for ruby files.
-au BufWritePre *.rb :%s/\s\+$//e
+"au BufWritePre *.rb :%s/\s\+$//e
 
 function! OpenFactoryFile()
   if filereadable("test/factories.rb")
@@ -460,4 +495,5 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 
-color codeschool
+set background=dark
+color solarized

@@ -46,6 +46,8 @@
   enabled = 1
 [github]
   user = ys
-  password = !security find-generic-password -wgs io.yannick.conf.github | tr -d '\n'
+  #password = !security find-generic-password -wgs io.yannick.conf.github | tr -d '\n'
 [mergetool]
 	keepBackup = true
+[ghi]
+  token = 3ac118ffb89b1a9faba7cf9c2f75a72e2d2597b4

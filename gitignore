@@ -1,8 +1,10 @@
 .DS_Store
 .svn
 *~
-tags
+/tags
 log/
 db/*.sqlite3
 .netrwhist
 .*.swp
+custom_plan.rb
+zeus.json

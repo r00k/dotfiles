@@ -5,7 +5,7 @@ ZSH=$HOME/.dotfiles/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="yann_ck"
+ZSH_THEME="agnoster"
 
 # Never know when you're gonna need to popd!
 setopt AUTO_PUSHD
@@ -35,13 +35,14 @@ SAVEHIST=20000
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
 stty stop undef
 
-export BUNDLER_EDITOR=mvim
+export BUNDLER_EDITOR=vim
+export EDITOR=vim
 export JRUBY_OPTS="--1.9"
 # -Xcompile.mode=FORCE --server --fast -J-Xmx1024M"
 export LC_ALL=en_US.UTF-8
@@ -58,6 +59,8 @@ export RUBY_HEAP_FREE_MIN=500000
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew osx git rails3 ruby rbenv bundler)
+#DISABLE AUTOCORRECT
+unsetopt correct
 
 source $ZSH/oh-my-zsh.sh
 
