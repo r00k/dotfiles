@@ -9,13 +9,13 @@ function git_branch_name {
 
 function git-done {
   branch=`git_branch_name`
-  git checkout master && git pull --rebase 
+  git checkout master && git pull --rebase
   git checkout $branch && git rebase master && git checkout master && git merge $branch && bundle install && bundle exec rake db:migrate && bundle exec rake && git push && git branch -D $branch && git push origin :$branch
 }
 
 function vpp-done {
   branch=`git_branch_name`
-  git checkout master && git pull --rebase 
+  git checkout master && git pull --rebase
   git checkout $branch && git rebase master && git checkout master && git merge $branch && bundle install && bundle exec rake db:migrate && bundle exec rake cucumber:client spec:javascripts && git push && git branch -D $branch && git push origin :$branch && bundle exec kumade
 }
 
@@ -25,7 +25,7 @@ function git-nuke {
 
 function git-on-master {
   branch=`git_branch_name`
-  git checkout master && git pull --rebase 
+  git checkout master && git pull --rebase
   git checkout $branch
   git rebase master
   }
@@ -41,4 +41,8 @@ compdef g=git
 
 function rrg {
   rake routes | grep $1
+}
+
+function todo {
+  vim ~/Dropbox/$1.txt
 }
