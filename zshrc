@@ -5,7 +5,7 @@ ZSH=$HOME/.dotfiles/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="yann_ck"
 
 # Never know when you're gonna need to popd!
 setopt AUTO_PUSHD
@@ -13,9 +13,9 @@ setopt AUTO_PUSHD
 bindkey "^N" insert-last-word
 
 # Show contents of directory after cd-ing into it
-chpwd() {
-  ls -lrthG
-}
+# chpwd() {
+#   ls -lrthG
+# }
 
 # Save a ton of history
 HISTSIZE=20000
@@ -55,6 +55,9 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=100000000
 export RUBY_HEAP_FREE_MIN=500000
 
+#GOOOOOO
+export GOPATH=$HOME/code/go
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -68,7 +71,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
 
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/sbin:/bin:/usr/sbin:/usr/X11/bin:$PATH
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$GOPATH/bin:$HOME/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/sbin:/bin:/usr/sbin:/usr/X11/bin:$PATH
 # Customize to your needs...
 # rbenv
 eval "$(rbenv init - --no-rehash)"
