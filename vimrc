@@ -91,8 +91,8 @@ set showcmd		" display incomplete commands
 set autoindent
 set showmatch
 set nowrap
-set backupdir=~/.vim/_backup/    " where to put backup files.
-set directory=~/.vim/_temp/      " where to put swap files.
+set backupdir=~/.vim_backup/    " where to put backup files.
+set directory=~/.vim_temp/      " where to put swap files.
 set autoread
 set wmh=0
 set viminfo+=!
