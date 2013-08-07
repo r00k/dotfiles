@@ -1,6 +1,6 @@
 [user]
-	name = Yannick Schutz
-	email = yannick.schutz@gmail.com
+  name = Yannick Schutz
+  email = yannick.schutz@gmail.com
 [alias]
   co = checkout
   cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
@@ -46,8 +46,8 @@
   enabled = 1
 [github]
   user = ys
-  #password = !security find-generic-password -wgs io.yannick.conf.github | tr -d '\n'
+  password = !security find-generic-password -wgs io.yannick.conf.github | tr -d '\n'
 [mergetool]
-	keepBackup = true
+  keepBackup = true
 [ghi]
   token = 3ac118ffb89b1a9faba7cf9c2f75a72e2d2597b4
