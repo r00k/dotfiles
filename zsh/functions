@@ -1,3 +1,7 @@
+function heroku-console {
+  heroku run console -r $1
+}
+
 function git-new-remote-tracking {
   git checkout -b $1 && git push -u origin $1
 }
@@ -28,7 +32,7 @@ function git-on-master {
   git checkout master && git pull --rebase
   git checkout $branch
   git rebase master
-  }
+}
 
 function g {
   if [[ $# > 0 ]]; then
