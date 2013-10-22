@@ -107,6 +107,12 @@ alias v='vim'
 alias vc='vim .'
 alias vi='vim'
 
+
+# todos
+alias to='todo'
+alias lto='list-todo'
+
+
 # Heroku staging
 alias staging-console='heroku run console --remote staging'
 alias staging-tail='heroku logs --tail --remote staging'

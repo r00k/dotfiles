@@ -44,5 +44,11 @@ function rrg {
 }
 
 function todo {
-  vim ~/Dropbox/$1.txt
+  vim ~/Dropbox/todos/$1.txt
 }
+
+function list-todo {
+  for i in ~/Dropbox/todos/*; do echo $(basename $i | cut -f 1 -d '.') ":" $(wc -l < $i); done
+}
+
+
