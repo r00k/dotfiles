@@ -40,6 +40,7 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+map <leader>i mmgg=G`m<CR>
 ""Quick vim regex to convert hashrocket (=>) 1.8 to colon syntax (:) 1.9:
 nmap <leader>nh :%s/\v:(\w+) \=\>/\1:/g<cr>
 map <Leader>o :call RunCurrentLineInTest()<CR>
@@ -62,8 +63,6 @@ map <C-h> :nohl<cr>
 imap <C-l> :<Space>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
-map <C-t> <esc>:tabnew<CR>
-map <C-x> <C-w>c
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
@@ -90,6 +89,7 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set autoindent
 set showmatch
+set rnu  "set relative line numbers
 set nowrap
 set backupdir=~/.vim_backup/    " where to put backup files.
 set directory=~/.vim_temp/      " where to put swap files.
@@ -104,7 +104,6 @@ set smarttab
 set noincsearch
 set ignorecase smartcase
 set laststatus=2  " Always show status line.
-set number
 "set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
 set autoindent " always set autoindenting on
 set colorcolumn=80
@@ -131,6 +130,9 @@ set tags=./tags;
 " Use Ack instead of grep
 set grepprg=ack
 
+
+" Vim rspec dispatch
+let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 " Gist options
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
@@ -218,6 +220,19 @@ function! RenameFile()
   endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PROMOTE VARIABLE TO RSPEC LET
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>pl :PromoteToLet<cr>
 
 " ========================================================================
 " End of things set by me.
