@@ -66,6 +66,7 @@ plugins=(brew osx git rails3 ruby rbenv bundler)
 unsetopt correct
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zshrc_private
 
 # Source my custom files after oh-my-zsh so I can override things.
 source $HOME/.dotfiles/zsh/aliases
