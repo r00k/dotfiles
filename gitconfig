@@ -35,6 +35,8 @@
   b = branch
   rb = rebase
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  db = branch -d
+	ctags = !.git/hooks/ctags
 [help]
   autocorrect = 1
 [branch]
@@ -51,3 +53,5 @@
   keepBackup = true
 [ghi]
   token = 3ac118ffb89b1a9faba7cf9c2f75a72e2d2597b4
+[init]
+	templatedir = ~/.git_template
