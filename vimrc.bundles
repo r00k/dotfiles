@@ -19,11 +19,14 @@ Bundle 'vim-scripts/tComment'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rbenv'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wincent/Command-T'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'jnwhiteh/vim-golang'
+
+Bundle 'tpope/vim-dispatch'
 
 filetype on
