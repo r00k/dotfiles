@@ -1,4 +1,4 @@
-=== Ben Orenstein's dot files
+=== Yannick's dot files
 
 These are config files to set up a system the way I like it.
 
@@ -8,7 +8,7 @@ I'm also a pretty aggressive aliaser. You might find a few you like in bash/alia
 
 == Installation
 
-  git clone git://github.com/r00k/dotfiles ~/.dotfiles
+  git clone git://github.com/ys/dotfiles ~/.dotfiles
   cd ~/.dotfiles
   rake install
 
