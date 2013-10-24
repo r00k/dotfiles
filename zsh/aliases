@@ -85,6 +85,7 @@ alias rdtp="be rake db:test:prepare"
 alias rs='bundle install && rails server -p 3001'
 alias safepush='git pull --rebase && bundle install && rdm && rake && git push'
 alias shpush='rake && hpush'
+alias s='cd ~/src'
 alias sc='staging-console'
 alias so='source ~/.dotfiles/zsh/aliases'
 alias sp='safepush'
