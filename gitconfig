@@ -2,8 +2,21 @@
   name = Yannick Schutz
   email = yannick.schutz@gmail.com
 [alias]
+  ci = commit
+  st = status
   co = checkout
-  cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+  cob = checkout -b
+  d = diff
+  ps = push
+  pl = pull
+  poule = pull
+  m = merge
+  ms = merge --squash
+  b = branch
+  rb = rebase
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  db = branch -d
+	ctags = !.git/hooks/ctags
 [color]
   diff = auto
   status = auto
@@ -16,7 +29,7 @@
   meta = yellow
 
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /opt/boxen/config/git/gitignore
   editor = vim
 [apply]
   whitespace = nowarn
@@ -55,3 +68,9 @@
   token = 3ac118ffb89b1a9faba7cf9c2f75a72e2d2597b4
 [init]
 	templatedir = ~/.git_template
+
+[hub]
+protocol = https
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential

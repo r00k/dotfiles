@@ -1,6 +1,6 @@
 require 'rake'
 
-desc "Zip all the old files" 
+desc "Zip all the old files"
 task :backup do
   system %Q{mkdir "$HOME/backup-dotfiles"}
   files = Dir['*']
@@ -10,10 +10,10 @@ end
 
 desc "install the dot files into user's home directory"
 task :install do
-  replace_all = false
+  replace_all = true
   Dir['*'].each do |file|
     next if %w[Rakefile README LICENSE id_dsa.pub].include? file
-    
+
     if File.exist?(File.join(ENV['HOME'], ".#{file}"))
       if replace_all
         replace_file(file)

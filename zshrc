@@ -71,6 +71,7 @@ source $HOME/.zshrc_private
 # Source my custom files after oh-my-zsh so I can override things.
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 export PATH=$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$GOPATH/bin:$HOME/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/sbin:/bin:/usr/sbin:/usr/X11/bin:$PATH
 # Customize to your needs...
