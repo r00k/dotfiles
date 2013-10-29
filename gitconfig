@@ -1,22 +1,6 @@
 [user]
   name = Yannick Schutz
   email = yannick.schutz@gmail.com
-[alias]
-  ci = commit
-  st = status
-  co = checkout
-  cob = checkout -b
-  d = diff
-  ps = push
-  pl = pull
-  poule = pull
-  m = merge
-  ms = merge --squash
-  b = branch
-  rb = rebase
-  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  db = branch -d
-	ctags = !.git/hooks/ctags
 [color]
   diff = auto
   status = auto
@@ -49,7 +33,8 @@
   rb = rebase
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   db = branch -d
-	ctags = !.git/hooks/ctags
+  ctags = !.git/hooks/ctags
+  review = !.git/hooks/review
 [help]
   autocorrect = 1
 [branch]
@@ -67,10 +52,8 @@
 [ghi]
   token = 3ac118ffb89b1a9faba7cf9c2f75a72e2d2597b4
 [init]
-	templatedir = ~/.git_template
-
+  templatedir = ~/.git_template
 [hub]
-protocol = https
-
+  protocol = https
 [credential]
-helper = /opt/boxen/bin/boxen-git-credential
+  helper = /opt/boxen/bin/boxen-git-credential

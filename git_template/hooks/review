@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+PATH="/usr/local/bin:$PATH"
+REPO=$(git config remote.origin.url | sed "s/^.*:\\(.*\\).git/\\1/");
+BRANCH=$(git rev-parse --abbrev-ref HEAD);
+open "https://www.pullreview.com/${REPO}/reviews/${BRANCH}"
