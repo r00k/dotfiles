@@ -49,14 +49,15 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Ruby 1.9.3-px perf
-export RUBY_HEAP_MIN_SLOTS=1000000
+#export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_GC_HEAP_INIT_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=100000000
 export RUBY_HEAP_FREE_MIN=500000
 
 #GOOOOOO
-export GOPATH=$HOME/code/go
+export GOPATH=$HOME/src/languages/go
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
