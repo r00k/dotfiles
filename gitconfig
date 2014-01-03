@@ -44,16 +44,13 @@
   default = current
 [rerere]
   enabled = 1
-[github]
-  user = ys
-  password = !security find-generic-password -wgs io.yannick.github.password | tr -d '\n'
 [mergetool]
   keepBackup = true
-[ghi]
-  token = !security find-generic-password -wgs io.yannick.github.oauth_token | tr -d '\n'
 [init]
   templatedir = ~/.git_template
 [hub]
   protocol = https
 [credential]
-  helper = /opt/boxen/bin/boxen-git-credential
+  helper = osxkeychain
+[github]
+  user = ys
