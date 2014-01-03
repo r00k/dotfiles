@@ -29,4 +29,6 @@ Bundle 'jnwhiteh/vim-golang'
 
 Bundle 'tpope/vim-dispatch'
 
+Bundle 'rodjek/vim-puppet'
+
 filetype on
