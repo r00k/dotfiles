@@ -51,6 +51,6 @@
 [hub]
   protocol = https
 [credential]
-  helper = osxkeychain
+  helper = /opt/boxen/bin/boxen-git-credential
 [github]
   user = ys
