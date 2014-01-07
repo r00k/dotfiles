@@ -85,3 +85,4 @@ export PATH=/usr/local/heroku/bin:$PATH
 # Wrap git automatically by adding the following to ~/.zshrc:
 
 eval "$(hub alias -s)"
+export PATH=$PATH:$GOPATH/bin
