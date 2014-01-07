@@ -294,5 +294,6 @@ if has("autocmd")
   :highlight ExtraWhitespace ctermbg=red guibg=red
   :match ExtraWhitespace /\s\+$/
 
-  set background=dark
-  color solarized
+  " set background=dark
+  " color solarized
+  colorscheme monochrome

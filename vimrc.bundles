@@ -30,5 +30,6 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'tpope/vim-dispatch'
 
 Bundle 'rodjek/vim-puppet'
+Bundle 'fxn/vim-monochrome'
 
 filetype on
