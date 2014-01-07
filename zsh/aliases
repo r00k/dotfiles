@@ -6,7 +6,6 @@ elif [[ $platform == 'Darwin' ]]; then
   alias a='ls -lrthG'
 fi
 
-
 alias -g G='| grep'
 alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias amend="git commit --amend"
@@ -61,6 +60,7 @@ alias grake='rspec --drb spec/ && cucumber --drb features/'
 alias grebc='git rebase --continue'
 alias gurad='guard'
 alias h='heroku'
+alias hkc='heroku run console --app'
 alias hpush='git push heroku'
 alias hrb='heroku run bash -r'
 alias hrc='heroku run console -r'
