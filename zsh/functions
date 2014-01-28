@@ -2,6 +2,11 @@ function heroku-console {
   heroku run console -r $1
 }
 
+function hexrandom {
+  size=${1-64}
+  ruby -e "require 'securerandom'; puts SecureRandom.hex($size)"
+}
+
 function git-new-remote-tracking {
   git checkout -b $1 && git push -u origin $1
 }
