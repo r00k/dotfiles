@@ -31,5 +31,6 @@ Bundle 'tpope/vim-dispatch'
 
 Bundle 'rodjek/vim-puppet'
 Bundle 'fxn/vim-monochrome'
+Bundle 'slim-template/vim-slim'
 
 filetype on
