@@ -8,15 +8,12 @@
   interactive = auto
   ui = true
   pager = true
-
 [color "diff"]
   meta = yellow
-
 [core]
   excludesfile = /opt/boxen/config/git/gitignore
   editor = vim
 [apply]
-  whitespace = nowarn
 
 [alias]
   ci = commit
@@ -42,6 +39,8 @@
   autosetuprebase = always
 [push]
   default = current
+[pull]
+  rebase = preserve
 [rerere]
   enabled = 1
 [mergetool]
