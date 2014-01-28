@@ -1,12 +1,12 @@
 " Begin .vimrc
 "
-set nocompatible
+set nocompatible " default to vim
 "
 " ================
 " Ruby stuff
 " ================
 if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+  source ~/.vimrc.bundles " load bundles from another file
 endif
 
 syntax on                 " Enable syntax highlighting
@@ -17,8 +17,8 @@ augroup myfiletypes
   autocmd!
   " autoindent with two spaces, always expand tabs
   autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
-  "octopress
-  autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=octopress
+  autocmd FileType go set ai sw=4 sts=4 et
+  au FileType go au BufWritePre <buffer> Fmt
 augroup END
 
 
@@ -59,13 +59,6 @@ map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
-map <C-h> :nohl<cr>
-imap <C-l> :<Space>
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
-
 nmap <C-)> <C-]>
 inoremap jj <ESC>
 
@@ -79,56 +72,43 @@ nmap <Down> ]e
 vmap <Up> [egv
 vmap <Down> ]egv
 
-" Emacs-like beginning and end of line.
-imap <c-e> <c-o>$
-imap <c-a> <c-o>^
-
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set history=500		" keep 500 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set autoindent
-set showmatch
-set rnu  "set relative line numbers
-set nowrap
-set backupdir=~/.vim_backup/    " where to put backup files.
-set directory=~/.vim_temp/      " where to put swap files.
-set autoread
-set wmh=0
+set history=500		       " keep 500 lines of command line history
+set ruler		       " show the cursor position all the time
+set showcmd		       " display incomplete commands
+set autoindent                 " auto ident relative to last line
+set showmatch                  " show matching char like () []
+set relativenumber             "set relative line numbers
+set nowrap                     " do not wrap text
+set backupdir=~/.vim_backup/   " where to put backup files.
+set directory=~/.vim_temp/     " where to put swap files.
+set autoread                   " Auto read file changes
 set viminfo+=!
-set guioptions-=T
-set guifont=Triskweline_10:h10
-set et
-set sw=2
-set smarttab
-set noincsearch
+set guioptions-=T              " Do not include toolbar in GUI
+set guioptions-=r              " Removes right hand scroll bar
+set guioptions-=L              " Removes left hand scroll bar
+set expandtab                  " Expand tabs in spaces
+set shiftwidth=2               " Number of spaces for a tab
+set smarttab                   " something about tabs... see help
+set noincsearch                " Do not search immediately
 set ignorecase smartcase
-set laststatus=2  " Always show status line.
-"set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
-set autoindent " always set autoindenting on
-set colorcolumn=80
+set laststatus=2               " Always show status line.
+set colorcolumn=80             " If more than 80 chars... show a line >>>>>>>>>
 set guifont=Bitstream\ Vera\ Sans\ Mono:h14
-"let g:NERDTreeWinPos = "right"
-set guioptions-=T " Removes top toolbar
-set guioptions-=r " Removes right hand scroll bar
-set go-=L " Removes left hand scroll bar
 set showbreak=↪
+set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
+set nofoldenable " Say no to code folding...
 
 set winwidth=84
-" We have to have a winheight bigger than we want to set winminheight. But if
-" we set winheight to be huge before winminheight, the winminheight set will
-" fail.
 set winheight=5
 set winminheight=5
 set winheight=999
 
-set mouse=nicr
+set mouse=a      " Mouse in all modes
+set tags=./tags; " Set the tag file search order
 
-" Set the tag file search order
-set tags=./tags;
-
-" Use Ack instead of grep
-set grepprg=ack
+set grepprg=ag " Use ag instead of grep
+let g:ackprg = 'ag --nogroup --nocolor --column' " Ag instead of Ack
 
 
 " Vim rspec dispatch
@@ -142,19 +122,12 @@ let g:gist_open_browser_after_post = 1
 
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
-" Ag instead of Ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Highlight the status line
 highlight StatusLine ctermfg=blue ctermbg=yellow
 
-set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
-
-set nofoldenable " Say no to code folding...
-
 command! Q q " Bind :Q to :q
 command! Qall qall
-
 
 " Disable Ex mode
 map Q <Nop>
@@ -260,16 +233,6 @@ if has("autocmd")
 
     " For all text files set 'textwidth' to 78 characters.
     autocmd FileType text setlocal textwidth=78
-
-    " When editing a file, always jump to the last known cursor position.
-    " Don't do it when the position is invalid or when inside an event handler
-    " (happens when dropping a file on gvim).
-    " autocmd BufReadPost *
-    "   \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    "   \   exe "normal g`\"" |
-    "   \ endif
-
-    " augroup END
 
   endif " has("autocmd")
 
