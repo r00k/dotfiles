@@ -15,3 +15,9 @@
 -- Autocomplete keywords (like SELECT) in upper-case, even if you started
 -- typing them in lower case.
 \set COMP_KEYWORD_CASE upper
+
+\set slow_queries 'SELECT (total_time / 1000 / 60) as total_minutes, (total_time/calls) as average_time, query FROM pg_stat_statements ORDER BY 1 DESC LIMIT 100;'
+\set cache_hit 'SELECT 'index hit rate' AS name, (sum(idx_blks_hit)) / sum(idx_blks_hit + idx_blks_read) AS ratio FROM pg_statio_user_indexes UNION ALL SELECT 'cache hit rate' AS name, sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) AS ratio FROM pg_statio_user_tables;'
+\set index_usage 'SELECT relname, CASE idx_scan WHEN 0 THEN 'Insufficient data' ELSE (100 * idx_scan / (seq_scan + idx_scan))::text END percent_of_times_index_used, n_live_tup rows_in_table FROM pg_stat_user_tables ORDER BY n_live_tup DESC;'
+\set unused_indexes 'SELECT schemaname || '.' || relname AS table, indexrelname AS index, pg_size_pretty(pg_relation_size(i.indexrelid)) AS index_size, idx_scan as index_scans FROM pg_stat_user_indexes ui JOIN pg_index i ON ui.indexrelid = i.indexrelid WHERE NOT indisunique AND idx_scan < 50 AND pg_relation_size(relid) > 5 * 8192 ORDER BY pg_relation_size(i.indexrelid) / nullif(idx_scan, 0) DESC NULLS FIRST, pg_relation_size(i.indexrelid) DESC;'
+\set outliers 'SELECT query, time, calls, hits FROM ( SELECT query, (total_time/calls) AS time, calls, AVG(calls) OVER () AS avg_calls, AVG(total_time/calls) OVER () AS avg_time, 100.0 * shared_blks_hit / nullif(shared_blks_hit + shared_blks_read, 0) AS hits FROM pg_stat_statements WHERE userid = (SELECT usesysid FROM pg_user WHERE usename = current_user LIMIT 1)) AS ss WHERE calls > avg_calls AND time > avg_time ORDER BY hits ASC, calls DESC, avg_time ASC;'
