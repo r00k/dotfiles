@@ -43,7 +43,6 @@ map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 map <leader>i mmgg=G`m<CR>
 ""Quick vim regex to convert hashrocket (=>) 1.8 to colon syntax (:) 1.9:
 nmap <leader>nh :%s/\v:(\w+) \=\>/\1:/g<cr>
-map <Leader>o :call RunCurrentLineInTest()<CR>
 map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 " vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
@@ -112,7 +111,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column' " Ag instead of Ack
 
 
 " Vim rspec dispatch
-let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+let g:rspec_command = "!bin/rspec {spec}"
 " Gist options
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
@@ -257,6 +256,24 @@ if has("autocmd")
   :highlight ExtraWhitespace ctermbg=red guibg=red
   :match ExtraWhitespace /\s\+$/
 
-  " set background=dark
-  " color solarized
-  colorscheme monochrome
+  set background=dark
+  color solarized
+  "colorscheme monochrome
+
+" Highlight words to avoid in tech writing
+" =======================================
+"
+"   obviously, basically, simply, of course, clearly,
+"   just, everyone knows, However, So, easy
+
+"   http://css-tricks.com/words-avoid-educational-writing/
+
+highlight TechWordsToAvoid ctermbg=red ctermfg=white
+function MatchTechWordsToAvoid()
+        match TechWordsToAvoid /\c\<\(obviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however\|so,\|easy\)\>/
+endfunction
+autocmd FileType markdown call MatchTechWordsToAvoid()
+autocmd BufWinEnter *.md call MatchTechWordsToAvoid()
+autocmd InsertEnter *.md call MatchTechWordsToAvoid()
+autocmd InsertLeave *.md call MatchTechWordsToAvoid()
+autocmd BufWinLeave *.md call clearmatches()
