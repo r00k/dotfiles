@@ -2,6 +2,12 @@ function heroku-console {
   heroku run console -r $1
 }
 
+function _hk {
+  altfile=$1
+  shift;
+  HOME=~/.ssh/heroku-$altfile hk $@
+}
+
 function hexrandom {
   size=${1-64}
   ruby -e "require 'securerandom'; puts SecureRandom.hex($size)"
@@ -38,6 +44,8 @@ function git-on-master {
   git checkout $branch
   git rebase master
 }
+
+function pt() { papertrail -f -d 5 $_ | colortail -g papertrail }
 
 function g {
   if [[ $# > 0 ]]; then
