@@ -1,51 +1,7 @@
-function heroku-console {
-  heroku run console -r $1
-}
-
-function _hk {
-  altfile=$1
-  shift;
-  HOME=~/.ssh/heroku-$altfile hk $@
-}
-
 function hexrandom {
   size=${1-64}
   ruby -e "require 'securerandom'; puts SecureRandom.hex($size)"
 }
-
-function git-new-remote-tracking {
-  git checkout -b $1 && git push -u origin $1
-}
-
-function git_branch_name {
-  val=`git branch 2>/dev/null | grep '^*' | colrm 1 2`
-  echo "$val"
-}
-
-function git-done {
-  branch=`git_branch_name`
-  git checkout master && git pull --rebase
-  git checkout $branch && git rebase master && git checkout master && git merge $branch && bundle install && bundle exec rake db:migrate && bundle exec rake && git push && git branch -D $branch && git push origin :$branch
-}
-
-function vpp-done {
-  branch=`git_branch_name`
-  git checkout master && git pull --rebase
-  git checkout $branch && git rebase master && git checkout master && git merge $branch && bundle install && bundle exec rake db:migrate && bundle exec rake cucumber:client spec:javascripts && git push && git branch -D $branch && git push origin :$branch && bundle exec kumade
-}
-
-function git-nuke {
-  git branch -D $1 && git push origin :$1
-}
-
-function git-on-master {
-  branch=`git_branch_name`
-  git checkout master && git pull --rebase
-  git checkout $branch
-  git rebase master
-}
-
-function pt() { papertrail -f -d 5 $_ | colortail -g papertrail }
 
 function g {
   if [[ $# > 0 ]]; then
@@ -55,10 +11,6 @@ function g {
   fi
 }
 compdef g=git
-
-function rrg {
-  rake routes | grep $1
-}
 
 function todo {
   vim ~/Dropbox/todos/$1.txt
