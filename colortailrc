@@ -1,8 +1,0 @@
-Groupings = {
-  'papertrail' => [
-  { :match => /production.log/, :color => :magenta },
-  { :match => /mysqld/,         :color => :red },
-  { :match => /www/,            :color => :cyan },
-  { :match => /sshd/,           :color => :black, :attributes => :bright }
-  ]
-}
