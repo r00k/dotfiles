@@ -1,5 +1,5 @@
 [user]
-  name = Yannick Schutz
+  name = Yannick
   email = yannick.schutz@gmail.com
 [color]
   diff = auto
@@ -32,6 +32,7 @@
   db = branch -d
   ctags = !.git/hooks/ctags
   review = !.git/hooks/review
+  delete-remote = "!sh -c 'git push origin :$0'"
 [help]
   autocorrect = 1
 [branch]
@@ -40,7 +41,7 @@
 [push]
   default = current
 [pull]
-  rebase = preserve
+  rebase = true
 [rerere]
   enabled = 1
 [mergetool]
@@ -49,7 +50,12 @@
   templatedir = ~/.git_template
 [hub]
   protocol = https
+
 [credential]
-  helper = /opt/boxen/bin/boxen-git-credential
+helper = /opt/boxen/bin/boxen-git-credential
+
 [github]
   user = ys
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
