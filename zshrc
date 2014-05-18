@@ -51,6 +51,11 @@ export GOPATH=$HOME/src/languages/go
 unsetopt correct
 
 #source $ZSH/oh-my-zsh.sh
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
 source $HOME/.zshrc_private
 
 # Source my custom files after oh-my-zsh so I can override things.
