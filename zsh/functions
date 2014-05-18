@@ -68,4 +68,11 @@ function list-todo {
   for i in ~/Dropbox/todos/*; do echo $(basename $i | cut -f 1 -d '.') ":" $(wc -l < $i); done
 }
 
+function snippet {
+  vim ~/Dropbox/snippets/$1
+}
+
+function snippets {
+  for i in ~/Dropbox/snippets/*; do echo $(basename $i); done
+}
 
