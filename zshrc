@@ -1,20 +1,9 @@
 # Path to your oh-my-zsh configuration.
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="yann_ck"
-
 # Never know when you're gonna need to popd!
 setopt AUTO_PUSHD
 # Allow completing of the remainder of a command
 bindkey "^N" insert-last-word
-
-# Show contents of directory after cd-ing into it
-# chpwd() {
-#   ls -lrthG
-# }
 
 # Save a ton of history
 HISTSIZE=20000
@@ -43,18 +32,16 @@ export RUBY_HEAP_FREE_MIN=500000
 #GOOOOOO
 export GOPATH=$HOME/src/languages/go
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-#plugins=(brew osx git rails3 ruby rbenv bundler)
-#DISABLE AUTOCORRECT
-unsetopt correct
+autoload -U compinit promptinit colors
+compinit
+promptinit
+colors
 
-#source $ZSH/oh-my-zsh.sh
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# Theme
+PROMPT="$%2~ : "
+
+# case insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 source $HOME/.zshrc_private
 
@@ -63,15 +50,12 @@ source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
-#export PATH=$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$GOPATH/bin:$HOME/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/sbin:/bin:/usr/sbin:/usr/X11/bin:$PATH
-# Customize to your needs...
 # rbenv
-eval "$(rbenv init - --no-rehash)"
+#eval "$(rbenv init - --no-rehash)"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-export PATH=/usr/local/heroku/bin:$PATH
 
 
 # Wrap git automatically by adding the following to ~/.zshrc:
 
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 export PATH=$PATH:$GOPATH/bin:$HOME/bin

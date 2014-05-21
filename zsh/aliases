@@ -11,9 +11,10 @@ alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
 alias flushdns='dscacheutil -flushcache'
+# alias git=hub
 alias mou='/Applications/Mou.app/Contents/MacOS/Mou'
 alias nifty1='sudo kextunload /System/Library/Extensions/AppleStorageDrivers.kext/Contents/PlugIns/AppleUSBCardReader.kext; sudo kextload /System/Library/Extensions/AppleStorageDrivers.kext/Contents/PlugIns/AppleUSBCardReader.kext'
-alias ss='ruby app.rb'
+alias s='cd /Users/ys/src'
 alias track='git checkout -t'
 alias v='vim'
 # todos
