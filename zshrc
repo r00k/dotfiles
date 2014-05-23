@@ -2,6 +2,8 @@
 
 # Never know when you're gonna need to popd!
 setopt AUTO_PUSHD
+# Search all the things
+bindkey '^R' history-incremental-search-backward
 
 # Save a ton of history
 HISTSIZE=20000
