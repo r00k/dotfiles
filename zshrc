@@ -2,8 +2,6 @@
 
 # Never know when you're gonna need to popd!
 setopt AUTO_PUSHD
-# Allow completing of the remainder of a command
-bindkey "^N" insert-last-word
 
 # Save a ton of history
 HISTSIZE=20000
@@ -17,17 +15,9 @@ stty stop undef
 export BUNDLER_EDITOR=vim
 export EDITOR=vim
 export JRUBY_OPTS="--1.9"
-# -Xcompile.mode=FORCE --server --fast -J-Xmx1024M"
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# Ruby 1.9.3-px perf
-#export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_GC_HEAP_INIT_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=100000000
-export RUBY_HEAP_FREE_MIN=500000
 
 #GOOOOOO
 export GOPATH=$HOME/src/languages/go
@@ -39,6 +29,12 @@ colors
 
 # Theme
 PROMPT="$%2~ : "
+
+LS_COMMON="-hBG"
+
+# setup the main ls alias if we've established common args
+test -n "$LS_COMMON" &&
+	alias ls="command ls $LS_COMMON"
 
 # case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
