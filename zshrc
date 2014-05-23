@@ -30,7 +30,15 @@ promptinit
 colors
 
 # Theme
-PROMPT="$%2~ : "
+# get the name of the branch we are on
+chpwd_update_git() { 
+	[ -d ".git" ] && PROMPT+="[$(git rev-parse --abbrev-ref HEAD)] "
+}
+
+setopt prompt_subst
+
+PROMPT='%c '
+add-zsh-hook chpwd chpwd_update_git
 
 LS_COMMON="-hBG"
 
