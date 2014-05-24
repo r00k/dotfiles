@@ -1,3 +1,0 @@
-#! /bin/sh
-
-git tag production-$(date "+%Y%m%d%H%M") && git push production master #&& heroku run rake db:migrate -r production && heroku restart -r production

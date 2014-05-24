@@ -1,4 +1,0 @@
-#! /usr/bin/env ruby
-current_branch = `git rev-parse --abbrev-ref HEAD`.strip
-`git push staging #{current_branch}:master`
-
