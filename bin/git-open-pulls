@@ -1,0 +1,6 @@
+#! /usr/bin/env ruby
+
+origin_url = `git config --get remote.origin.url`
+repo = origin_url.split(':')[1].split('.')[0]
+
+`open https://github.com/#{repo}/pulls`

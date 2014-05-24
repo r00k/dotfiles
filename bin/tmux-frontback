@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd ~/src/frontback_apps/frontback
+tmux new-session -d -s frontback 'exec pfrontback "v"'
+tmux rename-window 'Frontback'
+tmux select-window -t frontback:0
+tmux split-window -v 'exec pfrontback "guard"'
+tmux -2 attach-session -t frontback

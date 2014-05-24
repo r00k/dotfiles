@@ -12,7 +12,7 @@ desc "install the dot files into user's home directory"
 task :install do
   replace_all = true
   Dir['*'].each do |file|
-    next if %w[Rakefile README LICENSE id_dsa.pub].include? file
+    next if %w[Rakefile README LICENSE id_dsa.pub bin].include? file
 
     if File.exist?(File.join(ENV['HOME'], ".#{file}"))
       if replace_all
@@ -40,6 +40,12 @@ task :install do
   puts "Linking public ssh key"
   system %Q{rm "$HOME/.ssh/id_rsa.pub"}
   system %Q{ln -s "$PWD/id_rsa.pub" "$HOME/.ssh/id_rsa.pub"}
+
+  # Handle bin
+  puts "Linkning personal bin"
+  system %Q{rm -rf "$HOME/bin"}
+  system %Q{ln -s "$PWD/bin" "$HOME/bin"}
+
 
 end
 

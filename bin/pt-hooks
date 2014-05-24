@@ -1,0 +1,8 @@
+#! /usr/bin/env ruby
+
+ARGF.each_line do |line|
+  user_id = line.match(/user_id=(?<id>\w*)/)['id']
+  error_code  = line.match(/error_code=(?<error>\w*)/)['error']
+  details = line.match(/details='(?<details>.*)'/)['details']
+  $stdout.puts(user_id)
+end
