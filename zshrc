@@ -84,11 +84,11 @@ rbenv_version_status() {
 if which rbenv &> /dev/null; then
   RPS1='$(git_custom_status)%{$fg[red]%}$(rbenv_version_status)%{$reset_color%} $EPS1'
 else
-  RPS1='$(git_custom_status) $EPS1'
+  RPS1='$(git_custom_status)%{$reset_color%} $EPS1'
 fi
  
 # basic prompt on the left
-PROMPT='%2c% %(?.%{$fg[green]%}.%{$fg[red]%})%B $%b '
+PROMPT='%{$reset_color%}%2c% $ ' #%(?.%{$fg[green]%}.%{$fg[red]%})%B $%b '
 
 # rbenv
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
