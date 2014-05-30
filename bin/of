@@ -1,3 +1,10 @@
-#!/bin/sh
-
-echo "$PATH"
+#!/usr/bin/osascript
+# Usage: omnifocus-inbox Do something @Work
+on run argv
+    set AppleScript's text item delimiters to " "
+    set theText to argv as string
+ 
+    tell application "OmniFocus"
+      parse tasks into default document with transport text theText
+    end tell
+end run
