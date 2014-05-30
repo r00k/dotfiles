@@ -97,3 +97,4 @@ PROMPT='%{$reset_color%}%2c% $ ' #%(?.%{$fg[green]%}.%{$fg[red]%})%B $%b '
 # Wrap git automatically by adding the following to ~/.zshrc:
 
 export PATH=$PATH:$GOPATH/bin:$HOME/bin
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
