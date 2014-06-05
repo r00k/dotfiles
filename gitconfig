@@ -39,7 +39,7 @@
   autosetupmerge = true
   autosetuprebase = always
 [push]
-  default = current
+	default = current
 [pull]
   rebase = true
 [rerere]

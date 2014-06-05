@@ -1,10 +1,38 @@
-.DS_Store
-.svn
-*~
 /tags
 log/
-db/*.sqlite3
-.netrwhist
-.*.swp
-custom_plan.rb
-zeus.json
+# IDEs and Editors #
+####################
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swp
+*~
+ 
+# Compiled #
+############
+*.pyc
+*.pyo
+ 
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+ 
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+ 
+# Shell & Virtualenv #
+######################
+.venv
+.vfenv
+.env
+.env.fish
+ 
+# Interim Caches #
+.sass-cache

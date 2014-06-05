@@ -26,3 +26,7 @@ alias lto='list-todo'
 
 alias rspec="nocorrect rspec"
 alias spring="nocorrect spring"
+
+# Git aliases
+alias gcom='git checkout master'
+alias gplom='git pull origin master'
