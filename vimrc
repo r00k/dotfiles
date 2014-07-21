@@ -3,7 +3,10 @@ execute pathogen#infect()
 set background=dark
 colorscheme solarized
 
-" New Leader 
+set cc=80   " Highlight column 80
+set number  " show number lines
+set mouse=a " use the mouse luke
+" New Leader
 let mapleader = ","
 let g:mapleader = ","
 
