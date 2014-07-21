@@ -17,6 +17,7 @@ install git
 install hk
 install jq
 install mercurial
+install phantomjs
 install readline
 install the_silver_searcher
 install vim
@@ -55,3 +56,4 @@ cask install rdio
 cask install slack
 cask install vlc
 cask install xquartz
+cask install vmware-fusion

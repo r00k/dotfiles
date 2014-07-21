@@ -3,15 +3,6 @@ function hexrandom {
   ruby -e "require 'securerandom'; puts SecureRandom.hex($size)"
 }
 
-function g {
-  if [[ $# > 0 ]]; then
-    git $@
-  else
-    git status
-  fi
-}
-compdef g=git
-
 function todo {
   vim ~/Dropbox/todos/$1.txt
 }
@@ -27,4 +18,7 @@ function snippet {
 function snippets {
   for i in ~/Dropbox/snippets/*; do echo $(basename $i); done
 }
-
+cloud() {
+  eval "$(ion-client shell)"
+  cloud "$@"
+}
