@@ -12,6 +12,7 @@
   meta = yellow
 [core]
   excludesfile = /opt/boxen/config/git/gitignore
+  excludesfile = ~/.gitignore
   editor = vim
 [apply]
 
@@ -59,3 +60,6 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+
+[gh]
+protocol = https
