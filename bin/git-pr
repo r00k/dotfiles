@@ -4,7 +4,7 @@ issue= ARGV.shift
 current_branch = `git rev-parse --abbrev-ref HEAD`
 origin_url = `git config --get remote.origin.url`
 repo = origin_url.split(':')[1].split('.')[0]
-command = "hub pull-request"
+command = "gh pull-request"
 command = command + " -i #{issue}" if issue
 command = command + " -b #{repo}:master -h #{repo}:#{current_branch}"
 system command
