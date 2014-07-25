@@ -44,6 +44,11 @@ test -n "$LS_COMMON" && alias ls="command ls $LS_COMMON"
 # case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+#chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby 2.1.2
+
 source $HOME/.zshrc_private
 source $HOME/.zsh/aliases
 source $HOME/.zsh/functions
