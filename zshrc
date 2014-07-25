@@ -47,7 +47,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 source $HOME/.zshrc_private
 source $HOME/.zsh/aliases
 source $HOME/.zsh/functions
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 # prompt
 
