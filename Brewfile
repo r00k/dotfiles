@@ -1,7 +1,7 @@
 # Casks
 
-tap phinze/cask
-install brew-cask
+tap phinze/cask || true
+install brew-cask || true
 
 
 # Dev tools
@@ -14,7 +14,7 @@ install gh
 install go
 install gist
 install git
-install hk
+# install hk
 install jq
 install mercurial
 install phantomjs
@@ -24,7 +24,7 @@ install vim
 install wrk
 install zsh
 
-cask install heroku-toolbelt
+install heroku-toolbelt
 
 # languages
 
