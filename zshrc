@@ -24,7 +24,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 #GOOOOOO
-export GOPATH=$HOME/src/languages/go
+export GOPATH=$HOME/src/go
 
 autoload -Uz compinit promptinit colors
 compinit
