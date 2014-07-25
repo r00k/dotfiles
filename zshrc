@@ -49,6 +49,9 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby 2.1.2
 
+#alias gh to git
+eval "$(gh alias -s)"
+
 source $HOME/.zshrc_private
 source $HOME/.zsh/aliases
 source $HOME/.zsh/functions
