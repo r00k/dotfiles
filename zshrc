@@ -1,5 +1,3 @@
-# Path to your oh-my-zsh configuration.
-
 # Never know when you're gonna need to popd!
 setopt AUTO_PUSHD
 # Search all the things
@@ -58,12 +56,6 @@ source $HOME/.zsh/functions
 
 # prompt
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}[%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
-
-
 function __git_prompt {
   local DIRTY="%{$fg[yellow]%}"
   local CLEAN="%{$fg[green]%}"
@@ -97,27 +89,14 @@ function __git_prompt {
   fi
 }
 
-
-# show current rbenv version if different from rbenv global
-rbenv_version_status() {
-  local ver=$(echo $RUBY_ROOT | awk 'BEGIN { FS = "/" } ; { print $NF }')
-  echo "[$ver]"
-}
-
 # put fancy stuff on the right
-if which chruby &> /dev/null; then
-  RPS1='$(__git_prompt)%{$fg[red]%}$(rbenv_version_status)%{$reset_color%} $EPS1'
-else
-  RPS1='$(__git_prompt)%{$reset_color%} $EPS1'
-fi
+RPS1='$(__git_prompt)%{$reset_color%} $EPS1'
 
 # basic prompt on the left
 PROMPT='%{$reset_color%}%2c% $ ' #%(?.%{$fg[green]%}.%{$fg[red]%})%B $%b '
 
-# rbenv
+# autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-# Wrap git automatically by adding the following to ~/.zshrc:
 
 export PATH=$PATH:$GOPATH/bin:$HOME/bin
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
