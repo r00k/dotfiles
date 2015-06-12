@@ -1,0 +1,55 @@
+# Idan's ~/.slate
+
+# I don't even know what these do but they came in the default. Might not need 'em
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Shows app icons and background apps, spreads icons in the same place.
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+alias mon-laptop      1440x900
+alias mon-thunderbolt 1920x1200
+
+
+# Used PCKeyboardHack and KeyRemap4Macbook to remap capslock to hyper.
+# http://vninja.net/osx/slate-setup/
+alias hyper ctrl;alt;cmd;shift
+
+
+# Window Hints
+bind esc:${hyper} hint
+bind tab:${hyper} switch
+
+# Graphical grid a la Divvy
+bind a:${hyper} grid padding:5 0:4,4
+
+
+# Abstract position formulae
+alias fullscreen move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+alias leftthird move screenOriginX;screenOriginY screenSizeX/3;screenSizeY
+alias righttwothirds move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3*2;screenSizeY
+
+# Mappings
+bind space:${hyper} ${fullscreen}
+bind left:${hyper} ${lefthalf}
+bind right:${hyper} ${righthalf}
+bind up:${hyper} ${topright}
+bind down:${hyper} ${bottomright}
+bind [:${hyper} ${leftthird}
+bind ]:${hyper} ${righttwothirds}
+
+# Quick app targets.  Hyper + key switches to that app from wherever I am
+bind b:${hyper} focus 'Google Chrome'
+bind i:${hyper} focus 'iTerm'
+bind r:${hyper} focus 'Rdio'
+bind t:${hyper} focus 'Twitter'
+bind h:${hyper} focus 'HipChat'
