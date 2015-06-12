@@ -1,7 +1,14 @@
 execute pathogen#infect()
 " Theme and stuff
-set background=dark
-colorscheme solarized
+colorscheme monochrome
+" colorscheme base16-grayscale
+if has("gui_macvim")
+  map <leader>ia :source ~/.vim/writer.vim
+  autocmd vimenter * source ~/.vim/writer.vim
+else
+  set background=dark
+end
+
 
 set cc=80   " Highlight column 80
 set number  " show number lines
@@ -10,14 +17,30 @@ set mouse=a " use the mouse luke
 let mapleader = ","
 let g:mapleader = ","
 
+" Enable spellchecking for Markdown
+" autocmd FileType markdown setlocal spell
+
+" Automatically wrap at 80 characters for Markdown
+" autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
 " Indentation
+" Softtabs, 2 spaces
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
+
+set backspace=2   " Backspace deletes like most programs in insert mode
+set nobackup
+set nowritebackup
+set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 
 augroup myfiletypes
 	" Clear old autocmds in group
 	autocmd!
 	" autoindent with two spaces, always expand tabs
 	autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
-	autocmd FileType ruby let b:dispatch = 'testrb %'
+	autocmd FileType ruby let b:dispatch = 'bundle exec testrb %'
 
 	" Javascript
 	autocmd FileType javascript set sw=2
@@ -33,9 +56,24 @@ augroup myfiletypes
 	autocmd FileType CoffeeScript,*.coffee set expandtab
 	autocmd FileType CoffeeScript,*.coffee set textwidth=79
 
+	" CSS
+	autocmd FileType javascript set sw=2
+	autocmd FileType javascript set ts=2
+	autocmd FileType javascript set sts=2
+	autocmd FileType javascript set expandtab
+	autocmd FileType javascript set textwidth=79
+
 	" Golang
 	autocmd FileType go set ai sw=4 sts=4 et
-	au FileType go au BufWritePre <buffer> Fmt
+  au FileType go nmap <C-i> <Plug>(go-info)
+  au FileType go nmap <Leader>gd <Plug>(go-doc)
+  au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+  au FileType go nmap <Leader>gdb <Plug>(go-doc-browser)
+  au FileType go nmap <leader>gr <Plug>(go-run)
+  au FileType go nmap <leader>gb <Plug>(go-build)
+  au FileType go nmap <leader>gt <Plug>(go-test)
+  au FileType go nmap <leader>gc <Plug>(go-coverage)
+  au FileType go nmap <leader>gdd <Plug>(go-def)
 augroup END
 
 " Aliases
@@ -72,10 +110,6 @@ endfunction
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-"show trailing spaces
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+$/
-
 " jj to escape
 inoremap jj <ESC>
 
@@ -104,3 +138,7 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+" Open Marked.app
+" only works on OSX with Marked.app installed
+imap <Leader>m <ESC>:!open -a Marked\ 2.app "%"<CR><CR>
+nmap <Leader>m :!open -a Marked\ 2.app "%"<CR><CR>
