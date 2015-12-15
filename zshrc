@@ -38,6 +38,7 @@ colors
 # get the name of the branch we are on
 
 setopt prompt_subst
+setopt NO_BEEP
 
 LS_COMMON="-hBG"
 
