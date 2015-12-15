@@ -28,6 +28,7 @@ export HOMEBREW_INSTALL_BADGE=☕️
 cdpath=($HOME/src/go/src $HOME/src)
 #GOOOOOO
 export GOPATH=$HOME/src/go
+fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
 
 autoload -Uz compinit promptinit colors
 compinit
