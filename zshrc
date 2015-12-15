@@ -21,6 +21,10 @@ export JRUBY_OPTS="--1.9"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+
+# HOMEBREW WITH NO BEER
+export HOMEBREW_INSTALL_BADGE=☕️
+
 cdpath=($HOME/src/go/src $HOME/src)
 #GOOOOOO
 export GOPATH=$HOME/src/go
