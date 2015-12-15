@@ -16,7 +16,7 @@ function 64 {
 }
 
 function todo {
-  vim ~/Dropbox/todos/$1.txt
+  vim ~/Dropbox/todos/$1.md
 }
 
 function list-todo {
@@ -27,6 +27,10 @@ function snippet {
   vim ~/Dropbox/snippets/$1
 }
 
+function notes {
+  NOTES=${1-notes}
+  mvim ~/Dropbox/notes/$NOTES.md
+}
 function snippets {
   for i in ~/Dropbox/snippets/*; do echo $(basename $i); done
 }
