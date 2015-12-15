@@ -1,5 +1,6 @@
-function dafuq_docker {
-  sudo route -n add -net 192.168.59.0/24 -interface $(VBoxManage showvminfo boot2docker-vm --machinereadable | grep hostonlyadapter | cut -d '"' -f 2)
+function fixdocker {
+  sudo route -n add -net 192.168.59.0/24 -interface $(VBoxManage showvminfo default --machinereadable | grep hostonlyadapter | cut -d '"' -f 2)
+  sudo route -n add -net 192.168.99.0/24 -interface $(VBoxManage showvminfo default --machinereadable | grep hostonlyadapter | cut -d '"' -f 2)
 }
 function hexrandom {
   size=${1-64}
