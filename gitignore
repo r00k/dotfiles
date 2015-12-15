@@ -1,5 +1,6 @@
 /tags
 log/
+tmp/
 # IDEs and Editors #
 ####################
 *.sublime-project
@@ -7,32 +8,40 @@ log/
 *.swp
 *.swp
 *~
- 
+
 # Compiled #
 ############
 *.pyc
 *.pyo
- 
+
 # Logs and databases #
 ######################
 *.log
-*.sql
 *.sqlite
 *.sqlite3
- 
+dump.rdb
+
 # OS generated files #
 ######################
 .DS_Store*
 ehthumbs.db
 Icon?
 Thumbs.db
- 
+
 # Shell & Virtualenv #
 ######################
 .venv
 .vfenv
 .env
 .env.fish
- 
+
 # Interim Caches #
 .sass-cache
+
+# Ruby version
+.ruby-version
+
+# Node modules
+node_modules
+
+.agignore
