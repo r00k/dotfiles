@@ -35,9 +35,6 @@ compinit
 promptinit
 colors
 
-# Theme
-# get the name of the branch we are on
-
 setopt prompt_subst
 setopt NO_BEEP
 
@@ -48,11 +45,6 @@ test -n "$LS_COMMON" && alias ls="command ls $LS_COMMON"
 
 # case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-#chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby 2.1.2
 
 #alias gh to git
 eval "$(gh alias -s)"
@@ -153,5 +145,21 @@ precmd() { echo "\033]0;$(__git_prompt_no_color)$(__heroku_cloud_no_color)\007\c
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-export PATH=$PATH:$GOPATH/bin:$HOME/bin
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.1.0/libexec"
+
+# added by travis gem
+[ -f /Users/yschutz/.travis/travis.sh ] && source /Users/yschutz/.travis/travis.sh
+
+export HEROKU_USER=yannick
+
+eval "$(docker-machine env default)"
+
+eval "$(nodenv init -)"
+
+chruby 2.2.3
+
+export PATH=$HOME/src/heroku-shell/bin:$GOPATH/bin:$HOME/bin:$PATH
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
