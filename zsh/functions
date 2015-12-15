@@ -7,6 +7,14 @@ function hexrandom {
   ruby -e "require 'securerandom'; puts SecureRandom.hex($size)"
 }
 
+function uuid {
+  ruby -e "require 'securerandom'; puts SecureRandom.uuid"
+}
+
+function 64 {
+  echo $1 | base64 -
+}
+
 function todo {
   vim ~/Dropbox/todos/$1.txt
 }
