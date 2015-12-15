@@ -63,10 +63,56 @@ source $HOME/.zsh/functions
 
 # prompt
 
+function __heroku_cloud {
+
+  if [[ -n "$HEROKU_CLOUD" ]]
+  then
+    echo -n "%{$fg[cyan]%}[☁️  $HEROKU_CLOUD]%{$reset_color%}"
+  fi
+}
+
+function __heroku_cloud_no_color {
+  if [[ -n "$HEROKU_CLOUD" ]]
+  then
+    echo -n "[☁️ $HEROKU_CLOUD]"
+  fi
+}
+
+function __git_prompt_no_color {
+  local DIRTY="💩 "
+  local CLEAN="😎 "
+  local UNMERGED="😡 "
+  git rev-parse --git-dir >& /dev/null
+  if [[ $? == 0 ]]
+  then
+    echo -n "["
+    if [[ `git ls-files -u >& /dev/null` == '' ]]
+    then
+      git diff --quiet >& /dev/null
+      if [[ $? == 1 ]]
+      then
+        echo -n $DIRTY
+      else
+        git diff --cached --quiet >& /dev/null
+        if [[ $? == 1 ]]
+        then
+          echo -n $DIRTY
+        else
+          echo -n $CLEAN
+        fi
+      fi
+    else
+      echo -n $UNMERGED
+    fi
+    echo -n `git branch | grep '* ' | sed 's/..//'`
+    echo -n "]"
+  fi
+}
+
 function __git_prompt {
-  local DIRTY="%{$fg[yellow]%}"
-  local CLEAN="%{$fg[green]%}"
-  local UNMERGED="%{$fg[red]%}"
+  local DIRTY="💩 %{$fg[yellow]%}"
+  local CLEAN="😎 %{$fg[green]%}"
+  local UNMERGED="😡 %{$fg[red]%}"
   local RESET="%{$terminfo[sgr0]%}"
   git rev-parse --git-dir >& /dev/null
   if [[ $? == 0 ]]
@@ -97,10 +143,12 @@ function __git_prompt {
 }
 
 # put fancy stuff on the right
-RPS1='$(__git_prompt)%{$reset_color%} $EPS1'
+RPS1='$(__git_prompt)%{$reset_color%}$(__heroku_cloud)%{$reset_color%} $EPS1'
 
 # basic prompt on the left
-PROMPT='%{$reset_color%}%2c% $ ' #%(?.%{$fg[green]%}.%{$fg[red]%})%B $%b '
+PROMPT='%2c%  ☃  ' #%(?.%{$fg[green]%}.%{$fg[red]%})%B $%b '
+
+precmd() { echo "\033]0;$(__git_prompt_no_color)$(__heroku_cloud_no_color)\007\c" }
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
