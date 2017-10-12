@@ -78,7 +78,7 @@ nmap <Leader>bi :source ~/.vimrc<cr>:PluginInstall<cr>
 vmap <Leader>bed "td?describe<cr>obed<tab><esc>"tpkdd/end<cr>o<esc>:nohl<cr>
 map <Leader>cc :!cucumber --drb %<CR>
 map <Leader>cu :Tabularize /\|<CR>
-map <Leader>co mmggVG"*y`m
+map <leader>co mmgg"*yG`m
 map <Leader>cc :Rjcollection client/
 map <Leader>cj :Rjspec client/
 map <Leader>cm :Rjmodel client/
