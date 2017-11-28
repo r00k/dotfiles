@@ -1,7 +1,3 @@
-function fixdocker {
-  sudo route -n add -net 192.168.59.0/24 -interface $(VBoxManage showvminfo default --machinereadable | grep hostonlyadapter | cut -d '"' -f 2)
-  sudo route -n add -net 192.168.99.0/24 -interface $(VBoxManage showvminfo default --machinereadable | grep hostonlyadapter | cut -d '"' -f 2)
-}
 function hexrandom {
   size=${1-64}
   ruby -e "require 'securerandom'; puts SecureRandom.hex($size)"
@@ -15,26 +11,6 @@ function 64 {
   echo $1 | base64 -
 }
 
-function todo {
-  vim ~/Dropbox/todos/$1.md
-}
-
-function list-todo {
-  for i in ~/Dropbox/todos/*; do echo $(basename $i | cut -f 1 -d '.') ":" $(wc -l < $i); done
-}
-
-function snippet {
-  vim ~/Dropbox/snippets/$1
-}
-
-function notes {
-  NOTES=${1-notes}
-  mvim ~/Dropbox/notes/$NOTES.md
-}
-function snippets {
-  for i in ~/Dropbox/snippets/*; do echo $(basename $i); done
-}
-cloud() {
-  eval "$(ion-client shell)"
-  cloud "$@"
+bag() {
+  ag "$@" `bundle show --paths`
 }

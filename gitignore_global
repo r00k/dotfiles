@@ -1,0 +1,59 @@
+/tags
+log/
+tmp/
+# IDEs and Editors #
+####################
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swp
+*~
+
+# Compiled #
+############
+*.pyc
+*.pyo
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.sqlite3
+dump.rdb
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Shell & Virtualenv #
+######################
+.venv
+.vfenv
+.env
+.env.fish
+.env.development
+
+# Interim Caches #
+.sass-cache
+
+# Ruby version
+.ruby-version
+.tools-versions
+.tool-versions
+.tool-versions-e
+public/assets
+
+# Node modules
+node_modules
+
+.agignore
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-metadata
+
+Guardfile

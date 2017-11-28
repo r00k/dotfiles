@@ -1,4 +1,5 @@
 # Never know when you're gonna need to popd!
+#
 setopt AUTO_PUSHD
 # Search all the things
 bindkey '^R' history-incremental-search-backward
@@ -14,22 +15,18 @@ SAVEHIST=20000
 stty start undef
 stty stop undef
 
-export BUNDLER_EDITOR=vim
-export EDITOR=vim
-export JRUBY_OPTS="--1.9"
+export BUNDLER_EDITOR=atom
+export EDITOR=atom
 
 export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 
 # HOMEBREW WITH NO BEER
 export HOMEBREW_INSTALL_BADGE=☕️
 
-cdpath=($HOME/src/go/src $HOME/src)
 #GOOOOOO
 export GOPATH=$HOME/src/go
-fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
 
+fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
 autoload -Uz compinit promptinit colors
 compinit
 promptinit
@@ -46,120 +43,22 @@ test -n "$LS_COMMON" && alias ls="command ls $LS_COMMON"
 # case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-#alias gh to git
-eval "$(gh alias -s)"
-
-source $HOME/.zshrc_private
 source $HOME/.zsh/aliases
 source $HOME/.zsh/functions
 
-# prompt
-
-function __heroku_cloud {
-
-  if [[ -n "$HEROKU_CLOUD" ]]
-  then
-    echo -n "%{$fg[cyan]%}[☁️  $HEROKU_CLOUD]%{$reset_color%}"
-  fi
-}
-
-function __heroku_cloud_no_color {
-  if [[ -n "$HEROKU_CLOUD" ]]
-  then
-    echo -n "[☁️ $HEROKU_CLOUD]"
-  fi
-}
-
-function __git_prompt_no_color {
-  local DIRTY="💩 "
-  local CLEAN="😎 "
-  local UNMERGED="😡 "
-  git rev-parse --git-dir >& /dev/null
-  if [[ $? == 0 ]]
-  then
-    echo -n "["
-    if [[ `git ls-files -u >& /dev/null` == '' ]]
-    then
-      git diff --quiet >& /dev/null
-      if [[ $? == 1 ]]
-      then
-        echo -n $DIRTY
-      else
-        git diff --cached --quiet >& /dev/null
-        if [[ $? == 1 ]]
-        then
-          echo -n $DIRTY
-        else
-          echo -n $CLEAN
-        fi
-      fi
-    else
-      echo -n $UNMERGED
-    fi
-    echo -n `git branch | grep '* ' | sed 's/..//'`
-    echo -n "]"
-  fi
-}
-
-function __git_prompt {
-  local DIRTY="💩 %{$fg[yellow]%}"
-  local CLEAN="😎 %{$fg[green]%}"
-  local UNMERGED="😡 %{$fg[red]%}"
-  local RESET="%{$terminfo[sgr0]%}"
-  git rev-parse --git-dir >& /dev/null
-  if [[ $? == 0 ]]
-  then
-    echo -n "["
-    if [[ `git ls-files -u >& /dev/null` == '' ]]
-    then
-      git diff --quiet >& /dev/null
-      if [[ $? == 1 ]]
-      then
-        echo -n $DIRTY
-      else
-        git diff --cached --quiet >& /dev/null
-        if [[ $? == 1 ]]
-        then
-          echo -n $DIRTY
-        else
-          echo -n $CLEAN
-        fi
-      fi
-    else
-      echo -n $UNMERGED
-    fi
-    echo -n `git branch | grep '* ' | sed 's/..//'`
-    echo -n $RESET
-    echo -n "]"
-  fi
-}
-
-# put fancy stuff on the right
-RPS1='$(__git_prompt)%{$reset_color%}$(__heroku_cloud)%{$reset_color%} $EPS1'
-
-# basic prompt on the left
-PROMPT='%2c%  ☃  ' #%(?.%{$fg[green]%}.%{$fg[red]%})%B $%b '
-
-precmd() { echo "\033]0;$(__git_prompt_no_color)$(__heroku_cloud_no_color)\007\c" }
-
-# autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-
-export JAVA_HOME="$(/usr/libexec/java_home)"
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.7.1.0/libexec"
-
-# added by travis gem
-[ -f /Users/yschutz/.travis/travis.sh ] && source /Users/yschutz/.travis/travis.sh
-
-export HEROKU_USER=yannick
-
-eval "$(docker-machine env default)"
-
-eval "$(nodenv init -)"
-
-chruby 2.2.3
+prompt pure
 
 export PATH=$HOME/src/heroku-shell/bin:$GOPATH/bin:$HOME/bin:$PATH
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
+source ~/.asdf/asdf.sh
+source ~/.asdf/completions/asdf.bash
+
+if [ -z "$(pgrep -u "$USER" gpg-agent)" ]; then
+  gpg-agent --daemon --enable-ssh-support
+fi
+export GPG_AGENT_INFO="$(gpgconf --list-dir agent-socket):0:1"
+export SSH_AUTH_SOCK="$(gpgconf --list-dir agent-ssh-socket)"
+export GPG_TTY=$(tty)
+export KEY_ID=0DA4D16C648617DD
+export DISABLE_SPRING=1

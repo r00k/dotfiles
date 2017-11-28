@@ -1,0 +1,8 @@
+=== Yannick's dot files
+
+
+== Installation
+
+  git clone git://github.com/ys/dotfiles ~/.dotfiles
+  cd ~/.dotfiles
+  make all

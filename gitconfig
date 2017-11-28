@@ -1,20 +1,23 @@
 [user]
-  name = Yannick
-  email = yannick.schutz@gmail.com
+	name = Yannick Schutz
+  ; email = yannick.schutz@gmail.com
+	email = me@yannick.io
+	signingkey = 4B56D5FC82F7D226
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
+  diff = true
+  status = true
+  branch = true
+  interactive = true
   ui = true
   pager = true
 [color "diff"]
   meta = yellow
 [core]
-  excludesfile = /opt/boxen/config/git/gitignore
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore_global
   editor = vim
+  whitespace = trailing-space,space-before-tab
 [apply]
+whitespace = fix
 
 [alias]
   ci = commit
@@ -24,7 +27,6 @@
   d = diff
   ps = push
   pl = pull
-  poule = pull
   m = merge
   ms = merge --squash
   b = branch
@@ -32,8 +34,12 @@
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   db = branch -d
   ctags = !.git/hooks/ctags
-  review = !.git/hooks/review
   delete-remote = "!sh -c 'git push origin :$0'"
+  p = "!sh -c 'git push ${@/--yolo/-f}'"
+  dc = diff --cached
+  ro = !git fetch origin --prune && git reset --hard origin/master
+  cp = cherry-pick
+  lp = log -p
 [help]
   autocorrect = 1
 [branch]
@@ -47,18 +53,22 @@
   enabled = 1
 [mergetool]
   keepBackup = true
+	prompt = false
 [init]
   templatedir = ~/.git_template
 [hub]
   protocol = https
-
-[credential]
-
 [github]
   user = ys
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-
-[gh]
-protocol = https
+[difftool]
+	prompt = false
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg2

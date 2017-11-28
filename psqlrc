@@ -1,10 +1,10 @@
 -- By default, NULL displays as an empty space. Is it actually an empty
 -- string, or is it null? This makes that distinction visible.
-\pset null '[NULL]'
+-- \pset null '[NULL]'
 -- Use table format (with headers across the top) by default, but switch to
 -- expanded table format when there's a lot of data, which makes it much
 -- easier to read.
-\x auto
+-- \x auto
 -- Verbose error reports.
 \set VERBOSITY verbose
 -- Use a separate history file per-database.

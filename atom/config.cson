@@ -1,0 +1,58 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "88414f23-a018-46b0-ad30-122261971fea"
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+    "atom-ide-diagnostics-ui":
+      showDiagnosticTraces: true
+  "atom-material-ui":
+    colors:
+      abaseColor: "#372b95"
+    fonts: {}
+    tabs:
+      tintedTabBar: true
+  core:
+    debugLSP: true
+    disabledPackages: [
+      "linter"
+    ]
+    projectHome: "/Users/yschutz/src"
+    telemetryConsent: "no"
+    themes: [
+      "white-ui"
+      "duotone-light-syntax"
+    ]
+    titleBar: "custom"
+  "duotone-light-syntax":
+    color:
+      duo: "#962ceb"
+      uno: "#505254"
+  editor:
+    fontFamily: "\"Operator Mono\""
+  "ex-mode":
+    splitright: true
+  "exception-reporting":
+    userId: "a3d5fa2d-46a9-e611-2124-84865af8d08e"
+  "git-plus":
+    general:
+      _analyticsUserId: "1a748acb-9e43-4ef8-8d9e-ceebc0e58285"
+  "linter-rubocop":
+    command: "bundle exec rubocop"
+  "linter-ui-default":
+    panelHeight: 241
+  "markdown-preview":
+    useGitHubStyle: true
+  "one-dark-ui": {}
+  "platformio-ide-terminal":
+    style:
+      fontFamily: "Operator Mono"
+      theme: "inverse"
+  rspec:
+    command: "bundle exec rspec"
+    save_before_run: true
+    split: "down"
+  "vim-mode-plus": {}
+  welcome:
+    showOnStartup: false

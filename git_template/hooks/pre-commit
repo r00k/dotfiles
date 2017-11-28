@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+git secrets --pre_commit_hook -- "$@"
+bundle exec rubocop

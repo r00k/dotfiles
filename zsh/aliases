@@ -1,38 +1,19 @@
-# Handle the fact that this file will be used with multiple OSs
-platform=`uname`
-if [[ $platform == 'Linux' ]]; then
-  alias a='ls -lrth --color'
-elif [[ $platform == 'Darwin' ]]; then
-  alias a='ls -lrthG'
-fi
-
-alias amend="git commit --amend"
-alias be='bundle exec'
-alias bi='bundle install'
-alias bu='bundle update'
-alias f='bundle exec foreman'
-alias fr='bundle exec foreman run'
-alias fs='bundle exec foreman start'
-alias flushdns='dscacheutil -flushcache'
-alias g='git'
-#alias git=hub
-alias h="cd ~/src/heroku"
-alias l=ls
-alias ll="ls -l"
-alias l.="ls -d .*"
-alias md='/Applications/MacDown.app/Contents/MacOS/MacDown'
-alias nifty1='sudo kextunload /System/Library/Extensions/AppleStorageDrivers.kext/Contents/PlugIns/AppleUSBCardReader.kext; sudo kextload /System/Library/Extensions/AppleStorageDrivers.kext/Contents/PlugIns/AppleUSBCardReader.kext'
+alias h="heroku"
+alias less="less -R"
+alias ls="ls -la"
 alias reload_aliases="source ~/.zsh/aliases"
-alias s='cd /Users/ys/src'
-alias track='git checkout -t'
-alias v='vim'
-# todos
-alias to='todo'
-alias lto='list-todo'
-
-alias rspec="nocorrect rspec"
-alias spring="nocorrect spring"
+alias v='atom .'
+alias g="hub"
+alias be="bundle exec"
+alias undle="bundle"
+alias befs="foreman start bundle exec"
+alias befr="foreman run bundle exec"
 
 # Git aliases
 alias gcom='git checkout master'
 alias gplom='git pull origin master'
+
+#Tmux
+alias tnew='tmux new-session -s '
+alias tuse='tmux attach-session -t '
+alias cd..="cd .."

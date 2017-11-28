@@ -1,2 +1,0 @@
-#!/bin/bash
-rsync  --rsync-path=/usr/syno/bin/rsync -avzhe "ssh -p 2222" ~/Pictures/2015/* ys@192.168.0.19:/volume1/photo/2015
