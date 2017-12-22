@@ -18,6 +18,10 @@ symlinks:
 	@ln -nsf $(DIR)/vimrc ~/.vimrc
 	@ln -nsf $(DIR)/zsh ~/.zsh
 	@ln -nsf $(DIR)/zshrc ~/.zshrc
+	@mkdir ~/.gnupg
+	@chmod 755 ~/.gnupg
+	@ln -nsf $(DIR)/gpg.conf ~/.gnupg/gpg.conf
+	@ln -nsf $(DIR)/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
 
 install_atom_packages:
