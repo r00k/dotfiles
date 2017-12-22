@@ -62,3 +62,6 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dir agent-ssh-socket)"
 export GPG_TTY=$(tty)
 export KEY_ID=0DA4D16C648617DD
 export DISABLE_SPRING=1
+
+# heroku autocomplete setup
+CLI_ENGINE_AC_ZSH_SETUP_PATH=/Users/yschutz/Library/Caches/heroku/completions/zsh_setup && test -f $CLI_ENGINE_AC_ZSH_SETUP_PATH && source $CLI_ENGINE_AC_ZSH_SETUP_PATH;
