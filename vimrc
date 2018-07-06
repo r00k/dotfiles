@@ -107,7 +107,7 @@ map <Leader>d orequire 'pry'<cr>binding.pry<esc>:w<cr>
 map <Leader>dr :e ~/Dropbox<cr>
 map <Leader>dj :e ~/Dropbox/notes/debugging_journal.txt<cr>
 map <Leader>ec :e ~/code/
-map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
+map <Leader>gw :cd %:p:h<cr>:!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>gl :e Gemfile.lock<cr>
 map <Leader>f :call OpenFactoryFile()<CR>
 map <Leader>fix :cnoremap % %<CR>
@@ -285,7 +285,7 @@ endfunction
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+let g:ctrlp_use_caching = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Test-running stuff
