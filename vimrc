@@ -11,11 +11,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-
 " My bundles
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'skwp/greplace.vim'
@@ -50,10 +45,6 @@ Plugin 'nanotech/jellybeans.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
-" Snippets are currently broken. Boo.
-" imap <C-l> <Plug>snipMateNextOrTrigger
-" smap <C-l> <Plug>snipMateNextOrTrigger
 
 " ========================================================================
 " Ruby stuff
@@ -293,8 +284,6 @@ let g:ctrlp_use_caching = 1
 let g:rspec_command = "!clear && bin/rspec {spec}"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-inoremap <Tab> <C-P>
 
 " Let's be reasonable, shall we?
 nmap k gk
