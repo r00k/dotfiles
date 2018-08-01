@@ -17,7 +17,6 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 
 " My bundles
-Plugin 'ervandew/supertab'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'skwp/greplace.vim'
 Plugin 'tomtom/tcomment_vim'
@@ -52,8 +51,9 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
+" Snippets are currently broken. Boo.
+" imap <C-l> <Plug>snipMateNextOrTrigger
+" smap <C-l> <Plug>snipMateNextOrTrigger
 
 " ========================================================================
 " Ruby stuff
@@ -157,7 +157,6 @@ map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 
 map <C-h> :nohl<cr>
-imap <C-l> :<Space>
 " Note that remapping C-s requires flow control to be disabled
 " (e.g. in .bashrc or .zshrc)
 map <C-s> <esc>:w<CR>
