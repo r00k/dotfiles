@@ -40,6 +40,9 @@ export PATH=$PATH:/usr/local/bin
 # Add stack's bin
 export PATH=$PATH:~/.local/bin
 
+# Update hombrew once a week
+export HOMEBREW_AUTO_UPDATE_SECS=600000
+
 # RVM
 [[ -s "/Users/ben/.rvm/scripts/rvm" ]] && source "/Users/ben/.rvm/scripts/rvm"
 
