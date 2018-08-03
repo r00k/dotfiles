@@ -111,7 +111,7 @@ map <Leader>nn :sp ~/Dropbox/notes/programming_notes.txt<cr>
 map <Leader>nt :e! ~/Dropbox/docs/trailmix/todo.md<cr>
 map <Leader>o :w<cr>:call RunNearestSpec()<CR>
 map <Leader>p :set paste<CR><esc>"*]p:set nopaste<cr>
-map <Leader>pn :sp ~/Dropbox/work/mackey/notes/project-notes.md<cr>
+map <Leader>pn :sp ~/Dropbox/work/tuple/project-notes.md<cr>
 map <Leader>q :copen<cr><cr>
 map <Leader>ra :%s/
 map <Leader>rs :vsp <C-r>#<cr><C-w>w
