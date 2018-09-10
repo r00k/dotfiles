@@ -18,6 +18,7 @@ alias bds='staging deploy'
 alias be='bundle exec'
 alias bi='bundle install -j 8'
 alias blog='z blog'
+alias book='cd ~/Dropbox/work/tuple/book/ && vim book.md'
 alias br='bin/rspec'
 alias bsf='bin/rspec spec/features'
 alias bu='bundle update'
@@ -126,6 +127,7 @@ alias v='vim'
 alias vi='vim'
 alias worknotes='vim ~/Dropbox/work/tuple/notes -c "Ex"'
 alias wr='vim ~/Dropbox/work/thoughtbot/notes/weekly-review-checklist.md'
+alias x='find . -name "*.xcworkspace" -type d | head -1 | xargs open' # Try to open the right thing in Xcode
 
 # Heroku staging
 alias staging-console='heroku run console --remote staging'
