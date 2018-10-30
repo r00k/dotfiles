@@ -352,6 +352,9 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 " Make it more obviouser when lines are too long
 highlight ColorColumn ctermbg=235
 
+" Bullshit to make copy/paste work for High Sierra when vim is run inside tmux
+set clipboard=unnamed
+
 " ========================================================================
 " End of things set by me.
 " ========================================================================
