@@ -25,6 +25,7 @@ alias bu='bundle update'
 alias bunbang='bundle install && !!'
 alias business-ideas='vim ~/Dropbox/notes/business-ideas.md'
 alias c='cd'
+alias cat='bat'
 alias code='cd ~/code'
 alias cqc='vim ~/code/cqc-exercises/exercises.md'
 alias d='cd ~/.dotfiles'
@@ -93,7 +94,7 @@ alias rerake='!! && rake'
 alias restart_apache="sudo /etc/init.d/apache2 restart"
 alias restart_postgres="stoppostgres && startpostgres"
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
-alias review="git diff master"
+alias review="vim ~/Dropbox/notes/review.md"
 alias rr="vim ~/Dropbox/rr/_notes/notes.md"
 alias rs='bundle check && rails server -p 3000'
 alias safepush='git pull --rebase && bundle install && rdm && rake && git push'
@@ -124,10 +125,10 @@ alias trs='tmux rename-session'
 alias u='cd ..'
 alias undeployed='git fetch --multiple production origin && git log production/master..origin/master'
 alias unslack='sudo cp ~/.dotfiles/hosts-with-timewasters-blocked.txt /etc/hosts && pkill -f Chrome'
+alias update-tuple='brew update && brew cask upgrade tupleapp'
 alias v='vim'
 alias vi='vim'
 alias worknotes='vim ~/Dropbox/work/tuple/notes -c "Ex"'
-alias wr='vim ~/Dropbox/work/thoughtbot/notes/weekly-review-checklist.md'
 alias x='find . -name "*.xcworkspace" -type d | head -1 | xargs open' # Try to open the right thing in Xcode
 
 # Heroku staging
