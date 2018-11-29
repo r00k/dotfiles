@@ -130,7 +130,7 @@ alias update-tuple='brew update && brew cask upgrade tupleapp'
 alias v='vim'
 alias vi='vim'
 alias worknotes='vim ~/Dropbox/work/tuple/notes -c "Ex"'
-alias x='find . -name "*.xcworkspace" -type d | head -1 | xargs open' # Try to open the right thing in Xcode
+alias yw='yarn watch'
 
 # Heroku staging
 alias staging-console='heroku run console --remote staging'
