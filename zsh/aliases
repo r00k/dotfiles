@@ -78,6 +78,7 @@ alias newblog='z blog ; rake new'
 alias news="vim -c \":e ~/Dropbox/notes/newsletter\""
 alias newscreen="tmux"
 alias notes="cd ~/Dropbox/notes ; vim ."
+alias onboard='vim ~/Dropbox/work/tuple/onboarding.md'
 alias pc='production-console'
 alias podcast='vim ~/Dropbox/notes/podcast.md'
 alias prepdb='dbprep'
