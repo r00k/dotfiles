@@ -277,6 +277,9 @@ endfunction
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 1
 
+" Don't jump to a different place just because the file is already open, dingus
+let g:ctrlp_switch_buffer = 0
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Test-running stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
