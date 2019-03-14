@@ -1,8 +1,8 @@
 [user]
 	name = Yannick Schutz
   ; email = yannick.schutz@gmail.com
-	email = me@yannick.io
-	signingkey = 4B56D5FC82F7D226
+	; email = me@yannick.io
+	email = yschutz@salesforce.com
 [color]
   diff = true
   status = true
@@ -14,7 +14,7 @@
   meta = yellow
 [core]
   excludesfile = ~/.gitignore_global
-  editor = vim
+  editor = "vim"
   whitespace = trailing-space,space-before-tab
 [apply]
 whitespace = fix
@@ -65,10 +65,11 @@ whitespace = fix
 [credential]
 	helper = osxkeychain
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [commit]
 	gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg2
+	program = /usr/local/MacGPG2/bin/gpg2
