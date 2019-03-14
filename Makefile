@@ -1,31 +1,37 @@
-DIR := ${CURDIR}
-DIR := ~/icloud-drive/dotfiles
+all: build
 
-all: symlinks install_atom_packages
-
-symlinks:
+sync:
 	echo $(DIR)
-	@ln -nsf $(DIR)/ackrc ~/.ackrc
-	@ln -nsf $(DIR)/agignore ~/.agignore
-	@ln -nsf $(DIR)/atom ~/.atom
-	@ln -nsf $(DIR)/gemrc ~/.gemrc
-	@ln -nsf $(DIR)/git_template ~/.git_template
-	@ln -nsf $(DIR)/gitconfig ~/.gitconfig
-	@ln -nsf $(DIR)/gitignore_global ~/.gitignore_global
-	@ln -nsf $(DIR)/psqlrc ~/.psqlrc
-	@ln -nsf $(DIR)/tmux.conf ~/.tmux.conf
-	@ln -nsf $(DIR)/vim ~/.vim
-	@ln -nsf $(DIR)/vimrc ~/.vimrc
-	@ln -nsf $(DIR)/zsh ~/.zsh
-	@ln -nsf $(DIR)/zshrc ~/.zshrc
-	@mkdir ~/.gnupg
-	@chmod 755 ~/.gnupg
-	@ln -nsf $(DIR)/gpg.conf ~/.gnupg/gpg.conf
-	@ln -nsf $(DIR)/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+	[ -f ~/.ackrc ] || ln -s $(PWD)/ackrc ~/.ackrc
+	[ -f ~/.agignore ] || ln -s $(DIR)/agignore ~/.agignore
+	[ -f ~/.gemrc ] || ln -s $(DIR)/gemrc ~/.gemrc
+	[ -f ~/.git_template ] || ln -s $(DIR)/git_template ~/.git_template
+	[ -f ~/.gitconfig ] || ln -s $(DIR)/gitconfig ~/.gitconfig
+	[ -f ~/.gitignore_global ] || ln -s $(DIR)/gitignore_global ~/.gitignore_global
+	[ -f ~/.psqlrc ] || ln -s $(DIR)/psqlrc ~/.psqlrc
+	[ -f ~/.tmux.conf ] || ln -s $(DIR)/tmux.conf ~/.tmux.conf
+	[ -f ~/.vimrc ] || ln -s $(DIR)/vimrc ~/.vimrc
+	[ -f ~/.zsh ] || ln -s $(DIR)/zsh ~/.zsh
+	[ -f ~/.zshrc ] || ln -s $(DIR)/zshrc ~/.zshrc
+	mkdir ~/.gnupg
+	chmod 755 ~/.gnupg
+	[ -f ~/.gnupg/gpg.conf ] || ln -s $(DIR)/gpg.conf ~/.gnupg/gpg.conf
+	[ -f ~/.gnupg/gpg-agent.conf ] || ln -s $(DIR)/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
 
-install_atom_packages:
-	apm install --packages-file $(DIR)/atom/packages.txt
+clean:
+  rm -f ~/.ackrc
+  rm -f ~/.agignore
+  rm -f ~/.gemrc
+  rm -rf ~/.git_template
+  rm -f ~/.gitconfig
+  rm -f ~/.gitignore_global
+  rm -f ~/.psqlrc
+  rm -f ~/.psqlrc
+  rm -f ~/.tmux.conf
+  rm -f ~/.vimrc
+  rm -rf ~/.zsh
+  rm -f ~/.zshrc
+  rm -rf ~/.gnupg
 
-save_atom_packages:
-	apm list --installed --bare > $(DIR)/atom/packages.txt
+.PHONY: all clean sync build run kill
