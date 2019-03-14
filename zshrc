@@ -68,3 +68,5 @@ CLI_ENGINE_AC_ZSH_SETUP_PATH=/Users/yschutz/Library/Caches/heroku/completions/zs
 
 # added by travis gem
 [ -f /Users/yschutz/.travis/travis.sh ] && source /Users/yschutz/.travis/travis.sh
+
+eval "$(jump shell)"
