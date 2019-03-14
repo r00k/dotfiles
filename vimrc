@@ -1,4 +1,22 @@
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'fxn/vim-monochrome'
+Plug 'w0rp/ale'
+Plug 'ngmy/vim-rubocop'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-rails'
+
+call plug#end()
+
+" Emojis ALE
+let g:ale_sign_error = '🙊'
+let g:ale_sign_warning = '🙈'
+
 " enable setting title
 set title
 set wildignore=.o,.obj,.git,Godeps/**,node_modules/**,tmp/**
@@ -20,16 +38,6 @@ set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 
-"Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-
 augroup myfiletypes
   " Clear old autocmds in group
   autocmd!
@@ -40,7 +48,7 @@ augroup myfiletypes
 augroup END
 
 " Aliases
-map <leader>f :FuzzyOpen<CR>
+map <leader>f :FZF<CR>
 let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>r :call Rubocop()<CR>

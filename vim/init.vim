@@ -1,1 +1,0 @@
-/Users/yschutz/.vimrc

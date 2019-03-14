@@ -15,8 +15,8 @@ SAVEHIST=20000
 stty start undef
 stty stop undef
 
-export BUNDLER_EDITOR=atom
-export EDITOR=atom
+export BUNDLER_EDITOR=vim
+export EDITOR=vim
 
 export LC_ALL=en_US.UTF-8
 
@@ -24,11 +24,11 @@ export LC_ALL=en_US.UTF-8
 export HOMEBREW_INSTALL_BADGE=☕️
 
 #GOOOOOO
-export GOPATH=$HOME/src/go
+export GOPATH=$HOME/go
 
 fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
 autoload -Uz compinit promptinit colors
-compinit
+compinit -i
 promptinit
 colors
 
@@ -38,7 +38,7 @@ setopt NO_BEEP
 LS_COMMON="-hBG"
 
 # setup the main ls alias if we've established common args
-test -n "$LS_COMMON" && alias ls="command ls $LS_COMMON"
+# test -n "$LS_COMMON" && alias ls="command ls $LS_COMMON"
 
 # case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -65,3 +65,6 @@ export DISABLE_SPRING=1
 
 # heroku autocomplete setup
 CLI_ENGINE_AC_ZSH_SETUP_PATH=/Users/yschutz/Library/Caches/heroku/completions/zsh_setup && test -f $CLI_ENGINE_AC_ZSH_SETUP_PATH && source $CLI_ENGINE_AC_ZSH_SETUP_PATH;
+
+# added by travis gem
+[ -f /Users/yschutz/.travis/travis.sh ] && source /Users/yschutz/.travis/travis.sh
