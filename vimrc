@@ -41,6 +41,17 @@ let g:elm_format_autosave = 0
 " Colors
 Plugin 'nanotech/jellybeans.vim'
 
+" --------- Snippets -------------------------
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+
+let g:UltiSnipsExpandTrigger="<tab>"
+
+" -------------------------------------------
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -121,7 +132,7 @@ map <Leader>sc :sp db/schema.rb<cr>
 map <Leader>sg :sp<cr>:grep<space>
 map <Leader>sm :RSmodel
 map <Leader>sp yss<p>
-map <Leader>sn :e ~/.vim/snippets/ruby.snippets<CR>
+map <Leader>sn :e ~/.vim/UltiSnips<CR>
 map <Leader>so :so %<cr>
 map <Leader>sq j<c-v>}klllcs<esc>:wq<cr>
 map <Leader>ss ds)i <esc>:w<cr>
