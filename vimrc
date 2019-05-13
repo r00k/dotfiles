@@ -42,13 +42,11 @@ let g:elm_format_autosave = 0
 Plugin 'nanotech/jellybeans.vim'
 
 " --------- Snippets -------------------------
-" Track the engine.
 Plugin 'SirVer/ultisnips'
 
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-
 let g:UltiSnipsExpandTrigger="<tab>"
-
+let g:UltiSnipsEditSplit="vertical"
 " -------------------------------------------
 
 
@@ -132,7 +130,7 @@ map <Leader>sc :sp db/schema.rb<cr>
 map <Leader>sg :sp<cr>:grep<space>
 map <Leader>sm :RSmodel
 map <Leader>sp yss<p>
-map <Leader>sn :e ~/.vim/UltiSnips<CR>
+map <Leader>sn :UltiSnipsEdit<CR>
 map <Leader>so :so %<cr>
 map <Leader>sq j<c-v>}klllcs<esc>:wq<cr>
 map <Leader>ss ds)i <esc>:w<cr>
