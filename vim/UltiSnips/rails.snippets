@@ -3,3 +3,47 @@ describe "$1" do
   $2
 end
 endsnippet
+
+snippet cont "context '' do ... end"
+context "$1" do
+  $2
+end
+endsnippet
+
+snippet it "it '' do ... end"
+it "$1" do
+  $2
+end
+endsnippet
+
+snippet exp
+expect($1).to $2
+endsnippet
+
+snippet defs
+def self.$1
+  $2
+end
+endsnippet
+
+snippet def
+def $1
+  $2
+end
+endsnippet
+
+snippet rrh
+require 'rails_helper'
+
+describe ${1:ClassName} do
+  describe "${2:docstring}" do
+    it "$3" do
+      $4
+    end
+  end
+end
+endsnippet
+
+snippet hc
+expect(page).to have_content("$1")
+endsnippet

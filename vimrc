@@ -133,7 +133,7 @@ map <Leader>sp yss<p>
 map <Leader>sn :UltiSnipsEdit<CR>
 map <Leader>so :so %<cr>
 map <Leader>sq j<c-v>}klllcs<esc>:wq<cr>
-map <Leader>ss ds)i <esc>:w<cr>
+map <Leader>ss :!spring stop<cr>
 map <Leader>st :!ruby -Itest % -n "//"<left><left>
 map <Leader>su :RSunittest
 map <Leader>sv :RSview
