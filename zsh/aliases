@@ -98,7 +98,7 @@ alias repush="gpr && git push"
 alias rerake='!! && rake'
 alias restart_apache="sudo /etc/init.d/apache2 restart"
 alias restart_postgres="stoppostgres && startpostgres"
-alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
+alias retag='ctags -R --exclude=node_modules --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias review="vim ~/Dropbox/notes/review.md"
 alias rr="vim ~/Dropbox/rr/_notes/notes.md"
 alias rs='bundle check && rails server -p 3000'
