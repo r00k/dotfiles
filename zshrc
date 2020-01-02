@@ -44,3 +44,6 @@ export PATH=$PATH:~/.local/bin
 export HOMEBREW_AUTO_UPDATE_SECS=600000
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# rbenv
+eval "$(rbenv init -)"
