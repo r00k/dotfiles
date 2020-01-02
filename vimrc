@@ -27,6 +27,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'dhruvasagar/vim-table-mode'
 
 " Clojure
 Plugin 'tpope/vim-fireplace'
