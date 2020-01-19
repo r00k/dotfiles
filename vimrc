@@ -108,6 +108,7 @@ map <Leader>d orequire 'pry'<cr>binding.pry<esc>:w<cr>
 map <Leader>dr :e ~/Dropbox<cr>
 map <Leader>dj :e ~/Dropbox/notes/debugging_journal.txt<cr>
 map <Leader>ec :e ~/code/
+map <Leader>gdm :Git diff master<cr>
 map <Leader>gw :cd %:p:h<cr>:!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>gl :e Gemfile.lock<cr>
 map <Leader>f :call OpenFactoryFile()<CR>
