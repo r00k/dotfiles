@@ -12,7 +12,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " My bundles
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'skwp/greplace.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'thoughtbot/vim-rspec'
@@ -26,18 +25,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'dhruvasagar/vim-table-mode'
-
-" Clojure
-Plugin 'tpope/vim-fireplace'
-
-" Elm
-Plugin 'ElmCast/elm-vim'
-" let g:elm_format_autosave = 1
-
-let g:elm_setup_keybindings = 0 " Get out of my bindings
-let g:elm_format_autosave = 0
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -70,16 +57,6 @@ augroup myfiletypes
   autocmd FileType ruby,eruby,yaml setlocal colorcolumn=80
   " Make ?s part of words
   autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
-
-  " Clojure
-  autocmd FileType clojure setlocal colorcolumn=80
-  autocmd FileType clojure map <Leader>t :!lein test<cr>
-
-  " Elm
-  autocmd FileType elm map <Leader>t :ElmMake<cr>
-  autocmd FileType elm map <Leader>d :ElmErrorDetail<cr>
-  autocmd FileType elm map <Leader>o :!elm-test<cr>
-  autocmd FileType elm map <Leader>i :ElmFormat<cr>
 augroup END
 
 " Enable built-in matchit plugin
@@ -211,9 +188,6 @@ highlight PmenuSel ctermfg=black
 
 " Ignore stuff that can't be opened
 set wildignore+=tmp/**
-
-" Highlight the status line
-highlight StatusLine ctermfg=blue ctermbg=yellow
 
 " Format xml files
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
