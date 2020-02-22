@@ -162,18 +162,15 @@ set autoread
 set wmh=0
 set viminfo+=!
 set guioptions-=T
-set guifont=Triskweline_10:h10
 set et
 set sw=2
 set smarttab
 set noincsearch
 set ignorecase smartcase
 set laststatus=2  " Always show status line.
-set relativenumber
 set number
 set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
 set autoindent " always set autoindenting on
-set lazyredraw " Don't redraw screen when running macros.
 
 colorscheme jellybeans
 
