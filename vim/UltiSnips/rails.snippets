@@ -53,3 +53,11 @@ endsnippet
 snippet hc
 expect(page).to have_content("$1")
 endsnippet
+
+snippet spec
+require 'rails_helper'
+
+describe $1 do
+  $2
+end
+endsnippet
