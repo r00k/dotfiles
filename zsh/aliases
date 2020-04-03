@@ -139,6 +139,7 @@ alias update-tuple='brew update && brew cask upgrade tuple --no-quarantine && br
 alias v='vim'
 alias vi='vim'
 alias worknotes='vim ~/Dropbox/work/tuple/notes -c "Ex"'
+alias ys='yarn serve'
 alias yw='yarn watch'
 
 # Heroku staging
