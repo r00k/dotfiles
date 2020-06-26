@@ -79,6 +79,7 @@ alias m='git checkout master'
 alias macos='vim ~/Dropbox/work/tuple/os-x-power-user-course-macos.md'
 alias mastre='master'
 alias microconf='vim ~/Dropbox/speaking/mc-19/notes.md'
+alias mikey='vim ~/Dropbox/work/tuple/mikey.md'
 alias squash='git rebase -i master'
 alias newblog='z blog ; rake new'
 alias news="vim -c \":e ~/Dropbox/notes/newsletter\""
