@@ -262,6 +262,10 @@ let g:ctrlp_use_caching = 1
 " Don't jump to a different place just because the file is already open, dingus
 let g:ctrlp_switch_buffer = 0
 
+" Ignore certain directories
+let g:ctrlp_custom_ignore = '_site'
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Test-running stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
