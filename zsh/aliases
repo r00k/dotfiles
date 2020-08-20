@@ -11,6 +11,7 @@ alias -g L='| less'
 alias -g M='| more'
 alias adam='vim ~/Dropbox/notes/adam-wathan.md'
 alias aliases='vim ~/.dotfiles/zsh/aliases'
+alias allhands='vim ~/Dropbox/work/tuple/all-hands.md'
 alias amend="git commit --amend"
 alias b='bin/rspec'
 alias bdp='production deploy'
