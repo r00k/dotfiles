@@ -133,6 +133,7 @@ alias stoppostgres='pg_ctl -D /usr/local/var/postgres9.4 -l /usr/local/var/postg
 alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped." && repush'
 alias t='cd ~/code/macapp && open ~/code/macapp/Tuple.xcworkspace'
 alias tail-logs='heroku logs -t'
+alias tc='z backend && pc'
 alias track='git checkout -t'
 alias training-log='vim ~/Dropbox/notes/training-log.md'
 alias trs='tmux rename-session'
