@@ -38,6 +38,9 @@ task :install do
   system %Q{sudo mv /etc/zshenv /etc/zshrc}
 
   system %Q{mkdir ~/.tmp}
+
+  # Get Vundle so I can install Vim plugins
+  system %Q{git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim}
 end
 
 def replace_file(file)
