@@ -19,4 +19,4 @@ I'm also a pretty aggressive aliaser. You might find a few you like in [zsh/alia
   
 ## More
 
-You should [follow me on Twitter](https://twitter.com/r00k). I tweet programming tips.
+You can [follow me on Twitter](https://twitter.com/r00k).
