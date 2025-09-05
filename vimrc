@@ -25,6 +25,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -337,6 +339,8 @@ autocmd FileType qf setlocal wrap linebreak
 
 " Don't automatically continue comments after newline
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
+autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
 
 " Make it more obviouser when lines are too long
 highlight ColorColumn ctermbg=235
