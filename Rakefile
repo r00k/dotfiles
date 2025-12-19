@@ -33,7 +33,7 @@ task :install do
   system %Q{rm "$HOME/.ssh/id_dsa.pub"}
   system %Q{ln -s "$PWD/id_dsa.pub" "$HOME/.ssh/id_dsa.pub"}
 
-  # Need to do this to make vim use RVM's ruby version
+  # Move system zshenv to zshrc to fix PATH issues with vim
   puts "Moving zshenv to zshrc"
   system %Q{sudo mv /etc/zshenv /etc/zshrc}
 
@@ -41,6 +41,14 @@ task :install do
 
   # Get Vundle so I can install Vim plugins
   system %Q{git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim}
+
+  # Install z for directory jumping
+  puts "Installing z via Homebrew"
+  system %Q{brew install z}
+
+  # Install mise for managing Ruby, Node, and other runtimes
+  puts "Installing mise"
+  system %Q{curl https://mise.run | sh}
 end
 
 def replace_file(file)
