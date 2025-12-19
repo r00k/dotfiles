@@ -31,8 +31,7 @@ export PATH=$PATH:bin
 # Add my own dotfiles bin
 export PATH=$PATH:$HOME/.dotfiles/bin
 
-# Add homebrew's bin
-export PATH=$PATH:/usr/local/bin
+# Homebrew bin is added via /opt/homebrew/bin in default PATH on Apple Silicon
 
 # Add stack's bin
 export PATH=$PATH:~/.local/bin
@@ -40,7 +39,5 @@ export PATH=$PATH:~/.local/bin
 # Update hombrew once a week
 export HOMEBREW_AUTO_UPDATE_SECS=600000
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-
-# Enable rbenv
-eval "$(rbenv init - zsh)"
+# Enable mise (manages Ruby, Node, and other runtimes)
+eval "$(mise activate zsh)"

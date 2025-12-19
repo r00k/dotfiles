@@ -3,23 +3,21 @@
 	email = ben.orenstein@gmail.com
 [alias]
 	co = checkout
-        cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+	cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 
 [color "diff"]
-        meta = yellow
+	meta = yellow
 
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim --noplugin
 [apply]
 	whitespace = nowarn
-
-[alias]
-      lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [help]
 	autocorrect = 1
 [branch]
