@@ -42,13 +42,13 @@ task :install do
   # Get Vundle so I can install Vim plugins
   system %Q{git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim}
 
-  # Install z for directory jumping
-  puts "Installing z via Homebrew"
-  system %Q{brew install z}
-
   # Install mise for managing Ruby, Node, and other runtimes
   puts "Installing mise"
   system %Q{curl https://mise.run | sh}
+
+  # Install useful utilities
+  puts "Installing utils"
+  system %Q{brew install bat z ag}
 end
 
 def replace_file(file)
