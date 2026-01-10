@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(curl:*)",
+      "Bash(sh)",
+      "Bash(~/.local/bin/mise doctor:*)",
+      "Bash(source ~/.zshrc)",
+      "Bash(brew install:*)",
+      "Bash(grep:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(ssh:*)"
+    ]
+  }
+}
