@@ -37,3 +37,4 @@ When you receive the test notification:
 - Both tasks run in background concurrently
 - Only use TaskOutput for the commit task, never for tests (to avoid duplicate notifications)
 - For fixing test failures, use opus model for thorough analysis
+- **The working tree must be clean when done** - no uncommitted or untracked files. Everything should be committed and pushed.
