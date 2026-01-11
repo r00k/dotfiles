@@ -1,6 +1,6 @@
 ---
-description: Analyze conversation for failed commands/approaches, find what worked, and update CLAUDE.md with generalizable learnings.
-allowed-tools: Read, Edit, Write, Glob, Grep, WebSearch, Bash
+description: Analyze conversation for failed commands/approaches, find what worked, and optionally update CLAUDE.md with generalizable learnings (with user approval).
+allowed-tools: Read, Edit, Write, Glob, Grep, WebSearch, Bash, Skill, AskUserQuestion
 ---
 
 ## Learn from Mistakes
@@ -38,9 +38,25 @@ For non-trivial failures, search for how others have solved similar problems:
 
 Skip this step for simple issues with obvious solutions.
 
-### Step 4: Update CLAUDE.md
+### Step 4: Present Learnings and Ask User
 
-For generalizable learnings:
+After identifying learnings, **do not automatically update CLAUDE.md**. Instead:
+
+1. Summarize what you found:
+   - What failures were identified
+   - What learnings were extracted
+   - Any best practices discovered via web/GitHub search
+
+2. For each generalizable learning, explain:
+   - What would be added to CLAUDE.md
+   - Which section it would go in
+   - Why it's worth documenting
+
+3. **Ask the user**: "Would you like me to add these learnings to CLAUDE.md?"
+
+### Step 5: Update CLAUDE.md (If Approved)
+
+Only if the user approves:
 1. Read the current CLAUDE.md
 2. Find the appropriate section (Commands, Preferences, etc.)
 3. Add a clear, concise note about:
@@ -48,10 +64,19 @@ For generalizable learnings:
    - What works instead (include best practices found via search if applicable)
 4. Keep it actionable - future Claude should know exactly what to do
 
+### Step 6: Commit the Change (If CLAUDE.md Was Updated)
+
+After updating CLAUDE.md:
+1. Use the `/commit` skill to commit the CLAUDE.md change
+2. The commit message should clearly describe:
+   - What learning was added
+   - Why it was documented (the failure that led to it)
+3. This should be a separate commit focused only on the CLAUDE.md update
+
 ### Output Format
 
-After updating, summarize:
+Summarize:
 - What failures were found
 - What learnings were extracted
 - Any best practices discovered via web/GitHub search
-- What was added to CLAUDE.md (or why nothing was added)
+- Whether CLAUDE.md was updated (and if so, confirm the commit was made)
