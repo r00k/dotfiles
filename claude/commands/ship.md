@@ -32,4 +32,17 @@ A `<task-notification>` will arrive with test results. Only then continue:
 ### CRITICAL
 
 - **NEVER use TaskOutput to check on tests** - wait for the notification
-- Working tree must be clean when done (nothing uncommitted/untracked)
+
+### VERY IMPORTANT: Clean Working Tree
+
+When /ship completes, the git working tree **MUST be clean**:
+- No unstaged changes
+- No untracked files
+- No uncommitted changes
+
+Before declaring "done", ALWAYS run `git status` to verify. If anything is dirty:
+1. Stage and amend the commit (if related to the work)
+2. Or create an additional commit
+3. Then push
+
+Do NOT finish with a dirty working tree. This is non-negotiable.
