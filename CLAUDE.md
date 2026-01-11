@@ -40,3 +40,7 @@ Vim plugins managed via Vundle in `~/.vim/bundle/`. Run `:PluginInstall` in vim 
 ## Runtime Management
 
 Uses mise (formerly rtx) for Ruby, Node, and other runtimes. Activated in zshrc via `eval "$(mise activate zsh)"`.
+
+## Working from ~/.claude
+
+The `~/.claude/commands` directory symlinks to `claude/commands/` in this repo. When editing these files from `~/.claude` as the working directory, the `/commit` skill won't work because it runs from cwd (which isn't a git repo). Use Bash with explicit `cd /Users/ben/.dotfiles && git ...` instead.
