@@ -33,11 +33,13 @@ task :install do
   system %Q{rm "$HOME/.ssh/id_dsa.pub"}
   system %Q{ln -s "$PWD/id_dsa.pub" "$HOME/.ssh/id_dsa.pub"}
 
-  # Link Claude Code commands directory
-  puts "Linking Claude Code commands"
+  # Link Claude Code commands and user instructions
+  puts "Linking Claude Code configuration"
   system %Q{mkdir -p "$HOME/.claude"}
   system %Q{rm -rf "$HOME/.claude/commands"}
   system %Q{ln -s "$PWD/claude/commands" "$HOME/.claude/commands"}
+  system %Q{rm -f "$HOME/.claude/CLAUDE.md"}
+  system %Q{ln -s "$PWD/claude/user-instructions.md" "$HOME/.claude/CLAUDE.md"}
 
   # Move system zshenv to zshrc to fix PATH issues with vim
   puts "Moving zshenv to zshrc"
