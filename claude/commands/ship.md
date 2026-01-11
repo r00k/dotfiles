@@ -5,6 +5,12 @@ allowed-tools: Bash, Task, Read, Edit, Write, Glob, Grep, TodoWrite
 
 ## Ship Changes
 
+### Step 0: Check if there's work to do
+
+Run `git status` to check:
+- If working tree is clean AND branch is up to date with remote → output "Nothing to ship." and **STOP**
+- Otherwise, continue to Step 1
+
 ### Step 1: Launch Background Tasks
 
 In a SINGLE response, launch both:
