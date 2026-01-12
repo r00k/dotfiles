@@ -46,5 +46,6 @@ Uses mise (formerly rtx) for Ruby, Node, and other runtimes. Activated in zshrc 
 The following are symlinked to `~/.claude/`:
 - `claude/commands/` → `~/.claude/commands` (custom skills)
 - `claude/user-instructions.md` → `~/.claude/CLAUDE.md` (global user instructions)
+- `claude/statusline.sh` → `~/.claude/statusline.sh` (custom statusline)
 
 When editing these files from `~/.claude` as the working directory, the `/commit` skill won't work because it runs from cwd (which isn't a git repo). Use Bash with explicit `cd /Users/ben/.dotfiles && git ...` instead.
