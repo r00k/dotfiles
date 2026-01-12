@@ -7,6 +7,15 @@ allowed-tools: Read, Edit, Write, Glob, Grep, WebSearch, Bash, Skill, AskUserQue
 
 Review the conversation history to find learning opportunities and document them.
 
+**User guidance:** $ARGUMENTS
+
+If guidance was provided above, use it to direct your analysis. This could be:
+- A focus area (e.g., "git issues") - prioritize that topic
+- A specific learning to document (e.g., "add a note about using --no-verify")
+- General direction on what changes to make to CLAUDE.md
+
+If no guidance was provided, analyze the entire conversation broadly.
+
 ### Step 1: Identify Failures and Fixes
 
 Look through the conversation for:
