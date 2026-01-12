@@ -36,6 +36,9 @@ export PATH=$PATH:$HOME/.dotfiles/bin
 # Add stack's bin
 export PATH=$PATH:~/.local/bin
 
+# Add ~/bin
+export PATH=$PATH:$HOME/bin
+
 # Update hombrew once a week
 export HOMEBREW_AUTO_UPDATE_SECS=600000
 
