@@ -1,54 +1,78 @@
 ---
-description: Run tests, commit (fast), and push - all in background. Auto-fixes test failures.
+description: Run tests, commit, and push. Auto-fixes test failures.
 allowed-tools: Bash, Task, Read, Edit, Write, Glob, Grep, TodoWrite
 ---
 
-## Ship Changes
+## Ship Changes (Fast Mode)
 
-### Step 0: Check if there's work to do
+### Step 1: Gather Info (Parallel)
 
-Run `git status` to check:
-- If working tree is clean AND branch is up to date with remote → output "Nothing to ship." and **STOP**
-- Otherwise, continue to Step 1
+Run ALL of these in a SINGLE response using parallel Bash calls:
 
-### Step 1: Launch Background Tasks
+```bash
+# Call 1: Status check
+git status --porcelain && git status --short --branch
 
-In a SINGLE response, launch both:
+# Call 2: Diff for commit message
+git diff HEAD && git diff --cached
 
-1. **Tests**: `Bash` with `run_in_background: true`
-   - Detect test runner: `package.json` (npm test), `pyproject.toml` (uv run pytest), `Cargo.toml` (cargo test), `go.mod` (go test ./...), `Rakefile` (rake test), `.rspec` (rspec), `Makefile` (make test)
+# Call 3: Recent commits for style
+git log --oneline -5
 
-2. **Commit**: `Task` with `model: haiku` and `run_in_background: true`
-   - Agent should: git status, git diff, write commit message, stage files, commit
+# Call 4: Detect and run tests (single command)
+if [ -f package.json ] && grep -q '"test"' package.json; then npm test;
+elif [ -f pyproject.toml ]; then uv run pytest 2>/dev/null || pytest 2>/dev/null || echo "NO_TESTS";
+elif [ -f Cargo.toml ]; then cargo test;
+elif [ -f go.mod ]; then go test ./...;
+elif [ -f Makefile ] && grep -q '^test:' Makefile; then make test;
+elif [ -f .rspec ] || [ -d spec ]; then bundle exec rspec 2>/dev/null || rspec;
+elif [ -f Rakefile ] && rake -T 2>/dev/null | grep -q 'rake test'; then rake test;
+else echo "NO_TESTS"; fi
+```
 
-Then output "Waiting for tests..." and **STOP. Do not call any more tools. Do not use TaskOutput. Just wait.**
+Run Call 4 (tests) with `run_in_background: true`. Run the others normally.
 
-### Step 2: Handle Test Notification
+### Step 2: Early Exit Check
 
-A `<task-notification>` will arrive with test results. Only then continue:
+From the status output:
+- If working tree is clean AND branch is up to date → output "Nothing to ship." and **STOP**
+- Otherwise, continue
 
-- **Tests pass**: Use TaskOutput to check commit finished, then `git push`
+### Step 3: Generate Commit Message & Commit
+
+Using the diff and log output you already have, write a commit message:
+- One summary line (imperative mood, ~50 chars)
+- Optionally 2-4 bullet points if changes are complex
+- Match the style from the git log output
+
+Then run:
+```bash
+git add -A && git commit -m "$(cat <<'EOF'
+<your generated message here>
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+EOF
+)"
+```
+
+### Step 4: Wait for Tests & Push
+
+Output "Waiting for tests..." and **STOP**.
+
+When `<task-notification>` arrives:
+
+- **Tests pass (or NO_TESTS)**: Run `git push`
 - **Tests fail**:
   1. Show failure output
   2. Fix with `Task` using `model: opus`
-  3. Re-run tests to verify
+  3. Re-run tests
   4. If fixed, amend commit and push
-  5. If still failing after 2 attempts, ask user for help
+  5. If still failing after 2 attempts, ask user
 
-### CRITICAL
+### Step 5: Verify Clean State
 
-- **NEVER use TaskOutput to check on tests** - wait for the notification
-
-### VERY IMPORTANT: Clean Working Tree
-
-When /ship completes, the git working tree **MUST be clean**:
+ALWAYS run `git status` before finishing. Working tree MUST be clean:
 - No unstaged changes
 - No untracked files
-- No uncommitted changes
 
-Before declaring "done", ALWAYS run `git status` to verify. If anything is dirty:
-1. Stage and amend the commit (if related to the work)
-2. Or create an additional commit
-3. Then push
-
-Do NOT finish with a dirty working tree. This is non-negotiable.
+If dirty: stage and amend, or create additional commit, then push.
