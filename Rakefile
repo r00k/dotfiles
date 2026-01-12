@@ -33,6 +33,11 @@ task :install do
   system %Q{rm "$HOME/.ssh/id_dsa.pub"}
   system %Q{ln -s "$PWD/id_dsa.pub" "$HOME/.ssh/id_dsa.pub"}
 
+  # Link ~/bin to bin directory in repo
+  puts "Linking ~/bin"
+  system %Q{rm -rf "$HOME/bin"}
+  system %Q{ln -s "$PWD/bin" "$HOME/bin"}
+
   # Link Claude Code commands and user instructions
   puts "Linking Claude Code configuration"
   system %Q{mkdir -p "$HOME/.claude"}

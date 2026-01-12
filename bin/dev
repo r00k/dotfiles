@@ -1,0 +1,42 @@
+#!/bin/bash
+set -e
+
+# Prevent nested tmux sessions
+if [ -n "$TMUX" ]; then
+  echo "Already in a tmux session. Exiting."
+  exit 1
+fi
+
+# Use argument or current directory
+PROJECT_DIR="${1:-$(pwd)}"
+# Replace dots with underscores to match tmux's session name sanitization
+SESSION_NAME=$(basename "$PROJECT_DIR" | tr '.' '_')
+
+# If session exists, just attach to it
+if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+  tmux attach -t "$SESSION_NAME"
+  exit 0
+fi
+
+# Create session with first window
+tmux new-session -d -s "$SESSION_NAME" -n "claude" -c "$PROJECT_DIR"
+tmux send-keys -t "$SESSION_NAME:claude" "claude" Enter
+
+# Window 1: claude 2
+tmux new-window -t "$SESSION_NAME" -n "claude 2" -c "$PROJECT_DIR"
+tmux send-keys -t "$SESSION_NAME:claude 2" "claude" Enter
+
+# Window 2: meta (dotfiles)
+tmux new-window -t "$SESSION_NAME" -n "meta" -c "$HOME/.dotfiles"
+tmux send-keys -t "$SESSION_NAME:meta" "claude" Enter
+
+# Window 3: vim
+tmux new-window -t "$SESSION_NAME" -n "vim" -c "$PROJECT_DIR"
+tmux send-keys -t "$SESSION_NAME:vim" "vim" Enter
+
+# Window 4: shell
+tmux new-window -t "$SESSION_NAME" -n "shell" -c "$PROJECT_DIR"
+
+# Select first window and attach
+tmux select-window -t "$SESSION_NAME:claude"
+tmux attach -t "$SESSION_NAME"

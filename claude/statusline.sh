@@ -2,6 +2,7 @@
 input=$(cat)
 MODEL=$(echo "$input" | jq -r '.model.display_name')
 CWD=$(echo "$input" | jq -r '.workspace.current_dir')
+CWD_NAME=$(basename "$CWD")
 
 # Get context usage percentage
 CONTEXT_SIZE=$(echo "$input" | jq -r '.context_window.context_window_size')
@@ -24,10 +25,10 @@ if [ -d "$CWD/.git" ] || git -C "$CWD" rev-parse --git-dir > /dev/null 2>&1; the
     else
       DIRTY=""
     fi
-    printf "%s | %s%s | %d%%" "$MODEL" "$BRANCH" "$DIRTY" "$CONTEXT_PCT"
+    printf "%s | %s%s | %d%% | %s" "$CWD_NAME" "$BRANCH" "$DIRTY" "$CONTEXT_PCT" "$MODEL"
   else
-    printf "%s | %d%%" "$MODEL" "$CONTEXT_PCT"
+    printf "%s | %d%% | %s" "$CWD_NAME" "$CONTEXT_PCT" "$MODEL"
   fi
 else
-  printf "%s | %d%%" "$MODEL" "$CONTEXT_PCT"
+  printf "%s | %d%% | %s" "$CWD_NAME" "$CONTEXT_PCT" "$MODEL"
 fi
