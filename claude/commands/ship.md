@@ -40,15 +40,16 @@ From the status output:
 
 ### Step 3: Generate Commit Message & Commit
 
-Using the diff and log output you already have, write a commit message:
-- One summary line (imperative mood, ~50 chars)
-- Optionally 2-4 bullet points if changes are complex
-- Match the style from the git log output
+Use the `Task` tool with `model: haiku` to generate a commit message:
+- Pass the diff and recent commit log to the task
+- Request: one summary line (imperative mood, ~50 chars), optionally 2-4 bullets if complex
+- Ask it to match the style from the git log output
+- Have it return ONLY the commit message text
 
 Then run:
 ```bash
 git add -A && git commit -m "$(cat <<'EOF'
-<your generated message here>
+<haiku's generated message here>
 
 Co-Authored-By: Claude <noreply@anthropic.com>
 EOF
