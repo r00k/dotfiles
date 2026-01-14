@@ -8,4 +8,6 @@ For complex tasks (new features, multi-file changes, architectural decisions), a
 
 # Long-Running Commands
 
-When calling commands that may take a long time to complete, try to display some sort of progress indication if possible.
+For long-running operations:
+- Show progress indication when possible
+- Design to be resumable if interrupted
