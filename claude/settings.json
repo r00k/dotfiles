@@ -1,31 +1,26 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mise*)"
-    ]
-  },
-  "hooks": {
-    "PreCompact": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bd prime"
-          }
-        ]
-      }
-    ],
-    "SessionStart": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bd prime"
-          }
-        ]
-      }
+      "Bash(git *)",
+      "Bash(mise*)",
+      "Bash(uv*)",
+      "Bash(createdb*)",
+      "Bash(brew*)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(yarn *)",
+      "Bash(pnpm *)",
+      "Bash(bun *)",
+      "Bash(cargo *)",
+      "Bash(make *)",
+      "Bash(rake *)",
+      "Bash(bundle *)",
+      "Bash(docker *)",
+      "Bash(docker-compose *)",
+      "Bash(python *)",
+      "Bash(pip *)",
+      "Bash(pytest *)",
+      "Bash(ruby *)"
     ]
   },
   "alwaysThinkingEnabled": true,

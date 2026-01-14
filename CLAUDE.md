@@ -41,6 +41,8 @@ Vim plugins managed via Vundle in `~/.vim/bundle/`. Run `:PluginInstall` in vim 
 
 Uses mise (formerly rtx) for Ruby, Node, and other runtimes. Activated in zshrc via `eval "$(mise activate zsh)"`.
 
+Use uv for Python projects and package management.
+
 ## Claude Code Configuration
 
 The following are symlinked to `~/.claude/`:
