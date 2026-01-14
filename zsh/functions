@@ -45,3 +45,30 @@ function take {
 function gc {
   git commit -m "$*"
 }
+
+function reattach {
+  if ! tmux list-sessions &>/dev/null; then
+    echo "No tmux sessions."
+    return 1
+  fi
+
+  local sessions=(${(f)"$(tmux list-sessions -F '#{session_name}')"})
+  local count=${#sessions[@]}
+
+  if [[ $count -eq 1 ]]; then
+    tmux attach -t "${sessions[1]}"
+  else
+    echo "Sessions:"
+    for i in {1..$count}; do
+      echo "  $i) ${sessions[$i]}"
+    done
+    echo
+    read "choice?Pick a session: "
+    if [[ $choice -ge 1 && $choice -le $count ]]; then
+      tmux attach -t "${sessions[$choice]}"
+    else
+      echo "Invalid choice."
+      return 1
+    fi
+  fi
+}
