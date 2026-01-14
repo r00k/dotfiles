@@ -96,7 +96,7 @@ alias rc='bin/rails console'
 alias rdm="bin/rake db:migrate"
 alias retro='vim ~/Dropbox/notes/retro.md'
 alias rdtp="bin/rake db:test:prepare"
-alias reattach='tmux attach'
+# reattach is now a function in zsh/functions
 alias remember-ssh='ssh-add ~/.ssh/id_rsa'
 alias remigrate='rake db:migrate && rake db:migrate:redo && rake db:schema:dump && rake db:test:prepare'
 alias remore='!! | more'
