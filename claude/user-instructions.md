@@ -5,3 +5,7 @@ When a small UI change causes a unit test to fail, consider whether the test is 
 # Complex Tasks
 
 For complex tasks (new features, multi-file changes, architectural decisions), ask 3-5 clarifying questions before starting implementation.
+
+# Long-Running Commands
+
+When calling commands that may take a long time to complete, try to display some sort of progress indication if possible.
