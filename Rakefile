@@ -47,6 +47,8 @@ task :install do
   system %Q{ln -s "$PWD/claude/user-instructions.md" "$HOME/.claude/CLAUDE.md"}
   system %Q{rm -f "$HOME/.claude/statusline.sh"}
   system %Q{ln -s "$PWD/claude/statusline.sh" "$HOME/.claude/statusline.sh"}
+  system %Q{rm -f "$HOME/.claude/settings.json"}
+  system %Q{ln -s "$PWD/claude/settings.json" "$HOME/.claude/settings.json"}
 
   # Move system zshenv to zshrc to fix PATH issues with vim
   puts "Moving zshenv to zshrc"
