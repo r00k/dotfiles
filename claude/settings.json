@@ -1,4 +1,9 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(mise*)"
+    ]
+  },
   "hooks": {
     "PreCompact": [
       {
