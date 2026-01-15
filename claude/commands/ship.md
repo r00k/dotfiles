@@ -117,7 +117,27 @@ If already on main:
 git push
 ```
 
-### Step 7: Verify Clean State
+### Step 7: Update Documentation (if needed)
+
+Check if the changes warrant updates to CLAUDE.md or README:
+
+1. Review what was changed in this session (use the diff from Step 1 or `git diff HEAD~1`)
+2. Consider updates if:
+   - New commands, aliases, or scripts were added
+   - Architecture or file structure changed
+   - New dependencies or tools introduced
+   - Setup/installation steps changed
+   - New features that users/developers should know about
+
+3. If updates are needed:
+   - Edit the relevant file(s) directly
+   - Keep changes minimal and focused on what's new
+   - Match existing style and format
+   - Commit with message like "Update docs for <feature>"
+
+4. If no updates needed, continue to Step 8
+
+### Step 8: Verify Clean State
 
 ALWAYS run `git status` before finishing. Working tree MUST be clean:
 - No unstaged changes
