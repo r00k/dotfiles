@@ -1,13 +1,12 @@
-# Unit Tests
+# User Instructions
 
-When a small UI change causes a unit test to fail, consider whether the test is actually testing something important or just testing implementation details. Consider refactoring the test to be more general or deleting the test if it doesn't provide much value. Don't delete a test just because it's hard to fix.
+## Preferences
 
-# Complex Tasks
+- Use uv for Python projects and package management
+- Always use mise for runtime management (Ruby, Node, etc.)
+- Follow existing code conventions in each project
+- Be concise and direct in responses
 
-For complex tasks (new features, multi-file changes, architectural decisions), ask 3-5 clarifying questions before starting implementation.
+## Claude Code Configuration
 
-# Long-Running Commands
-
-For long-running operations:
-- Show progress indication when possible
-- Design to be resumable if interrupted
+When editing files in ~/.claude as the working directory, /commit skill won't work because it runs from cwd (which isn't a git repo). Use Bash with explicit `cd /Users/ben/.dotfiles && git ...` instead.
