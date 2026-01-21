@@ -68,6 +68,14 @@ task :install do
   puts "Installing z"
   system %Q{brew install z}
 
+  # Install ag (the silver searcher)
+  puts "Installing ag"
+  system %Q{brew install the_silver_searcher}
+
+  # Install bat (cat with syntax highlighting)
+  puts "Installing bat"
+  system %Q{brew install bat}
+
   # Install GitHub CLI
   puts "Installing gh"
   system %Q{brew install gh}
