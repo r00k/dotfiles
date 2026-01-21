@@ -71,6 +71,10 @@ task :install do
   # Install GitHub CLI
   puts "Installing gh"
   system %Q{brew install gh}
+
+  # Install Alfred
+  puts "Installing Alfred"
+  system %Q{brew install --cask alfred}
 end
 
 def replace_file(file)
