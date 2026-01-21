@@ -63,9 +63,15 @@ task :install do
   puts "Installing mise"
   system %Q{curl https://mise.run | sh}
 
-  # Install useful utilities
-  puts "Installing utils"
-  system %Q{brew install bat z ag}
+  # Install Homebrew if not present
+  unless system('which brew > /dev/null 2>&1')
+    puts "Installing Homebrew"
+    system %Q{/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"}
+  end
+
+  # Install z for directory jumping
+  puts "Installing z"
+  system %Q{brew install z}
 end
 
 def replace_file(file)
