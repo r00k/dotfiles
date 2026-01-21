@@ -72,6 +72,10 @@ task :install do
   # Install z for directory jumping
   puts "Installing z"
   system %Q{brew install z}
+
+  # Install GitHub CLI
+  puts "Installing gh"
+  system %Q{brew install gh}
 end
 
 def replace_file(file)
