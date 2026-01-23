@@ -1,0 +1,4 @@
+{
+  "amp.dangerouslyAllowAll": true,
+  "amp.experimental.modes": ["deep"]
+}
