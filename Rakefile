@@ -38,6 +38,8 @@ task :install do
   system %Q{mkdir -p "$HOME/.config/amp"}
   system %Q{rm -f "$HOME/.config/amp/AGENTS.md"}
   system %Q{ln -s "$PWD/amp/AGENTS.md" "$HOME/.config/amp/AGENTS.md"}
+  system %Q{rm -f "$HOME/.config/amp/settings.json"}
+  system %Q{ln -s "$PWD/amp/settings.json" "$HOME/.config/amp/settings.json"}
 
   # Link Claude Code commands and user instructions
   puts "Linking Claude Code configuration"
