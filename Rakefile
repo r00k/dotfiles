@@ -76,6 +76,10 @@ task :install do
   puts "Installing bat"
   system %Q{brew install bat}
 
+  # Install uv for Python projects
+  puts "Installing uv"
+  system %Q{brew install uv}
+
   # Install GitHub CLI
   puts "Installing gh"
   system %Q{brew install gh}
