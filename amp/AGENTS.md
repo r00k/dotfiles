@@ -15,3 +15,15 @@ Don't keep unused code around.
 ## Testing
 
 Avoid trivial tests. Strive to write code that is easily tested. If you're struggling to test something, consider refactoring the code under test.
+
+## Browser Automation
+
+`agent-browser` is installed globally for headless browser automation. Use it to:
+- Navigate to URLs: `agent-browser open <url>`
+- Take screenshots: `agent-browser screenshot`
+- Get page snapshots (DOM): `agent-browser snapshot`
+- Click elements: `agent-browser click "<selector>"`
+- Fill inputs: `agent-browser fill "<selector>" "<value>"`
+- Get text: `agent-browser text "<selector>"`
+
+Use `--json` for machine-readable output. Run `agent-browser --help` for full command list.

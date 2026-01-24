@@ -17,10 +17,6 @@ I'm also a pretty aggressive aliaser. You might find a few you like in [zsh/alia
   `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`  
   Run :BundleInstall in vim.
   
-## Amp Skills
-
-Agent skills live in `agents/skills/` and are symlinked to `~/.config/agents`. Use `/ship` to commit, test, document, and push changes.
-
 ## More
 
 You can [follow me on Twitter](https://twitter.com/r00k).
