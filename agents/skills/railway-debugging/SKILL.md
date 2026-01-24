@@ -108,14 +108,11 @@ railway redeploy --service council-bot -y
 ### 5. Database Queries
 
 ```bash
-# Simple queries (use bin/prod-sql helper)
-bin/prod-sql "SELECT id, date, status FROM meetings"
+# Get the public database URL
+DB_URL=$(railway variable list --service Postgres --json 2>/dev/null | python3 -c "import sys,json; print(json.load(sys.stdin).get('DATABASE_PUBLIC_URL', 'NOT SET'))")
 
-# Complex queries with single quotes
-railway service Postgres > /dev/null 2>&1
-DB_URL=$(railway variable list --json 2>/dev/null | python3 -c "import sys,json; print(json.load(sys.stdin)['DATABASE_PUBLIC_URL'])")
-psql "$DB_URL" -c "SELECT * FROM meetings WHERE status = 'failed'"
-railway service council-bot > /dev/null 2>&1
+# Run a query
+psql "$DB_URL" -c "SELECT * FROM your_table LIMIT 5"
 ```
 
 ### 6. Worker Not Running / Cron Issues
@@ -136,7 +133,7 @@ railway logs --service council-bot-worker --lines 100 --since 2h
 3. **Filter errors:** `railway logs --lines 50 --filter "@level:error"`
 4. **Check build:** `railway logs --build --lines 100`
 5. **Verify env vars:** `railway variable list`
-6. **Check database:** `bin/prod-sql "SELECT id, status FROM meetings ORDER BY id DESC LIMIT 5"`
+6. **Check database:** Query via `psql` using `DATABASE_PUBLIC_URL` from Railway variables
 7. **Fix and redeploy:** `railway redeploy --service <name> -y`
 
 ## Log Query Syntax
