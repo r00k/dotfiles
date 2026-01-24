@@ -1,2 +1,2 @@
 # Empty - mise handles Ruby/Node versions via zshrc
-. "$HOME/.cargo/env"
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
