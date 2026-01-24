@@ -1,2 +1,3 @@
 font-size = 18
 theme = Catppuccin Mocha
+confirm-close-surface = false
