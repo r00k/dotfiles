@@ -213,7 +213,7 @@ au BufNewFile,BufRead *.txt setlocal nolist " Don't display whitespace
 " Better? completion on command line
 set wildmenu
 " What to do when I press 'wildchar'. Worth tweaking to see what feels right.
-set wildmode=list:full
+set wildmode=longest:full
 
 " (Hopefully) removes the delay when hitting esc in insert mode
 set noesckeys
