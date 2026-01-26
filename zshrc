@@ -44,3 +44,10 @@ export HOMEBREW_AUTO_UPDATE_SECS=600000
 
 # Enable mise (manages Ruby, Node, and other runtimes)
 eval "$(mise activate zsh)"
+
+# bun completions
+[ -s "/Users/ben/.bun/_bun" ] && source "/Users/ben/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
