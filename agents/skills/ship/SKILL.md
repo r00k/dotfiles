@@ -1,6 +1,6 @@
 ---
 name: ship
-description: Commits, tests, documents, and pushes code. Use when asked to "ship", "land", or push changes with quality checks.
+description: Commits, tests, documents, and pushes code. Use when asked to "ship" or "land" changes. Do NOT use when explicitly asked to just "commit" - in that case, just commit directly without loading this skill.
 ---
 
 # Ship
