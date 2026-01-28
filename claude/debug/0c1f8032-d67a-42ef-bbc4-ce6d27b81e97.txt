@@ -1,0 +1,15 @@
+2026-01-24T13:49:35.581Z [DEBUG] Watching for changes in setting files /Users/ben/code/council-bot/.claude...
+2026-01-24T13:49:35.582Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-24T13:49:35.582Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-24T13:49:35.582Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-24T13:49:35.582Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-24T13:49:35.583Z [DEBUG] [render] initYoga starting
+2026-01-24T13:49:35.585Z [DEBUG] [render] initYoga complete
+2026-01-24T13:49:35.586Z [DEBUG] [render] first ink render: 200ms since process start
+2026-01-24T13:49:35.589Z [DEBUG] Watching for changes in skill/command directories: /Users/ben/.claude/commands...
+2026-01-24T13:49:35.708Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66662.1769262575708
+2026-01-24T13:49:35.708Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:35.708Z [DEBUG] Temp file written successfully, size: 4413 bytes
+2026-01-24T13:49:35.708Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:35.708Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66662.1769262575708 to /Users/ben/.claude.json
+2026-01-24T13:49:35.709Z [DEBUG] File /Users/ben/.claude.json written atomically

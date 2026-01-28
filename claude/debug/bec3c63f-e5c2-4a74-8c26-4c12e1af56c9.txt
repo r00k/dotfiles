@@ -1,0 +1,449 @@
+2026-01-24T13:49:12.770Z [DEBUG] Watching for changes in setting files /Users/ben/code/council-bot/.claude...
+2026-01-24T13:49:12.770Z [ERROR] Failed to save config with lock: Error: ENOENT: no such file or directory, lstat '/Users/ben/.claude.json'
+2026-01-24T13:49:12.771Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552771
+2026-01-24T13:49:12.771Z [DEBUG] Setting permissions for new file: 600
+2026-01-24T13:49:12.771Z [DEBUG] Temp file written successfully, size: 82 bytes
+2026-01-24T13:49:12.771Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552771 to /Users/ben/.claude.json
+2026-01-24T13:49:12.771Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.772Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552772
+2026-01-24T13:49:12.772Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.772Z [DEBUG] Temp file written successfully, size: 130 bytes
+2026-01-24T13:49:12.772Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.772Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552772 to /Users/ben/.claude.json
+2026-01-24T13:49:12.772Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.772Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-24T13:49:12.772Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-24T13:49:12.772Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-24T13:49:12.772Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-24T13:49:12.773Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552773
+2026-01-24T13:49:12.773Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.773Z [DEBUG] Temp file written successfully, size: 167 bytes
+2026-01-24T13:49:12.773Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.773Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552773 to /Users/ben/.claude.json
+2026-01-24T13:49:12.773Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.773Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552773
+2026-01-24T13:49:12.773Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.773Z [DEBUG] Temp file written successfully, size: 202 bytes
+2026-01-24T13:49:12.773Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.773Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552773 to /Users/ben/.claude.json
+2026-01-24T13:49:12.773Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.773Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552773
+2026-01-24T13:49:12.773Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.774Z [DEBUG] Temp file written successfully, size: 238 bytes
+2026-01-24T13:49:12.774Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.774Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552773 to /Users/ben/.claude.json
+2026-01-24T13:49:12.774Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.774Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552774
+2026-01-24T13:49:12.774Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.774Z [DEBUG] Temp file written successfully, size: 275 bytes
+2026-01-24T13:49:12.774Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.774Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552774 to /Users/ben/.claude.json
+2026-01-24T13:49:12.774Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.775Z [DEBUG] Applying permission update: Adding 59 allow rule(s) to destination 'projectSettings': ["Read","Write","Edit","Glob","Grep","Task","NotebookEdit","Bash(bin/restart-server:*)","Bash(./bin/restart-server:*)","Bash(bundle:*)","Bash(rails:*)","Bash(rake:*)","Bash(bin/rails:*)","Bash(bin/rake:*)","Bash(ruby:*)","Bash(gem:*)","Bash(yarn:*)","Bash(npm:*)","Bash(node:*)","Bash(git:*)","Bash(rspec:*)","Bash(rubocop:*)","Bash(mkdir:*)","Bash(ls:*)","Bash(cat:*)","Bash(touch:*)","Bash(rm:*)","Bash(mv:*)","Bash(cp:*)","Bash(chmod:*)","Bash(curl:*)","Bash(psql:*)","Bash(pg_dump:*)","Bash(redis-cli:*)","Bash(docker:*)","Bash(docker-compose:*)","Bash(meeting:references )","Bash(legistar_item_id:integer )","Bash(title:text )","Bash(action:string )","Bash(mover:string )","Bash(seconder:string )","Bash(vote_result:string )","Bash(sequence:integer)","Bash(version:string )","Bash(content:text )","Bash(deepgram_response:jsonb)","Bash(bundle exec rspec:*)","Bash(ffmpeg:*)","Bash(brew install:*)","Bash(for:*)","Bash(done)","Bash(gh repo create:*)","Bash(railway:*)","Bash(lsof:*)","Bash(kill:*)","Bash(sleep:*)","Bash(uv:*)","Bash(source:*)"]
+2026-01-24T13:49:12.775Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-24T13:49:12.776Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-24T13:49:12.776Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-24T13:49:12.776Z [DEBUG] [STARTUP] Running setup()...
+2026-01-24T13:49:12.776Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-24T13:49:12.776Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/ben/.claude/skills, project=[]
+2026-01-24T13:49:12.776Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Library/Application Support/ClaudeCode/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:1903)
+    at mW (/$bunfs/root/claude:11:35435)
+    at readdirSync (/$bunfs/root/claude:12:1864)
+    at ILR (/$bunfs/root/claude:2215:380)
+    at ILR (/$bunfs/root/claude:2215:1350)
+    at <anonymous> (/$bunfs/root/claude:2215:4440)
+    at <anonymous> (/$bunfs/root/claude:2215:5171)
+    at A (/$bunfs/root/claude:11:7259)
+    at FZ8 (/$bunfs/root/claude:4862:4342)
+2026-01-24T13:49:12.776Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Users/ben/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:1903)
+    at mW (/$bunfs/root/claude:11:35435)
+    at readdirSync (/$bunfs/root/claude:12:1864)
+    at ILR (/$bunfs/root/claude:2215:380)
+    at ILR (/$bunfs/root/claude:2215:1350)
+    at <anonymous> (/$bunfs/root/claude:2215:4483)
+    at <anonymous> (/$bunfs/root/claude:2215:5171)
+    at A (/$bunfs/root/claude:11:7259)
+    at FZ8 (/$bunfs/root/claude:4862:4342)
+2026-01-24T13:49:12.776Z [DEBUG] Error log sink initialized
+2026-01-24T13:49:12.778Z [DEBUG] Plugin not available for MCP: frontend-design@claude-plugins-official - error type: plugin-not-found
+2026-01-24T13:49:12.778Z [DEBUG] Plugin not available for MCP: railway@railway-claude-plugin - error type: plugin-not-found
+2026-01-24T13:49:12.778Z [DEBUG] Plugin loading errors: Plugin frontend-design not found in marketplace claude-plugins-official, Plugin railway not found in marketplace railway-claude-plugin
+2026-01-24T13:49:12.778Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-01-24T13:49:12.778Z [DEBUG] Total plugin skills loaded: 0
+2026-01-24T13:49:12.778Z [DEBUG] Plugin loading errors: Plugin frontend-design not found in marketplace claude-plugins-official, Plugin railway not found in marketplace railway-claude-plugin
+2026-01-24T13:49:12.778Z [DEBUG] Total plugin commands loaded: 0
+2026-01-24T13:49:12.778Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-24T13:49:12.780Z [DEBUG] [STARTUP] setup() completed in 4ms
+2026-01-24T13:49:12.780Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-24T13:49:12.780Z [DEBUG] Plugin loading errors: Plugin frontend-design not found in marketplace claude-plugins-official, Plugin railway not found in marketplace railway-claude-plugin
+2026-01-24T13:49:12.780Z [DEBUG] Total plugin agents loaded: 0
+2026-01-24T13:49:12.781Z [DEBUG] [Claude in Chrome] Found chrome profiles: Default
+2026-01-24T13:49:12.781Z [DEBUG] [Claude in Chrome] Extension fcoeoabgfenejglbffodgkkbkcdhcgfn found in chrome Default
+2026-01-24T13:49:12.782Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552782
+2026-01-24T13:49:12.782Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.782Z [DEBUG] Temp file written successfully, size: 317 bytes
+2026-01-24T13:49:12.782Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.782Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552782 to /Users/ben/.claude.json
+2026-01-24T13:49:12.782Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.783Z [DEBUG] Watching for changes in skill/command directories: /Users/ben/.claude/commands...
+2026-01-24T13:49:12.783Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, legacy commands: 0)
+2026-01-24T13:49:12.783Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills, 0 bundled skills
+2026-01-24T13:49:12.783Z [DEBUG] [STARTUP] Commands and agents loaded in 3ms
+2026-01-24T13:49:12.783Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-24T13:49:12.920Z [DEBUG] [render] initYoga starting
+2026-01-24T13:49:12.928Z [DEBUG] [render] initYoga complete
+2026-01-24T13:49:12.929Z [DEBUG] [render] first ink render: 387ms since process start
+2026-01-24T13:49:12.944Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552944
+2026-01-24T13:49:12.944Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.944Z [DEBUG] Temp file written successfully, size: 493 bytes
+2026-01-24T13:49:12.944Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.944Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552944 to /Users/ben/.claude.json
+2026-01-24T13:49:12.944Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.944Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552944
+2026-01-24T13:49:12.944Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.944Z [DEBUG] Temp file written successfully, size: 529 bytes
+2026-01-24T13:49:12.944Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.944Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552944 to /Users/ben/.claude.json
+2026-01-24T13:49:12.945Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.945Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552945
+2026-01-24T13:49:12.945Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.945Z [DEBUG] Temp file written successfully, size: 557 bytes
+2026-01-24T13:49:12.945Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.945Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552945 to /Users/ben/.claude.json
+2026-01-24T13:49:12.945Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.945Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552945
+2026-01-24T13:49:12.945Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.945Z [DEBUG] Temp file written successfully, size: 590 bytes
+2026-01-24T13:49:12.945Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.945Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552945 to /Users/ben/.claude.json
+2026-01-24T13:49:12.946Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.946Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552946
+2026-01-24T13:49:12.946Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.946Z [DEBUG] Temp file written successfully, size: 642 bytes
+2026-01-24T13:49:12.946Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.946Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552946 to /Users/ben/.claude.json
+2026-01-24T13:49:12.946Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.946Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552946
+2026-01-24T13:49:12.946Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.946Z [DEBUG] Temp file written successfully, size: 681 bytes
+2026-01-24T13:49:12.946Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.946Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552946 to /Users/ben/.claude.json
+2026-01-24T13:49:12.946Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.946Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552946
+2026-01-24T13:49:12.946Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.946Z [DEBUG] Temp file written successfully, size: 711 bytes
+2026-01-24T13:49:12.947Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.947Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552946 to /Users/ben/.claude.json
+2026-01-24T13:49:12.947Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.947Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552947
+2026-01-24T13:49:12.947Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.947Z [DEBUG] Temp file written successfully, size: 750 bytes
+2026-01-24T13:49:12.947Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.947Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552947 to /Users/ben/.claude.json
+2026-01-24T13:49:12.947Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.947Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552947
+2026-01-24T13:49:12.947Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.947Z [DEBUG] Temp file written successfully, size: 788 bytes
+2026-01-24T13:49:12.947Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.947Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552947 to /Users/ben/.claude.json
+2026-01-24T13:49:12.947Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.947Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552947
+2026-01-24T13:49:12.947Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.947Z [DEBUG] Temp file written successfully, size: 833 bytes
+2026-01-24T13:49:12.947Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.947Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552947 to /Users/ben/.claude.json
+2026-01-24T13:49:12.948Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.948Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552948
+2026-01-24T13:49:12.948Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.948Z [DEBUG] Temp file written successfully, size: 863 bytes
+2026-01-24T13:49:12.948Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.948Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552948 to /Users/ben/.claude.json
+2026-01-24T13:49:12.948Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:12.950Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-24T13:49:12.966Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-24T13:49:12.967Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262552967
+2026-01-24T13:49:12.967Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:12.967Z [DEBUG] Temp file written successfully, size: 904 bytes
+2026-01-24T13:49:12.967Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:12.967Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262552967 to /Users/ben/.claude.json
+2026-01-24T13:49:12.967Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:13.178Z [DEBUG] High write ratio: blit=0, write=1797 (100.0% writes), screen=36x137
+2026-01-24T13:49:14.710Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262554710
+2026-01-24T13:49:14.710Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:14.711Z [DEBUG] Temp file written successfully, size: 904 bytes
+2026-01-24T13:49:14.711Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:14.711Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262554710 to /Users/ben/.claude.json
+2026-01-24T13:49:14.711Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:14.713Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262554713
+2026-01-24T13:49:14.713Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:14.713Z [DEBUG] Temp file written successfully, size: 904 bytes
+2026-01-24T13:49:14.713Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:14.713Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262554713 to /Users/ben/.claude.json
+2026-01-24T13:49:14.713Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:14.725Z [DEBUG] High write ratio: blit=0, write=1222 (100.0% writes), screen=28x137
+2026-01-24T13:49:22.528Z [ERROR] Error: Error: Failed to delete keychain entry
+    at kMB (/$bunfs/root/claude:4004:6938)
+    at async vrB (/$bunfs/root/claude:5237:592)
+    at async ECB (/$bunfs/root/claude:5237:496)
+    at async SKA (/$bunfs/root/claude:1817:62911)
+    at async startOAuthFlow (/$bunfs/root/claude:1817:64442)
+    at processTicksAndRejections (native:7:39)
+2026-01-24T13:49:22.528Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262562528
+2026-01-24T13:49:22.528Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:22.528Z [DEBUG] Temp file written successfully, size: 904 bytes
+2026-01-24T13:49:22.528Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:22.528Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262562528 to /Users/ben/.claude.json
+2026-01-24T13:49:22.529Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:22.577Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262562577
+2026-01-24T13:49:22.577Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:22.577Z [DEBUG] Temp file written successfully, size: 904 bytes
+2026-01-24T13:49:22.577Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:22.577Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262562577 to /Users/ben/.claude.json
+2026-01-24T13:49:22.577Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:22.744Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262562744
+2026-01-24T13:49:22.744Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:22.744Z [DEBUG] Temp file written successfully, size: 1156 bytes
+2026-01-24T13:49:22.744Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:22.744Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262562744 to /Users/ben/.claude.json
+2026-01-24T13:49:22.744Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:22.901Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262562901
+2026-01-24T13:49:22.901Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:22.901Z [DEBUG] Temp file written successfully, size: 1279 bytes
+2026-01-24T13:49:22.901Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:22.901Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262562901 to /Users/ben/.claude.json
+2026-01-24T13:49:22.902Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:23.126Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262563126
+2026-01-24T13:49:23.126Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:23.126Z [DEBUG] Temp file written successfully, size: 1340 bytes
+2026-01-24T13:49:23.126Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:23.126Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262563126 to /Users/ben/.claude.json
+2026-01-24T13:49:23.126Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:23.129Z [DEBUG] Skipping Notification:auth_success hook execution - workspace trust not accepted
+2026-01-24T13:49:27.829Z [DEBUG] High write ratio: blit=0, write=1160 (100.0% writes), screen=28x137
+2026-01-24T13:49:29.498Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262569498
+2026-01-24T13:49:29.498Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:29.499Z [DEBUG] Temp file written successfully, size: 1411 bytes
+2026-01-24T13:49:29.499Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:29.499Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262569498 to /Users/ben/.claude.json
+2026-01-24T13:49:29.499Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:29.501Z [DEBUG] [render] initYoga starting
+2026-01-24T13:49:29.501Z [DEBUG] [render] initYoga complete
+2026-01-24T13:49:29.502Z [DEBUG] [render] first ink render: 16961ms since process start
+2026-01-24T13:49:29.504Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-24T13:49:29.518Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-24T13:49:30.442Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570442
+2026-01-24T13:49:30.442Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.442Z [DEBUG] Temp file written successfully, size: 1808 bytes
+2026-01-24T13:49:30.442Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.442Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570442 to /Users/ben/.claude.json
+2026-01-24T13:49:30.443Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.470Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-01-24T13:49:30.471Z [DEBUG] Grove: No cache, fetching config in background (dialog skipped this session)
+2026-01-24T13:49:30.474Z [DEBUG] [STARTUP] showSetupScreens() completed in 17691ms
+2026-01-24T13:49:30.474Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-24T13:49:30.474Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-24T13:49:30.474Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-24T13:49:30.474Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-24T13:49:30.474Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-24T13:49:30.475Z [DEBUG] Passes: No cache, fetching eligibility in background (command unavailable this session)
+2026-01-24T13:49:30.475Z [DEBUG] Total LSP servers loaded: 0
+2026-01-24T13:49:30.475Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-24T13:49:30.476Z [DEBUG] [STARTUP] MCP configs loaded in 17701ms
+2026-01-24T13:49:30.477Z [DEBUG] [ToolSearch:optimistic] mode=standard, ENABLE_TOOL_SEARCH=undefined, result=false
+2026-01-24T13:49:30.482Z [DEBUG] Creating installed_plugins.json from settings.json files
+2026-01-24T13:49:30.483Z [DEBUG] [Reconnection] computeInitialTeamContext: No teammate context set (not a teammate)
+2026-01-24T13:49:30.484Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570484
+2026-01-24T13:49:30.484Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.484Z [DEBUG] Temp file written successfully, size: 1828 bytes
+2026-01-24T13:49:30.484Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.484Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570484 to /Users/ben/.claude.json
+2026-01-24T13:49:30.484Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.485Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-24T13:49:30.485Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-24T13:49:30.486Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-01-24T13:49:30.486Z [DEBUG] Found 0 hook matchers in settings
+2026-01-24T13:49:30.486Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2026-01-24T13:49:30.486Z [DEBUG] LSP server manager initialized successfully
+2026-01-24T13:49:30.486Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-24T13:49:30.486Z [DEBUG] Plugin frontend-design@claude-plugins-official not found in any marketplace, skipping
+2026-01-24T13:49:30.487Z [DEBUG] Plugin railway@railway-claude-plugin not found in any marketplace, skipping
+2026-01-24T13:49:30.487Z [DEBUG] Saved 0 installed plugins to /Users/ben/.claude/plugins/installed_plugins.json
+2026-01-24T13:49:30.487Z [DEBUG] Sync completed: 0 added, 0 updated in installed_plugins.json
+2026-01-24T13:49:30.488Z [DEBUG] [render] initYoga starting
+2026-01-24T13:49:30.488Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-01-24T13:49:30.488Z [DEBUG] [render] initYoga complete
+2026-01-24T13:49:30.488Z [DEBUG] [render] first ink render: 17946ms since process start
+2026-01-24T13:49:30.500Z [DEBUG] Git remote URL: git@github.com:r00k/council-bot.git
+2026-01-24T13:49:30.501Z [DEBUG] Parsed repository: r00k/council-bot from git@github.com:r00k/council-bot.git
+2026-01-24T13:49:30.501Z [DEBUG] Parsed repository: r00k/council-bot from URL: git@github.com:r00k/council-bot.git
+2026-01-24T13:49:30.501Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570501
+2026-01-24T13:49:30.501Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.502Z [DEBUG] Temp file written successfully, size: 1924 bytes
+2026-01-24T13:49:30.502Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.502Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570501 to /Users/ben/.claude.json
+2026-01-24T13:49:30.502Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.502Z [DEBUG] Added /Users/ben/code/council-bot to tracked paths for repo r00k/council-bot
+2026-01-24T13:49:30.505Z [DEBUG] [ToolSearch:optimistic] mode=standard, ENABLE_TOOL_SEARCH=undefined, result=false
+2026-01-24T13:49:30.509Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-24T13:49:30.519Z [DEBUG] High write ratio: blit=0, write=1124 (100.0% writes), screen=20x137
+2026-01-24T13:49:30.522Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570522
+2026-01-24T13:49:30.522Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.522Z [DEBUG] Temp file written successfully, size: 1981 bytes
+2026-01-24T13:49:30.522Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.522Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570522 to /Users/ben/.claude.json
+2026-01-24T13:49:30.522Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.522Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570522
+2026-01-24T13:49:30.522Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.522Z [DEBUG] Temp file written successfully, size: 2054 bytes
+2026-01-24T13:49:30.522Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.522Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570522 to /Users/ben/.claude.json
+2026-01-24T13:49:30.522Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.523Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570523
+2026-01-24T13:49:30.523Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.523Z [DEBUG] Temp file written successfully, size: 2102 bytes
+2026-01-24T13:49:30.523Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.523Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570523 to /Users/ben/.claude.json
+2026-01-24T13:49:30.523Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.523Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570523
+2026-01-24T13:49:30.523Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.523Z [DEBUG] Temp file written successfully, size: 2135 bytes
+2026-01-24T13:49:30.523Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.523Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570523 to /Users/ben/.claude.json
+2026-01-24T13:49:30.523Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.530Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570530
+2026-01-24T13:49:30.530Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.531Z [DEBUG] Temp file written successfully, size: 2171 bytes
+2026-01-24T13:49:30.531Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.531Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570530 to /Users/ben/.claude.json
+2026-01-24T13:49:30.531Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.531Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570531
+2026-01-24T13:49:30.531Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.531Z [DEBUG] Temp file written successfully, size: 2253 bytes
+2026-01-24T13:49:30.531Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.531Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570531 to /Users/ben/.claude.json
+2026-01-24T13:49:30.531Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.532Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-24T13:49:30.532Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-24T13:49:30.532Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-24T13:49:30.533Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-24T13:49:30.533Z [DEBUG] performStartupChecks called
+2026-01-24T13:49:30.533Z [DEBUG] Starting background plugin installations
+2026-01-24T13:49:30.533Z [DEBUG] performBackgroundPluginInstallations called
+2026-01-24T13:49:30.534Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-24T13:49:30.534Z [DEBUG] Plugin not available for MCP: frontend-design@claude-plugins-official - error type: plugin-not-found
+2026-01-24T13:49:30.534Z [DEBUG] Plugin not available for MCP: railway@railway-claude-plugin - error type: plugin-not-found
+2026-01-24T13:49:30.534Z [DEBUG] Plugin not available for MCP: frontend-design@claude-plugins-official - error type: plugin-not-found
+2026-01-24T13:49:30.534Z [DEBUG] Plugin not available for MCP: railway@railway-claude-plugin - error type: plugin-not-found
+2026-01-24T13:49:30.534Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-01-24T13:49:30.534Z [DEBUG] [claudeai-mcp] Gate returned: false
+2026-01-24T13:49:30.534Z [DEBUG] [claudeai-mcp] Disabled via gate
+2026-01-24T13:49:30.534Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570534
+2026-01-24T13:49:30.534Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.534Z [DEBUG] Temp file written successfully, size: 2293 bytes
+2026-01-24T13:49:30.534Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.534Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570534 to /Users/ben/.claude.json
+2026-01-24T13:49:30.534Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.535Z [DEBUG] Found 2 enabled plugins
+2026-01-24T13:49:30.535Z [DEBUG] Syncing installed_plugins.json with enabledPlugins from all settings.json files
+2026-01-24T13:49:30.535Z [DEBUG] Found 0 installed plugins (V2 format)
+2026-01-24T13:49:30.535Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570535
+2026-01-24T13:49:30.535Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.535Z [DEBUG] Temp file written successfully, size: 2337 bytes
+2026-01-24T13:49:30.535Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.535Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570535 to /Users/ben/.claude.json
+2026-01-24T13:49:30.535Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.536Z [DEBUG] Attempting to auto-install official marketplace
+2026-01-24T13:49:30.537Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 2
+2026-01-24T13:49:30.537Z [DEBUG] Found 2 missing plugins (not installed): frontend-design@claude-plugins-official, railway@railway-claude-plugin
+2026-01-24T13:49:30.537Z [DEBUG] Cannot install 2 plugins because their marketplaces are not installed or configured: claude-plugins-official, railway-claude-plugin
+2026-01-24T13:49:30.537Z [DEBUG] Uninstallable plugins: frontend-design@claude-plugins-official, railway@railway-claude-plugin
+2026-01-24T13:49:30.537Z [DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 2 uninstallable plugins
+2026-01-24T13:49:30.537Z [DEBUG] Plugin frontend-design@claude-plugins-official not found in any marketplace, skipping
+2026-01-24T13:49:30.537Z [DEBUG] Plugin railway@railway-claude-plugin not found in any marketplace, skipping
+2026-01-24T13:49:30.539Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570539
+2026-01-24T13:49:30.539Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.539Z [DEBUG] Temp file written successfully, size: 2518 bytes
+2026-01-24T13:49:30.539Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.539Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570539 to /Users/ben/.claude.json
+2026-01-24T13:49:30.539Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.543Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-24T13:49:30.546Z [DEBUG] Plugin installation status: 0 failed marketplaces, 2 failed plugins
+2026-01-24T13:49:30.546Z [DEBUG] Adding notification for 2 failed installations
+2026-01-24T13:49:30.558Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570558
+2026-01-24T13:49:30.558Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.558Z [DEBUG] Temp file written successfully, size: 2518 bytes
+2026-01-24T13:49:30.558Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.558Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570558 to /Users/ben/.claude.json
+2026-01-24T13:49:30.558Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.567Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-24T13:49:30.568Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570568
+2026-01-24T13:49:30.568Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.568Z [DEBUG] Temp file written successfully, size: 2585 bytes
+2026-01-24T13:49:30.568Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.568Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570568 to /Users/ben/.claude.json
+2026-01-24T13:49:30.568Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.568Z [DEBUG] [ToolSearch:optimistic] mode=standard, ENABLE_TOOL_SEARCH=undefined, result=false
+2026-01-24T13:49:30.569Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.f52; cc_entrypoint=cli
+2026-01-24T13:49:30.569Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-24T13:49:30.569Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-24T13:49:30.570Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-24T13:49:30.570Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570570
+2026-01-24T13:49:30.570Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.571Z [DEBUG] Temp file written successfully, size: 2624 bytes
+2026-01-24T13:49:30.571Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.571Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570570 to /Users/ben/.claude.json
+2026-01-24T13:49:30.571Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.571Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570571
+2026-01-24T13:49:30.571Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.571Z [DEBUG] Temp file written successfully, size: 2662 bytes
+2026-01-24T13:49:30.571Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.571Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570571 to /Users/ben/.claude.json
+2026-01-24T13:49:30.571Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.614Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570614
+2026-01-24T13:49:30.614Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.614Z [DEBUG] Temp file written successfully, size: 2837 bytes
+2026-01-24T13:49:30.614Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.614Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570614 to /Users/ben/.claude.json
+2026-01-24T13:49:30.614Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.625Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570625
+2026-01-24T13:49:30.625Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.625Z [DEBUG] Temp file written successfully, size: 2980 bytes
+2026-01-24T13:49:30.625Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.625Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570625 to /Users/ben/.claude.json
+2026-01-24T13:49:30.626Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.903Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.1.19/claude)
+2026-01-24T13:49:30.952Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262570952
+2026-01-24T13:49:30.952Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:30.952Z [DEBUG] Temp file written successfully, size: 3338 bytes
+2026-01-24T13:49:30.952Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:30.952Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262570952 to /Users/ben/.claude.json
+2026-01-24T13:49:30.952Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:30.952Z [DEBUG] Passes eligibility cached for org 272b50f7-5ae2-4151-9aa3-1ad100d1a3b2: true
+2026-01-24T13:49:31.001Z [DEBUG] Stream started - received first chunk
+2026-01-24T13:49:31.032Z [DEBUG] [ToolSearch:optimistic] mode=standard, ENABLE_TOOL_SEARCH=undefined, result=false
+2026-01-24T13:49:31.035Z [DEBUG] Skills and commands included in Skill tool:
+2026-01-24T13:49:31.035Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-24T13:49:31.035Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-24T13:49:31.035Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-24T13:49:31.187Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262571187
+2026-01-24T13:49:31.187Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:31.187Z [DEBUG] Temp file written successfully, size: 3529 bytes
+2026-01-24T13:49:31.187Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:31.187Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262571187 to /Users/ben/.claude.json
+2026-01-24T13:49:31.187Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:32.327Z [DEBUG] Added marketplace source: claude-plugins-official
+2026-01-24T13:49:32.327Z [DEBUG] Successfully auto-installed official marketplace
+2026-01-24T13:49:32.327Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.66540.1769262572327
+2026-01-24T13:49:32.327Z [DEBUG] Preserving file permissions: 100600
+2026-01-24T13:49:32.327Z [DEBUG] Temp file written successfully, size: 3624 bytes
+2026-01-24T13:49:32.327Z [DEBUG] Applied original permissions to temp file
+2026-01-24T13:49:32.327Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.66540.1769262572327 to /Users/ben/.claude.json
+2026-01-24T13:49:32.328Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-24T13:49:32.328Z [DEBUG] Showing marketplace installation success notification
+2026-01-24T13:49:32.714Z [DEBUG] Getting matching hook commands for SessionEnd with query: prompt_input_exit
+2026-01-24T13:49:32.714Z [DEBUG] Found 0 hook matchers in settings
+2026-01-24T13:49:32.714Z [DEBUG] Matched 0 unique hooks for query "prompt_input_exit" (0 before deduplication)

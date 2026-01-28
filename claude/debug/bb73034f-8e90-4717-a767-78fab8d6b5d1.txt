@@ -1,0 +1,620 @@
+2026-01-28T04:31:01.249Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-28T04:31:01.249Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-28T04:31:01.249Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-28T04:31:01.249Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-28T04:31:01.250Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-28T04:31:01.251Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.251Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.251Z [DEBUG] [STARTUP] Running setup()...
+2026-01-28T04:31:01.251Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-28T04:31:01.251Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/ben/.claude/skills, project=[]
+2026-01-28T04:31:01.252Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Library/Application Support/ClaudeCode/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:1903)
+    at mW (/$bunfs/root/claude:11:35435)
+    at readdirSync (/$bunfs/root/claude:12:1864)
+    at ILR (/$bunfs/root/claude:2215:380)
+    at ILR (/$bunfs/root/claude:2215:1350)
+    at <anonymous> (/$bunfs/root/claude:2215:4440)
+    at <anonymous> (/$bunfs/root/claude:2215:5171)
+    at A (/$bunfs/root/claude:11:7259)
+    at FZ8 (/$bunfs/root/claude:4862:4342)
+2026-01-28T04:31:01.252Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Users/ben/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:1903)
+    at mW (/$bunfs/root/claude:11:35435)
+    at readdirSync (/$bunfs/root/claude:12:1864)
+    at ILR (/$bunfs/root/claude:2215:380)
+    at ILR (/$bunfs/root/claude:2215:1350)
+    at <anonymous> (/$bunfs/root/claude:2215:4483)
+    at <anonymous> (/$bunfs/root/claude:2215:5171)
+    at A (/$bunfs/root/claude:11:7259)
+    at FZ8 (/$bunfs/root/claude:4862:4342)
+2026-01-28T04:31:01.252Z [DEBUG] Error log sink initialized
+2026-01-28T04:31:01.252Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-01-28T04:31:01.252Z [DEBUG] Total plugin skills loaded: 0
+2026-01-28T04:31:01.252Z [DEBUG] Total plugin commands loaded: 0
+2026-01-28T04:31:01.252Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-28T04:31:01.254Z [DEBUG] [STARTUP] setup() completed in 3ms
+2026-01-28T04:31:01.254Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-28T04:31:01.255Z [DEBUG] Total plugin agents loaded: 0
+2026-01-28T04:31:01.265Z [DEBUG] [Claude in Chrome] Found chrome profiles: Default, Profile 2
+2026-01-28T04:31:01.265Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, legacy commands: 0)
+2026-01-28T04:31:01.265Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills, 0 bundled skills
+2026-01-28T04:31:01.265Z [DEBUG] [STARTUP] Commands and agents loaded in 11ms
+2026-01-28T04:31:01.265Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-28T04:31:01.266Z [DEBUG] [render] initYoga starting
+2026-01-28T04:31:01.266Z [DEBUG] [Claude in Chrome] Extension fcoeoabgfenejglbffodgkkbkcdhcgfn found in chrome Default
+2026-01-28T04:31:01.266Z [DEBUG] Watching for changes in skill/command directories: /Users/ben/.claude/commands...
+2026-01-28T04:31:01.268Z [DEBUG] [render] initYoga complete
+2026-01-28T04:31:01.269Z [DEBUG] [render] first ink render: 191ms since process start
+2026-01-28T04:31:01.270Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-28T04:31:01.273Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-28T04:31:01.276Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-01-28T04:31:01.277Z [DEBUG] [STARTUP] showSetupScreens() completed in 12ms
+2026-01-28T04:31:01.277Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-28T04:31:01.277Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-28T04:31:01.277Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-28T04:31:01.277Z [DEBUG] Total LSP servers loaded: 0
+2026-01-28T04:31:01.277Z [DEBUG] [STARTUP] MCP configs loaded in 27ms
+2026-01-28T04:31:01.278Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.278Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.278Z [DEBUG] [Reconnection] computeInitialTeamContext: No teammate context set (not a teammate)
+2026-01-28T04:31:01.279Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574661279
+2026-01-28T04:31:01.279Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:01.279Z [DEBUG] Temp file written successfully, size: 5432 bytes
+2026-01-28T04:31:01.279Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:01.279Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574661279 to /Users/ben/.claude.json
+2026-01-28T04:31:01.279Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:01.280Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-28T04:31:01.280Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-28T04:31:01.280Z [DEBUG] Loaded 0 installed plugins from /Users/ben/.claude/plugins/installed_plugins.json
+2026-01-28T04:31:01.280Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-01-28T04:31:01.281Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-01-28T04:31:01.281Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:01.281Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2026-01-28T04:31:01.281Z [DEBUG] LSP server manager initialized successfully
+2026-01-28T04:31:01.281Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-28T04:31:01.281Z [DEBUG] [render] initYoga starting
+2026-01-28T04:31:01.281Z [DEBUG] [render] initYoga complete
+2026-01-28T04:31:01.282Z [DEBUG] [render] first ink render: 204ms since process start
+2026-01-28T04:31:01.293Z [DEBUG] Git remote URL: git@github.com:r00k/agentrails.git
+2026-01-28T04:31:01.293Z [DEBUG] Parsed repository: r00k/agentrails from git@github.com:r00k/agentrails.git
+2026-01-28T04:31:01.293Z [DEBUG] Parsed repository: r00k/agentrails from URL: git@github.com:r00k/agentrails.git
+2026-01-28T04:31:01.293Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574661293
+2026-01-28T04:31:01.293Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:01.293Z [DEBUG] Temp file written successfully, size: 5499 bytes
+2026-01-28T04:31:01.293Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:01.293Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574661293 to /Users/ben/.claude.json
+2026-01-28T04:31:01.293Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:01.293Z [DEBUG] Added /Users/ben/code/agentrails to tracked paths for repo r00k/agentrails
+2026-01-28T04:31:01.300Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.300Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.303Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-28T04:31:01.324Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:31:01.325Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-28T04:31:01.325Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-28T04:31:01.325Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:31:01.326Z [DEBUG] Official marketplace auto-install skipped: already_attempted
+2026-01-28T04:31:01.326Z [DEBUG] performStartupChecks called
+2026-01-28T04:31:01.326Z [DEBUG] Trust not accepted for current directory - skipping plugin installations
+2026-01-28T04:31:01.332Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-28T04:31:01.499Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-01-28T04:31:01.499Z [DEBUG] [claudeai-mcp] Gate returned: false
+2026-01-28T04:31:01.499Z [DEBUG] [claudeai-mcp] Disabled via gate
+2026-01-28T04:31:01.499Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-28T04:31:01.507Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-28T04:31:01.507Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.507Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.f52; cc_entrypoint=cli
+2026-01-28T04:31:01.507Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:01.507Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:01.507Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:01.509Z [ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-28T04:31:01.509Z [ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at validateHeaders (/$bunfs/root/claude:161:1013)
+    at buildHeaders (/$bunfs/root/claude:161:8517)
+    at async buildRequest (/$bunfs/root/claude:161:7583)
+    at async makeRequest (/$bunfs/root/claude:161:3411)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:31:01.512Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:31:01.513Z [ERROR] SyntaxError: SyntaxError: JSON Parse error: Property name must be a string literal
+    at <parse> (:0)
+    at parse (unknown)
+    at <anonymous> (/$bunfs/root/claude:69:708)
+    at A (/$bunfs/root/claude:11:7259)
+    at EX8 (/$bunfs/root/claude:4307:5876)
+    at async SmB (/$bunfs/root/claude:4307:8662)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:31:01.513Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574661513
+2026-01-28T04:31:01.513Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:01.513Z [DEBUG] Temp file written successfully, size: 6083 bytes
+2026-01-28T04:31:01.513Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:01.513Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574661513 to /Users/ben/.claude.json
+2026-01-28T04:31:01.514Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:01.635Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.635Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:01.637Z [DEBUG] Skills and commands included in Skill tool:
+2026-01-28T04:31:01.637Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:01.637Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:01.637Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:01.638Z [ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at validateHeaders (/$bunfs/root/claude:161:1013)
+    at buildHeaders (/$bunfs/root/claude:161:8517)
+    at async buildRequest (/$bunfs/root/claude:161:7583)
+    at async makeRequest (/$bunfs/root/claude:161:3411)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:31:01.638Z [DEBUG] countTokensWithFallback: API returned null, trying haiku fallback (21 tools)
+2026-01-28T04:31:01.638Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:01.638Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:01.638Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:01.638Z [DEBUG] countTokensWithFallback: haiku fallback failed: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-28T04:31:01.638Z [ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at validateHeaders (/$bunfs/root/claude:161:1013)
+    at buildHeaders (/$bunfs/root/claude:161:8517)
+    at async buildRequest (/$bunfs/root/claude:161:7583)
+    at async makeRequest (/$bunfs/root/claude:161:3411)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:31:01.638Z [DEBUG] countToolDefinitionTokens returned null for 21 tools: Task, TaskOutput, Bash, Glob, Grep, ExitPlanMode, Read, Edit, Write, NotebookEdit, WebFetch, WebSear...
+2026-01-28T04:31:01.756Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.1.19/claude)
+2026-01-28T04:31:01.994Z [DEBUG] PackageManagerAutoUpdater: Update available 2.1.19 -> 2.1.21
+2026-01-28T04:31:03.689Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:03.689Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:03.705Z [DEBUG] Started caffeinate to prevent sleep
+2026-01-28T04:31:03.706Z [DEBUG] Stats cache does not exist, returning empty cache
+2026-01-28T04:31:03.706Z [DEBUG] Stats cache empty, processing all historical data in background
+2026-01-28T04:31:03.707Z [DEBUG] Writing to temp file: /Users/ben/.claude/todos/bb73034f-8e90-4717-a767-78fab8d6b5d1-agent-bb73034f-8e90-4717-a767-78fab8d6b5d1.json.tmp.35239.1769574663707
+2026-01-28T04:31:03.707Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-28T04:31:03.707Z [DEBUG] Renaming /Users/ben/.claude/todos/bb73034f-8e90-4717-a767-78fab8d6b5d1-agent-bb73034f-8e90-4717-a767-78fab8d6b5d1.json.tmp.35239.1769574663707 to /Users/ben/.claude/todos/bb73034f-8e90-4717-a767-78fab8d6b5d1-agent-bb73034f-8e90-4717-a767-78fab8d6b5d1.json
+2026-01-28T04:31:03.707Z [DEBUG] File /Users/ben/.claude/todos/bb73034f-8e90-4717-a767-78fab8d6b5d1-agent-bb73034f-8e90-4717-a767-78fab8d6b5d1.json written atomically
+2026-01-28T04:31:03.713Z [DEBUG] Summarizing all 2 messages (~0 tokens)
+2026-01-28T04:31:03.714Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-28T04:31:03.714Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:03.714Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.cab; cc_entrypoint=cli
+2026-01-28T04:31:03.714Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:03.714Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:03.714Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:03.715Z [ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-28T04:31:03.715Z [ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at validateHeaders (/$bunfs/root/claude:161:1013)
+    at buildHeaders (/$bunfs/root/claude:161:8517)
+    at async buildRequest (/$bunfs/root/claude:161:7583)
+    at async makeRequest (/$bunfs/root/claude:161:3411)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:31:03.716Z [DEBUG] Generated summary for session 793f6e5b-7007-4ebf-8d92-78d259a3a8d6: "Invalid API key · Please run /login"
+2026-01-28T04:31:03.716Z [DEBUG] Session index: added 1, updated 0, removed 0, summaries generated 1 (total: 1)
+2026-01-28T04:31:04.534Z [DEBUG] Successfully refreshed marketplace: claude-plugins-official
+2026-01-28T04:31:04.534Z [DEBUG] Plugin autoupdate: checking installed plugins
+2026-01-28T04:31:07.598Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-28T04:31:07.598Z [DEBUG] BigQuery metrics exporter flush complete
+2026-01-28T04:31:07.598Z [DEBUG] Telemetry flushed successfully
+2026-01-28T04:31:07.629Z [ERROR] Error: Error: Failed to delete keychain entry
+    at kMB (/$bunfs/root/claude:4004:6938)
+    at async vrB (/$bunfs/root/claude:5237:592)
+    at async ECB (/$bunfs/root/claude:5237:496)
+    at async SKA (/$bunfs/root/claude:1817:62911)
+    at async startOAuthFlow (/$bunfs/root/claude:1817:64442)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:31:07.630Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574667630
+2026-01-28T04:31:07.630Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:07.630Z [DEBUG] Temp file written successfully, size: 6083 bytes
+2026-01-28T04:31:07.630Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:07.631Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574667630 to /Users/ben/.claude.json
+2026-01-28T04:31:07.631Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:07.688Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574667688
+2026-01-28T04:31:07.688Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:07.688Z [DEBUG] Temp file written successfully, size: 5892 bytes
+2026-01-28T04:31:07.688Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:07.688Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574667688 to /Users/ben/.claude.json
+2026-01-28T04:31:07.689Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:07.798Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574667798
+2026-01-28T04:31:07.798Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:07.798Z [DEBUG] Temp file written successfully, size: 6144 bytes
+2026-01-28T04:31:07.798Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:07.798Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574667798 to /Users/ben/.claude.json
+2026-01-28T04:31:07.799Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:07.966Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574667966
+2026-01-28T04:31:07.966Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:07.967Z [DEBUG] Temp file written successfully, size: 6267 bytes
+2026-01-28T04:31:07.967Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:07.967Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574667966 to /Users/ben/.claude.json
+2026-01-28T04:31:07.967Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:07.969Z [DEBUG] Getting matching hook commands for Notification with query: auth_success
+2026-01-28T04:31:07.969Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:07.969Z [DEBUG] Matched 0 unique hooks for query "auth_success" (0 before deduplication)
+2026-01-28T04:31:09.254Z [DEBUG] Programmatic settings change notification for policySettings
+2026-01-28T04:31:09.254Z [DEBUG] Plugin hooks: reloading due to policySettings change
+2026-01-28T04:31:09.256Z [DEBUG] Settings changed from policySettings, updating AppState
+2026-01-28T04:31:09.261Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574669261
+2026-01-28T04:31:09.261Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:09.261Z [DEBUG] Temp file written successfully, size: 6338 bytes
+2026-01-28T04:31:09.261Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:09.261Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574669261 to /Users/ben/.claude.json
+2026-01-28T04:31:09.261Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:09.262Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-28T04:31:09.263Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-28T04:31:09.264Z [DEBUG] FileHistory: Added snapshot for fa5721d7-b827-4673-9e3c-eba65a13b467, tracking 0 files
+2026-01-28T04:31:09.288Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:31:09.291Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-28T04:31:09.291Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-01-28T04:31:09.291Z [DEBUG] [claudeai-mcp] Gate returned: false
+2026-01-28T04:31:09.291Z [DEBUG] [claudeai-mcp] Disabled via gate
+2026-01-28T04:31:09.299Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-01-28T04:31:09.303Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574669303
+2026-01-28T04:31:09.303Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:09.303Z [DEBUG] Temp file written successfully, size: 6387 bytes
+2026-01-28T04:31:09.303Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:09.303Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574669303 to /Users/ben/.claude.json
+2026-01-28T04:31:09.303Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:09.306Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574669306
+2026-01-28T04:31:09.306Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:09.306Z [DEBUG] Temp file written successfully, size: 6425 bytes
+2026-01-28T04:31:09.306Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:09.306Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574669306 to /Users/ben/.claude.json
+2026-01-28T04:31:09.306Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:09.542Z [DEBUG] PackageManagerAutoUpdater: Update available 2.1.19 -> 2.1.21
+2026-01-28T04:31:12.856Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.856Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.871Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-28T04:31:12.871Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-28T04:31:12.871Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-28T04:31:12.871Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-28T04:31:12.873Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.873Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.883Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.883Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.889Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.889Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.892Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-01-28T04:31:12.892Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:12.892Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-28T04:31:12.893Z [DEBUG] Started caffeinate to prevent sleep
+2026-01-28T04:31:12.893Z [DEBUG] FileHistory: Making snapshot for message 66d1e270-175e-4bca-9bfd-bc9f1981897b
+2026-01-28T04:31:12.893Z [DEBUG] FileHistory: Added snapshot for 66d1e270-175e-4bca-9bfd-bc9f1981897b, tracking 0 files
+2026-01-28T04:31:12.896Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-28T04:31:12.897Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.897Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.897Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.0ed; cc_entrypoint=cli
+2026-01-28T04:31:12.898Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:12.898Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:12.898Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:12.898Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-28T04:31:12.904Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.904Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.907Z [DEBUG] Auto tool search disabled: 0 tokens (threshold: 20000, 10% of context) [source: query]
+2026-01-28T04:31:12.908Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.908Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.911Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.911Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.911Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.911Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.911Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.ec5; cc_entrypoint=cli
+2026-01-28T04:31:12.911Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:12.911Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:12.911Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:12.913Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:12.913Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:13.472Z [DEBUG] Stream started - received first chunk
+2026-01-28T04:31:14.338Z [DEBUG] Stream started - received first chunk
+2026-01-28T04:31:17.269Z [DEBUG] High write ratio: blit=340, write=678 (66.6% writes), screen=32x68
+2026-01-28T04:31:17.925Z [DEBUG] High write ratio: blit=544, write=632 (53.7% writes), screen=35x68
+2026-01-28T04:31:18.627Z [DEBUG] High write ratio: blit=544, write=663 (54.9% writes), screen=38x68
+2026-01-28T04:31:19.542Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574679542
+2026-01-28T04:31:19.543Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:19.543Z [DEBUG] Temp file written successfully, size: 6460 bytes
+2026-01-28T04:31:19.543Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:19.543Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574679542 to /Users/ben/.claude.json
+2026-01-28T04:31:19.543Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:19.545Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.545Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.552Z [DEBUG] High write ratio: blit=544, write=760 (58.3% writes), screen=42x68
+2026-01-28T04:31:19.553Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-28T04:31:19.557Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.557Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.561Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-01-28T04:31:19.561Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:19.561Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:19.561Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.561Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.564Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.564Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.575Z [DEBUG] tree-sitter: loaded from embedded
+2026-01-28T04:31:19.578Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.578Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.591Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.591Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.595Z [DEBUG] High write ratio: blit=544, write=760 (58.3% writes), screen=42x68
+2026-01-28T04:31:19.596Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-28T04:31:19.596Z [DEBUG] Looking for shell config file: /Users/ben/.zshrc
+2026-01-28T04:31:19.596Z [DEBUG] Snapshots directory: /Users/ben/.claude/shell-snapshots
+2026-01-28T04:31:19.597Z [DEBUG] Creating snapshot at: /Users/ben/.claude/shell-snapshots/snapshot-zsh-1769574679596-lbj1q7.sh
+2026-01-28T04:31:19.597Z [DEBUG] Shell binary exists: true
+2026-01-28T04:31:19.597Z [DEBUG] Execution timeout: 10000ms
+2026-01-28T04:31:19.678Z [DEBUG] Shell snapshot created successfully (13654 bytes)
+2026-01-28T04:31:19.678Z [DEBUG] No session environment scripts found
+2026-01-28T04:31:19.701Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.701Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.703Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.704Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.705Z [DEBUG] Getting matching hook commands for PostToolUseFailure with query: Bash
+2026-01-28T04:31:19.705Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:19.705Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:19.705Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.705Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.705Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.708Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-28T04:31:19.709Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.709Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.710Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-01-28T04:31:19.710Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:19.710Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:19.710Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.710Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.714Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.714Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.717Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.717Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.719Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-28T04:31:19.719Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:19.719Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.95e; cc_entrypoint=cli
+2026-01-28T04:31:19.719Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:19.719Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:19.720Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:19.734Z [DEBUG] High write ratio: blit=544, write=783 (59.0% writes), screen=43x68
+2026-01-28T04:31:20.569Z [DEBUG] Stream started - received first chunk
+2026-01-28T04:31:20.572Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.572Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.578Z [DEBUG] High write ratio: blit=680, write=747 (52.3% writes), screen=43x68
+2026-01-28T04:31:20.578Z [DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "echo:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+2026-01-28T04:31:20.581Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.581Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.585Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.585Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.588Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.588Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.592Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2026-01-28T04:31:20.593Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574680593
+2026-01-28T04:31:20.593Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:20.593Z [DEBUG] Temp file written successfully, size: 6500 bytes
+2026-01-28T04:31:20.593Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:20.593Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574680593 to /Users/ben/.claude.json
+2026-01-28T04:31:20.593Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:20.593Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-01-28T04:31:20.594Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.594Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:20.596Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2026-01-28T04:31:20.596Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:20.596Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:20.631Z [DEBUG] High write ratio: blit=680, write=685 (50.2% writes), screen=48x68
+2026-01-28T04:31:22.441Z [DEBUG] Persisting permission update: addRules to source 'localSettings'
+2026-01-28T04:31:22.441Z [DEBUG] Persisting 1 allow rule(s) to localSettings
+2026-01-28T04:31:22.442Z [DEBUG] Writing to temp file: /Users/ben/code/agentrails/.claude/settings.local.json.tmp.35239.1769574682442
+2026-01-28T04:31:22.443Z [DEBUG] Temp file written successfully, size: 69 bytes
+2026-01-28T04:31:22.443Z [DEBUG] Renaming /Users/ben/code/agentrails/.claude/settings.local.json.tmp.35239.1769574682442 to /Users/ben/code/agentrails/.claude/settings.local.json
+2026-01-28T04:31:22.443Z [DEBUG] File /Users/ben/code/agentrails/.claude/settings.local.json written atomically
+2026-01-28T04:31:22.446Z [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(echo:*)"]
+2026-01-28T04:31:22.455Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.455Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.466Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:31:22.466Z [DEBUG] Started caffeinate to prevent sleep
+2026-01-28T04:31:22.467Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-28T04:31:22.491Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-28T04:31:22.492Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574682492
+2026-01-28T04:31:22.492Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:22.492Z [DEBUG] Temp file written successfully, size: 6539 bytes
+2026-01-28T04:31:22.492Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:22.492Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574682492 to /Users/ben/.claude.json
+2026-01-28T04:31:22.492Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:22.492Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.493Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.7aa; cc_entrypoint=cli
+2026-01-28T04:31:22.493Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:22.493Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:22.493Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:22.494Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.494Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.499Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.499Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.502Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-01-28T04:31:22.502Z [DEBUG] Found 3 hook matchers in settings
+2026-01-28T04:31:22.502Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:22.502Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.502Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.502Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.505Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-28T04:31:22.506Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.506Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.508Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-01-28T04:31:22.508Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:22.508Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:22.508Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.508Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.509Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.509Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.512Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.512Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.515Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.515Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.516Z [DEBUG] Permission suggestions for Bash: []
+2026-01-28T04:31:22.519Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.519Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.521Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.521Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.523Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.523Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.526Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2026-01-28T04:31:22.526Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-01-28T04:31:22.526Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.526Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:22.528Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2026-01-28T04:31:22.528Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:22.528Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:22.563Z [DEBUG] High write ratio: blit=544, write=719 (56.9% writes), screen=47x68
+2026-01-28T04:31:22.731Z [DEBUG] PackageManagerAutoUpdater: Update available 2.1.19 -> 2.1.21
+2026-01-28T04:31:22.994Z [DEBUG] Stream started - received first chunk
+2026-01-28T04:31:23.158Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:23.173Z [DEBUG] High write ratio: blit=544, write=610 (52.9% writes), screen=39x68
+2026-01-28T04:31:23.174Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:31:23.176Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-28T04:31:23.183Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574683183
+2026-01-28T04:31:23.183Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:23.184Z [DEBUG] Temp file written successfully, size: 6564 bytes
+2026-01-28T04:31:23.184Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:23.184Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574683183 to /Users/ben/.claude.json
+2026-01-28T04:31:23.184Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:23.185Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574683185
+2026-01-28T04:31:23.185Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:23.185Z [DEBUG] Temp file written successfully, size: 6589 bytes
+2026-01-28T04:31:23.185Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:23.185Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574683185 to /Users/ben/.claude.json
+2026-01-28T04:31:23.185Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:23.440Z [DEBUG] PackageManagerAutoUpdater: Update available 2.1.19 -> 2.1.21
+2026-01-28T04:31:26.560Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.560Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.576Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-28T04:31:26.576Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-28T04:31:26.576Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-28T04:31:26.576Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-28T04:31:26.582Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.582Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.589Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.589Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.592Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-01-28T04:31:26.592Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:26.592Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-28T04:31:26.593Z [DEBUG] Started caffeinate to prevent sleep
+2026-01-28T04:31:26.593Z [DEBUG] FileHistory: Making snapshot for message 0ebcaa49-b911-416e-9912-1bdd497e81f3
+2026-01-28T04:31:26.593Z [DEBUG] FileHistory: Added snapshot for 0ebcaa49-b911-416e-9912-1bdd497e81f3, tracking 0 files
+2026-01-28T04:31:26.597Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-28T04:31:26.598Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.598Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.598Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.0ed; cc_entrypoint=cli
+2026-01-28T04:31:26.598Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:26.598Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:26.598Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:26.603Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.603Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.607Z [DEBUG] Auto tool search disabled: 0 tokens (threshold: 20000, 10% of context) [source: query]
+2026-01-28T04:31:26.609Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.609Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.611Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.612Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.ec5; cc_entrypoint=cli
+2026-01-28T04:31:26.612Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:31:26.612Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:31:26.612Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:31:26.613Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:26.613Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:27.223Z [DEBUG] Stream started - received first chunk
+2026-01-28T04:31:28.043Z [DEBUG] Stream started - received first chunk
+2026-01-28T04:31:30.489Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.489Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.496Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-28T04:31:30.503Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.503Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.511Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-01-28T04:31:30.511Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:30.511Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:30.511Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.511Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.516Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.516Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.520Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.520Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.525Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.525Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.528Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.528Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.530Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.530Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.533Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.533Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.535Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.535Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.536Z [DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Read",
+        "ruleContent": "//Users/ben/**"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "session"
+  }
+]
+2026-01-28T04:31:30.536Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.536Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.538Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.538Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.541Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.541Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.545Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2026-01-28T04:31:30.545Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-01-28T04:31:30.546Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.546Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:30.547Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2026-01-28T04:31:30.547Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:30.547Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:32.967Z [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'session': ["Read(//Users/ben/**)"]
+2026-01-28T04:31:32.972Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:32.972Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:32.985Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:31:32.986Z [DEBUG] Started caffeinate to prevent sleep
+2026-01-28T04:31:32.988Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-28T04:31:33.246Z [DEBUG] PackageManagerAutoUpdater: Update available 2.1.19 -> 2.1.21
+2026-01-28T04:31:50.539Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:50.539Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:50.547Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-01-28T04:31:50.550Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574710550
+2026-01-28T04:31:50.550Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:50.550Z [DEBUG] Temp file written successfully, size: 6613 bytes
+2026-01-28T04:31:50.550Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:50.550Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574710550 to /Users/ben/.claude.json
+2026-01-28T04:31:50.550Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:50.552Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:50.555Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:50.559Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:50.559Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:50.562Z [DEBUG] Getting matching hook commands for PostToolUseFailure with query: Bash
+2026-01-28T04:31:50.562Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:50.562Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-28T04:31:50.562Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:31:50.579Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574710579
+2026-01-28T04:31:50.579Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:50.579Z [DEBUG] Temp file written successfully, size: 6635 bytes
+2026-01-28T04:31:50.579Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:50.579Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574710579 to /Users/ben/.claude.json
+2026-01-28T04:31:50.579Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:50.580Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35239.1769574710580
+2026-01-28T04:31:50.580Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:31:50.580Z [DEBUG] Temp file written successfully, size: 6658 bytes
+2026-01-28T04:31:50.580Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:31:50.580Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35239.1769574710580 to /Users/ben/.claude.json
+2026-01-28T04:31:50.580Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:31:51.206Z [DEBUG] Getting matching hook commands for SessionEnd with query: prompt_input_exit
+2026-01-28T04:31:51.206Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:31:51.206Z [DEBUG] Matched 0 unique hooks for query "prompt_input_exit" (0 before deduplication)

@@ -1,0 +1,106 @@
+# Canonical API reference
+
+When in doubt, this file should be considered the authority on how our API
+should work. All choices should flow downhill from this doc. Never change this
+doc when a discrepancy is discovered between it and the API–change the API.
+
+## Pitch
+
+This API gives agents the tools they need to assist the human they are acting on behalf of (their 'owner').
+
+We provide an email address, the ability to text and make phone calls, and (coming soon) a credit card.
+
+We also provide a publicly-available URL that acts as your catch-all mailbox for inbound data. We rely on a long, UUID-based URL to prevent easy guessing by attackers.
+
+
+## Implementation
+
+You can think of this API as similar to an implementation of the Actor Model for agents.
+
+The core idea is this: we give agents a mailbox on a publicly-available URL. 
+
+All data meant for the agent flows into this mailbox: inbound emails, new SMS messages to its phone number, results of outbound calls. The agent can use this mailbox URL for any service that requires a webhook/callback URL. It is a unified interface for inbound data.
+
+Agents can choose to forward their mailbox data to a different URL they control, or they can simply poll it (this is particularly helpful for agents who are sandboxed/on a VM/can't get a public URL).
+
+
+## Endpoints
+
+POST /register -> sign up (for free!) as an agent, receive an API key, email address,  mailbox URL, and signing secret
+
+GET /mailbox -> view the contents of your mailbox (accepts a cursor)
+POST /mailbox/forward → Specify your own webhook URL for real-time forwarding of mailbox events
+DELETE /mailbox/forward → Disable forwarding, return to polling
+
+POST /send-email → Send an email from your email address. Responses go to your mailbox.
+POST /phone-call → Make an outbound call, specify a high-level goal for the phone agent in natural language. Results are posted to your mailbox.
+POST /sms → Send SMS message. Inbound SMS goes to your mailbox.
+
+POST /ask-owner-to-verify-email -> Sends a message to their owner to confirm the control and email and consent to the agent emailing them. Required before agents can send outbound emails to their owner. Successful verification generates a message to your mailbox.
+POST /owner-signup-url → Generate a URL for your owner to a page that lets them enter a credit card and upgrade the agent to a paid plan. Generates a message to your mailbox upon success.
+GET /usage → Returns usage this period. Specifies remaining emails, SMSs, calls for agents on the free plan.
+
+POST /feedback → Tell us what you need, or wish we did better. Feel free to specify features that would have compelled you to sign up if we'd had them.
+
+GET /status → Returns owner verification status, current plan, phone number (if any), mailbox URL
+
+Client sends an Idempotency-Key header on mutating requests (/send-email, /sms, /phone-call, etc.); server stores and returns the cached response if the same key is seen again within 24 hours.
+
+## Authentication
+
+All requests except /register and /feedback require `Authorization: Bearer <api_key>` header.
+
+## Schemas
+
+Concrete schemas will be defined soon via OpenAPI spec.
+
+## Correlation
+
+- Outbound emails return a `email_id`; inbound replies include `in_reply_to` (standard email headers). 
+- Phone calls return a `phone_call_id` referenced by all related mailbox events. 
+- SMS uses implicit conversation threading by phone number pair (`sms_conversation_id`), not individual message correlation.
+
+
+### Not implemented, coming soon
+
+POST /credit-card -> Generate a virtual card with spending limits for you (the agent) to use on behalf of your owner 
+
+### Additional API notes
+
+#### Limitations
+
+- Agents on the free plan can only send emails to and receive emails from their owner.
+- Agents can only send emails to their owner after the owner has verified their email address (prevents spam).
+
+#### Mailbox signing
+
+At registration, you receive a signing secret.
+
+For services that accept a custom webhook secret: you can provide your signing_secret when configuring the callback URL. When messages arrive, we verify the signature and mark the message as trusted.
+
+For services that provide their own secret (or don't sign at all): we can't verify then. Messages are marked as unverified. You'll have to verify those messages yourself using whatever secret the external service gave you.
+
+Check the verification field on each message and decide your own risk tolerance for unverified messages.
+
+
+
+## Pricing plans
+
+### Free
+
+Meant to be what the agent signs up for immediately to test functionality. Requires no credit card.
+
+- Can only email to/from owner's verified email address
+- 20 emails/day, 200 mailbox messages/day
+- Webhook events persisted 7 days
+- No phone number, no SMS
+- API: 30 reads/min, 20 writes/min
+
+### Pro ($10/month)
+
+- Email to/from anyone (100/hr, 1k/day, 15/day per recipient)
+- Phone number for SMS. SMS limits: 60/min, 500/day
+- Outbound calls (50/day)
+- Mailbox items persisted 30 days
+- API: 100 reads/min, 60 writes/min
+- Usage: $0.002/email, $0.02/SMS, $0.12/min calls

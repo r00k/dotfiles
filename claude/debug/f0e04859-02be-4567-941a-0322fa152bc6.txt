@@ -1,0 +1,277 @@
+2026-01-28T15:58:08.355Z [DEBUG] Failed to check enabledPlatforms: TypeError: undefined is not an object (evaluating 'mZ.join')
+2026-01-28T15:58:08.403Z [DEBUG] Watching for changes in setting files /Users/ben/code/agentrails/.claude...
+2026-01-28T15:58:08.404Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-28T15:58:08.404Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-28T15:58:08.404Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-28T15:58:08.404Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-28T15:58:08.406Z [DEBUG] Applying permission update: Adding 2 allow rule(s) to destination 'localSettings': ["Bash(echo:*)","Bash(brew --prefix:*)"]
+2026-01-28T15:58:08.406Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-28T15:58:08.407Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T15:58:08.407Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T15:58:08.407Z [DEBUG] [STARTUP] Running setup()...
+2026-01-28T15:58:08.407Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-28T15:58:08.407Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/ben/.claude/skills, project=[]
+2026-01-28T15:58:08.408Z [DEBUG] Passes: Cache stale, returning cached data and refreshing in background
+2026-01-28T15:58:08.408Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Library/Application Support/ClaudeCode/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:2063)
+    at oW (/$bunfs/root/claude:11:35584)
+    at readdirSync (/$bunfs/root/claude:12:2024)
+    at MIR (/$bunfs/root/claude:1758:380)
+    at MIR (/$bunfs/root/claude:1758:1350)
+    at <anonymous> (/$bunfs/root/claude:1758:4670)
+    at <anonymous> (/$bunfs/root/claude:1758:5401)
+    at A (/$bunfs/root/claude:11:7259)
+    at fw8 (/$bunfs/root/claude:4826:4342)
+2026-01-28T15:58:08.408Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Users/ben/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:2063)
+    at oW (/$bunfs/root/claude:11:35584)
+    at readdirSync (/$bunfs/root/claude:12:2024)
+    at MIR (/$bunfs/root/claude:1758:380)
+    at MIR (/$bunfs/root/claude:1758:1350)
+    at <anonymous> (/$bunfs/root/claude:1758:4713)
+    at <anonymous> (/$bunfs/root/claude:1758:5401)
+    at A (/$bunfs/root/claude:11:7259)
+    at fw8 (/$bunfs/root/claude:4826:4342)
+2026-01-28T15:58:08.408Z [DEBUG] Error log sink initialized
+2026-01-28T15:58:08.413Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-01-28T15:58:08.413Z [DEBUG] Total plugin skills loaded: 0
+2026-01-28T15:58:08.413Z [DEBUG] Total plugin commands loaded: 0
+2026-01-28T15:58:08.413Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-28T15:58:08.413Z [DEBUG] [STARTUP] setup() completed in 6ms
+2026-01-28T15:58:08.413Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-28T15:58:08.415Z [DEBUG] Total plugin agents loaded: 0
+2026-01-28T15:58:08.416Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, legacy commands: 0)
+2026-01-28T15:58:08.416Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills, 1 bundled skills
+2026-01-28T15:58:08.416Z [DEBUG] [STARTUP] Commands and agents loaded in 3ms
+2026-01-28T15:58:08.416Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-28T15:58:08.416Z [DEBUG] [render] initLayout starting
+2026-01-28T15:58:08.416Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:08.417Z [DEBUG] [Claude in Chrome] Found chrome profiles: Default, Profile 2
+2026-01-28T15:58:08.417Z [DEBUG] [Claude in Chrome] Extension fcoeoabgfenejglbffodgkkbkcdhcgfn found in chrome Default
+2026-01-28T15:58:08.417Z [DEBUG] Watching for changes in skill/command directories: /Users/ben/.claude/commands...
+2026-01-28T15:58:08.419Z [DEBUG] [render] initLayout complete
+2026-01-28T15:58:08.420Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:08.420Z [DEBUG] [render] first ink render: 253ms since process start
+2026-01-28T15:58:08.431Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-28T15:58:08.434Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-28T15:58:08.437Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-01-28T15:58:08.438Z [DEBUG] Grove: Using fresh cached config
+2026-01-28T15:58:08.438Z [DEBUG] [render] initLayout starting
+2026-01-28T15:58:08.438Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:08.438Z [DEBUG] [render] initLayout complete
+2026-01-28T15:58:08.438Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:08.438Z [DEBUG] [render] first ink render: 271ms since process start
+2026-01-28T15:58:08.439Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-28T15:58:08.441Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-28T15:58:08.446Z [DEBUG] Git remote URL: git@github.com:r00k/agentrails.git
+2026-01-28T15:58:08.446Z [DEBUG] Parsed repository: r00k/agentrails from git@github.com:r00k/agentrails.git
+2026-01-28T15:58:08.446Z [DEBUG] Parsed repository: r00k/agentrails from URL: git@github.com:r00k/agentrails.git
+2026-01-28T15:58:08.446Z [DEBUG] Path /Users/ben/code/agentrails already tracked for repo r00k/agentrails
+2026-01-28T15:58:08.469Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615888469
+2026-01-28T15:58:08.469Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:08.469Z [DEBUG] Temp file written successfully, size: 7966 bytes
+2026-01-28T15:58:08.470Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:08.470Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615888469 to /Users/ben/.claude.json
+2026-01-28T15:58:08.470Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:08.669Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615888669
+2026-01-28T15:58:08.669Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:08.669Z [DEBUG] Temp file written successfully, size: 7999 bytes
+2026-01-28T15:58:08.669Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:08.669Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615888669 to /Users/ben/.claude.json
+2026-01-28T15:58:08.669Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:08.671Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615888671
+2026-01-28T15:58:08.671Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:08.671Z [DEBUG] Temp file written successfully, size: 8052 bytes
+2026-01-28T15:58:08.671Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:08.671Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615888671 to /Users/ben/.claude.json
+2026-01-28T15:58:08.671Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:08.720Z [DEBUG] Failed to fetch and cache passes eligibility
+2026-01-28T15:58:08.720Z [ERROR] AxiosError: Error
+    at yy (/$bunfs/root/claude:42:1144)
+    at <anonymous> (/$bunfs/root/claude:47:10093)
+    at emit (node:events:92:22)
+    at endReadableNT (internal:streams/readable:861:50)
+    at processTicksAndRejections (native:7:39)
+    at request (/$bunfs/root/claude:49:2149)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T15:58:09.238Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615889238
+2026-01-28T15:58:09.238Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:09.239Z [DEBUG] Temp file written successfully, size: 8052 bytes
+2026-01-28T15:58:09.239Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:09.239Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615889238 to /Users/ben/.claude.json
+2026-01-28T15:58:09.239Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:10.957Z [DEBUG] [STARTUP] showSetupScreens() completed in 2541ms
+2026-01-28T15:58:10.957Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-28T15:58:10.958Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-28T15:58:10.958Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-28T15:58:10.958Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T15:58:10.958Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T15:58:10.960Z [DEBUG] Passes: Cache stale, returning cached data and refreshing in background
+2026-01-28T15:58:10.960Z [DEBUG] Total LSP servers loaded: 0
+2026-01-28T15:58:10.960Z [DEBUG] [STARTUP] MCP configs loaded in 2554ms
+2026-01-28T15:58:10.962Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T15:58:10.963Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T15:58:10.967Z [DEBUG] [Reconnection] computeInitialTeamContext: No teammate context set (not a teammate)
+2026-01-28T15:58:10.968Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615890968
+2026-01-28T15:58:10.968Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:10.969Z [DEBUG] Temp file written successfully, size: 8052 bytes
+2026-01-28T15:58:10.969Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:10.969Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615890968 to /Users/ben/.claude.json
+2026-01-28T15:58:10.969Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:10.971Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-28T15:58:10.971Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-28T15:58:10.972Z [DEBUG] Loaded 0 installed plugins from /Users/ben/.claude/plugins/installed_plugins.json
+2026-01-28T15:58:10.972Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-01-28T15:58:10.972Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-01-28T15:58:10.973Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T15:58:10.973Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2026-01-28T15:58:10.973Z [DEBUG] LSP server manager initialized successfully
+2026-01-28T15:58:10.973Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-28T15:58:10.973Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T15:58:10.976Z [DEBUG] [render] initLayout starting
+2026-01-28T15:58:10.976Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.977Z [DEBUG] [render] initLayout complete
+2026-01-28T15:58:10.977Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.977Z [DEBUG] [render] first ink render: 2810ms since process start
+2026-01-28T15:58:10.986Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T15:58:10.986Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T15:58:10.992Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-28T15:58:10.996Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.997Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.997Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.997Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.998Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:10.999Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.000Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.001Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.001Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.002Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.002Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.002Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.002Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.002Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.003Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.003Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.003Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.003Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.003Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.003Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.014Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891014
+2026-01-28T15:58:11.014Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.015Z [DEBUG] Temp file written successfully, size: 8086 bytes
+2026-01-28T15:58:11.015Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.015Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891014 to /Users/ben/.claude.json
+2026-01-28T15:58:11.015Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.021Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891021
+2026-01-28T15:58:11.021Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.021Z [DEBUG] Temp file written successfully, size: 8086 bytes
+2026-01-28T15:58:11.021Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.021Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891021 to /Users/ben/.claude.json
+2026-01-28T15:58:11.021Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.022Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891022
+2026-01-28T15:58:11.022Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.022Z [DEBUG] Temp file written successfully, size: 8086 bytes
+2026-01-28T15:58:11.022Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.022Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891022 to /Users/ben/.claude.json
+2026-01-28T15:58:11.022Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.022Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.20/claude
+2026-01-28T15:58:11.023Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-28T15:58:11.023Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-28T15:58:11.023Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.20/claude
+2026-01-28T15:58:11.023Z [DEBUG] Official marketplace auto-install skipped: already_attempted
+2026-01-28T15:58:11.023Z [DEBUG] performStartupChecks called
+2026-01-28T15:58:11.024Z [DEBUG] Starting background plugin installations
+2026-01-28T15:58:11.024Z [DEBUG] performBackgroundPluginInstallations called
+2026-01-28T15:58:11.029Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-28T15:58:11.164Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-01-28T15:58:11.165Z [DEBUG] [claudeai-mcp] Gate returned: false
+2026-01-28T15:58:11.165Z [DEBUG] [claudeai-mcp] Disabled via gate
+2026-01-28T15:58:11.165Z [DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+2026-01-28T15:58:11.165Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-28T15:58:11.170Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891170
+2026-01-28T15:58:11.170Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.170Z [DEBUG] Temp file written successfully, size: 8086 bytes
+2026-01-28T15:58:11.170Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.170Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891170 to /Users/ben/.claude.json
+2026-01-28T15:58:11.170Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.171Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891171
+2026-01-28T15:58:11.171Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.171Z [DEBUG] Temp file written successfully, size: 8086 bytes
+2026-01-28T15:58:11.171Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.171Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891171 to /Users/ben/.claude.json
+2026-01-28T15:58:11.171Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.171Z [DEBUG] Passes eligibility cached for org 272b50f7-5ae2-4151-9aa3-1ad100d1a3b2: true
+2026-01-28T15:58:11.171Z [ERROR] SyntaxError: SyntaxError: JSON Parse error: Property name must be a string literal
+    at <parse> (:0)
+    at parse (unknown)
+    at <anonymous> (/$bunfs/root/claude:70:855)
+    at A (/$bunfs/root/claude:11:7259)
+    at QU8 (/$bunfs/root/claude:4277:5874)
+    at async maB (/$bunfs/root/claude:4277:8660)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T15:58:11.172Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891172
+2026-01-28T15:58:11.172Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.172Z [DEBUG] Temp file written successfully, size: 8086 bytes
+2026-01-28T15:58:11.172Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.172Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891172 to /Users/ben/.claude.json
+2026-01-28T15:58:11.172Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.175Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.20/claude
+2026-01-28T15:58:11.180Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891180
+2026-01-28T15:58:11.180Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.180Z [DEBUG] Temp file written successfully, size: 8086 bytes
+2026-01-28T15:58:11.180Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.180Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891180 to /Users/ben/.claude.json
+2026-01-28T15:58:11.180Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.636Z [DEBUG] PackageManagerAutoUpdater: Update available 2.1.20 -> 2.1.22
+2026-01-28T15:58:11.636Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:11.977Z [DEBUG] rg error (signal=undefined, code=ABORT_ERR, stderr: ), 123 results
+2026-01-28T15:58:11.977Z [ERROR] AbortError: AbortError: The operation was aborted.
+    at unknown
+    at abortChildProcess (node:child_process:935:42)
+    at onAbortListener2 (node:child_process:35:24)
+    at abort (unknown)
+    at <anonymous> (/$bunfs/root/claude:3027:209)
+2026-01-28T15:58:11.978Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T15:58:11.978Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T15:58:11.985Z [DEBUG] Skills and commands included in Skill tool:
+2026-01-28T15:58:11.987Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891987
+2026-01-28T15:58:11.987Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.987Z [DEBUG] Temp file written successfully, size: 8117 bytes
+2026-01-28T15:58:11.987Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.987Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891987 to /Users/ben/.claude.json
+2026-01-28T15:58:11.987Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.988Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.55416.1769615891988
+2026-01-28T15:58:11.989Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T15:58:11.989Z [DEBUG] Temp file written successfully, size: 8152 bytes
+2026-01-28T15:58:11.989Z [DEBUG] Applied original permissions to temp file
+2026-01-28T15:58:11.989Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.55416.1769615891988 to /Users/ben/.claude.json
+2026-01-28T15:58:11.989Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T15:58:11.989Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T15:58:11.989Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T15:58:11.989Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T15:58:12.175Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.1.20/claude)
+2026-01-28T15:58:13.974Z [DEBUG] Layout engine: yoga
+2026-01-28T15:58:14.083Z [DEBUG] Getting matching hook commands for SessionEnd with query: prompt_input_exit
+2026-01-28T15:58:14.083Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T15:58:14.083Z [DEBUG] Matched 0 unique hooks for query "prompt_input_exit" (0 before deduplication)

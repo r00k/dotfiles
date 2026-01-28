@@ -1,0 +1,149 @@
+2026-01-28T04:30:55.158Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-28T04:30:55.158Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-28T04:30:55.158Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-28T04:30:55.158Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-28T04:30:55.160Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-28T04:30:55.161Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:30:55.161Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:30:55.161Z [DEBUG] [STARTUP] Running setup()...
+2026-01-28T04:30:55.162Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-28T04:30:55.162Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/ben/.claude/skills, project=[]
+2026-01-28T04:30:55.162Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Library/Application Support/ClaudeCode/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:1903)
+    at mW (/$bunfs/root/claude:11:35435)
+    at readdirSync (/$bunfs/root/claude:12:1864)
+    at ILR (/$bunfs/root/claude:2215:380)
+    at ILR (/$bunfs/root/claude:2215:1350)
+    at <anonymous> (/$bunfs/root/claude:2215:4440)
+    at <anonymous> (/$bunfs/root/claude:2215:5171)
+    at A (/$bunfs/root/claude:11:7259)
+    at FZ8 (/$bunfs/root/claude:4862:4342)
+2026-01-28T04:30:55.162Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Users/ben/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:1903)
+    at mW (/$bunfs/root/claude:11:35435)
+    at readdirSync (/$bunfs/root/claude:12:1864)
+    at ILR (/$bunfs/root/claude:2215:380)
+    at ILR (/$bunfs/root/claude:2215:1350)
+    at <anonymous> (/$bunfs/root/claude:2215:4483)
+    at <anonymous> (/$bunfs/root/claude:2215:5171)
+    at A (/$bunfs/root/claude:11:7259)
+    at FZ8 (/$bunfs/root/claude:4862:4342)
+2026-01-28T04:30:55.162Z [DEBUG] Error log sink initialized
+2026-01-28T04:30:55.163Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-01-28T04:30:55.163Z [DEBUG] Total plugin skills loaded: 0
+2026-01-28T04:30:55.163Z [DEBUG] Total plugin commands loaded: 0
+2026-01-28T04:30:55.163Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-28T04:30:55.167Z [DEBUG] [STARTUP] setup() completed in 6ms
+2026-01-28T04:30:55.167Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-28T04:30:55.167Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-01-28T04:30:55.167Z [DEBUG] [claudeai-mcp] Gate returned: false
+2026-01-28T04:30:55.167Z [DEBUG] [claudeai-mcp] Disabled via gate
+2026-01-28T04:30:55.168Z [DEBUG] Total plugin agents loaded: 0
+2026-01-28T04:30:55.179Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, legacy commands: 0)
+2026-01-28T04:30:55.179Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills, 0 bundled skills
+2026-01-28T04:30:55.179Z [DEBUG] [STARTUP] Commands and agents loaded in 12ms
+2026-01-28T04:30:55.179Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-28T04:30:55.179Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-28T04:30:55.179Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-28T04:30:55.181Z [DEBUG] Total LSP servers loaded: 0
+2026-01-28T04:30:55.181Z [DEBUG] [STARTUP] MCP configs loaded in 21ms
+2026-01-28T04:30:55.181Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-28T04:30:55.181Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-28T04:30:55.181Z [DEBUG] LSP server manager initialized successfully
+2026-01-28T04:30:55.181Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-28T04:30:55.182Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:30:55.182Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:30:55.182Z [DEBUG] Loaded 0 installed plugins from /Users/ben/.claude/plugins/installed_plugins.json
+2026-01-28T04:30:55.182Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-01-28T04:30:55.183Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-01-28T04:30:55.189Z [DEBUG] Writing to temp file: /Users/ben/.claude/todos/793f6e5b-7007-4ebf-8d92-78d259a3a8d6-agent-793f6e5b-7007-4ebf-8d92-78d259a3a8d6.json.tmp.35171.1769574655189
+2026-01-28T04:30:55.189Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-28T04:30:55.189Z [DEBUG] Renaming /Users/ben/.claude/todos/793f6e5b-7007-4ebf-8d92-78d259a3a8d6-agent-793f6e5b-7007-4ebf-8d92-78d259a3a8d6.json.tmp.35171.1769574655189 to /Users/ben/.claude/todos/793f6e5b-7007-4ebf-8d92-78d259a3a8d6-agent-793f6e5b-7007-4ebf-8d92-78d259a3a8d6.json
+2026-01-28T04:30:55.189Z [DEBUG] File /Users/ben/.claude/todos/793f6e5b-7007-4ebf-8d92-78d259a3a8d6-agent-793f6e5b-7007-4ebf-8d92-78d259a3a8d6.json written atomically
+2026-01-28T04:30:55.191Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-01-28T04:30:55.191Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:30:55.191Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2026-01-28T04:30:55.195Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-28T04:30:55.195Z [DEBUG] Watching for changes in skill/command directories: /Users/ben/.claude/commands...
+2026-01-28T04:30:55.214Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-28T04:30:55.214Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-28T04:30:55.214Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-28T04:30:55.214Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-28T04:30:55.215Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-01-28T04:30:55.215Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:30:55.215Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-28T04:30:55.354Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:30:55.354Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:30:55.356Z [DEBUG] Skills and commands included in Skill tool:
+2026-01-28T04:30:55.356Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:30:55.356Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:30:55.356Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:30:55.357Z [ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at validateHeaders (/$bunfs/root/claude:161:1013)
+    at buildHeaders (/$bunfs/root/claude:161:8517)
+    at async buildRequest (/$bunfs/root/claude:161:7583)
+    at async makeRequest (/$bunfs/root/claude:161:3411)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:30:55.357Z [DEBUG] countTokensWithFallback: API returned null, trying haiku fallback (18 tools)
+2026-01-28T04:30:55.357Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:30:55.357Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:30:55.357Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:30:55.357Z [DEBUG] countTokensWithFallback: haiku fallback failed: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-28T04:30:55.357Z [ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at validateHeaders (/$bunfs/root/claude:161:1013)
+    at buildHeaders (/$bunfs/root/claude:161:8517)
+    at async buildRequest (/$bunfs/root/claude:161:7583)
+    at async makeRequest (/$bunfs/root/claude:161:3411)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:30:55.357Z [DEBUG] countToolDefinitionTokens returned null for 18 tools: Task, TaskOutput, Bash, Glob, Grep, ExitPlanMode, Read, Edit, Write, NotebookEdit, WebFetch, TodoWri...
+2026-01-28T04:30:55.379Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35171.1769574655379
+2026-01-28T04:30:55.379Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:30:55.379Z [DEBUG] Temp file written successfully, size: 5387 bytes
+2026-01-28T04:30:55.379Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:30:55.379Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35171.1769574655379 to /Users/ben/.claude.json
+2026-01-28T04:30:55.379Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:30:55.380Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35171.1769574655380
+2026-01-28T04:30:55.380Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:30:55.380Z [DEBUG] Temp file written successfully, size: 5433 bytes
+2026-01-28T04:30:55.380Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:30:55.380Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35171.1769574655380 to /Users/ben/.claude.json
+2026-01-28T04:30:55.380Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:30:55.380Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-28T04:30:55.380Z [DEBUG] Auto tool search disabled: 0 tokens (threshold: 20000, 10% of context) [source: query]
+2026-01-28T04:30:55.381Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:30:55.381Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:30:55.381Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:30:55.381Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:30:55.382Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.35171.1769574655382
+2026-01-28T04:30:55.382Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:30:55.382Z [DEBUG] Temp file written successfully, size: 5432 bytes
+2026-01-28T04:30:55.382Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:30:55.382Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.35171.1769574655382 to /Users/ben/.claude.json
+2026-01-28T04:30:55.382Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:30:55.382Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:30:55.383Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.19.0ed; cc_entrypoint=sdk-cli
+2026-01-28T04:30:55.383Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:30:55.383Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:30:55.383Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:30:55.384Z [ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-28T04:30:55.384Z [ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at validateHeaders (/$bunfs/root/claude:161:1013)
+    at buildHeaders (/$bunfs/root/claude:161:8517)
+    at async buildRequest (/$bunfs/root/claude:161:7583)
+    at async makeRequest (/$bunfs/root/claude:161:3411)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:30:55.384Z [ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-28T04:30:55.384Z [ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at validateHeaders (/$bunfs/root/claude:161:1013)
+    at buildHeaders (/$bunfs/root/claude:161:8517)
+    at async buildRequest (/$bunfs/root/claude:161:7583)
+    at async makeRequest (/$bunfs/root/claude:161:3411)
+    at processTicksAndRejections (native:7:39)
+2026-01-28T04:30:55.393Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-01-28T04:30:55.393Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:30:55.393Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-28T04:30:55.393Z [DEBUG] Getting matching hook commands for SessionEnd with query: other
+2026-01-28T04:30:55.393Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:30:55.393Z [DEBUG] Matched 0 unique hooks for query "other" (0 before deduplication)

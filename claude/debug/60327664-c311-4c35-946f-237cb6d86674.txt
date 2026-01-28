@@ -1,0 +1,129 @@
+2026-01-28T04:46:12.546Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-28T04:46:12.546Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-28T04:46:12.546Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-28T04:46:12.546Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-28T04:46:12.547Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-28T04:46:12.548Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:46:12.548Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:46:12.548Z [DEBUG] [STARTUP] Running setup()...
+2026-01-28T04:46:12.548Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-28T04:46:12.548Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/ben/.claude/skills, project=[]
+2026-01-28T04:46:12.548Z [DEBUG] Passes: Using fresh cached eligibility data
+2026-01-28T04:46:12.549Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Library/Application Support/ClaudeCode/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:1903)
+    at mW (/$bunfs/root/claude:11:35435)
+    at readdirSync (/$bunfs/root/claude:12:1864)
+    at ILR (/$bunfs/root/claude:2215:380)
+    at ILR (/$bunfs/root/claude:2215:1350)
+    at <anonymous> (/$bunfs/root/claude:2215:4440)
+    at <anonymous> (/$bunfs/root/claude:2215:5171)
+    at A (/$bunfs/root/claude:11:7259)
+    at FZ8 (/$bunfs/root/claude:4862:4342)
+2026-01-28T04:46:12.549Z [ERROR] Error: Error: ENOENT: no such file or directory, scandir '/Users/ben/.claude/skills'
+    at readdirSync (unknown)
+    at <anonymous> (/$bunfs/root/claude:12:1903)
+    at mW (/$bunfs/root/claude:11:35435)
+    at readdirSync (/$bunfs/root/claude:12:1864)
+    at ILR (/$bunfs/root/claude:2215:380)
+    at ILR (/$bunfs/root/claude:2215:1350)
+    at <anonymous> (/$bunfs/root/claude:2215:4483)
+    at <anonymous> (/$bunfs/root/claude:2215:5171)
+    at A (/$bunfs/root/claude:11:7259)
+    at FZ8 (/$bunfs/root/claude:4862:4342)
+2026-01-28T04:46:12.549Z [DEBUG] Error log sink initialized
+2026-01-28T04:46:12.551Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-01-28T04:46:12.551Z [DEBUG] Total plugin skills loaded: 0
+2026-01-28T04:46:12.551Z [DEBUG] Total plugin commands loaded: 0
+2026-01-28T04:46:12.551Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-28T04:46:12.551Z [DEBUG] [STARTUP] setup() completed in 3ms
+2026-01-28T04:46:12.551Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-28T04:46:12.552Z [DEBUG] Total plugin agents loaded: 0
+2026-01-28T04:46:12.562Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, legacy commands: 0)
+2026-01-28T04:46:12.562Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills, 0 bundled skills
+2026-01-28T04:46:12.562Z [DEBUG] [STARTUP] Commands and agents loaded in 11ms
+2026-01-28T04:46:12.562Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-28T04:46:12.562Z [DEBUG] [render] initYoga starting
+2026-01-28T04:46:12.563Z [DEBUG] [Claude in Chrome] Found chrome profiles: Default, Profile 2
+2026-01-28T04:46:12.563Z [DEBUG] Watching for changes in skill/command directories: /Users/ben/.claude/commands...
+2026-01-28T04:46:12.563Z [DEBUG] [Claude in Chrome] Extension fcoeoabgfenejglbffodgkkbkcdhcgfn found in chrome Default
+2026-01-28T04:46:12.564Z [DEBUG] [render] initYoga complete
+2026-01-28T04:46:12.565Z [DEBUG] [render] first ink render: 199ms since process start
+2026-01-28T04:46:12.566Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-28T04:46:12.569Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-28T04:46:12.572Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-01-28T04:46:12.572Z [DEBUG] Grove: Using fresh cached config
+2026-01-28T04:46:12.572Z [DEBUG] [render] initYoga starting
+2026-01-28T04:46:12.573Z [DEBUG] [render] initYoga complete
+2026-01-28T04:46:12.573Z [DEBUG] [render] first ink render: 207ms since process start
+2026-01-28T04:46:12.574Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-28T04:46:12.577Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-28T04:46:12.578Z [DEBUG] Git remote URL: null
+2026-01-28T04:46:12.578Z [DEBUG] No git remote URL found
+2026-01-28T04:46:12.578Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-28T04:46:12.732Z [DEBUG] [STARTUP] showSetupScreens() completed in 170ms
+2026-01-28T04:46:12.732Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-28T04:46:12.732Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-28T04:46:12.732Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-28T04:46:12.732Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:46:12.732Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:46:12.732Z [DEBUG] Passes: Using fresh cached eligibility data
+2026-01-28T04:46:12.732Z [DEBUG] Total LSP servers loaded: 0
+2026-01-28T04:46:12.732Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:46:12.733Z [DEBUG] [STARTUP] MCP configs loaded in 186ms
+2026-01-28T04:46:12.734Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:46:12.734Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:46:12.735Z [DEBUG] [Reconnection] computeInitialTeamContext: No teammate context set (not a teammate)
+2026-01-28T04:46:12.736Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.37928.1769575572736
+2026-01-28T04:46:12.736Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:46:12.736Z [DEBUG] Temp file written successfully, size: 7967 bytes
+2026-01-28T04:46:12.736Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:46:12.736Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.37928.1769575572736 to /Users/ben/.claude.json
+2026-01-28T04:46:12.736Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:46:12.737Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-28T04:46:12.737Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-28T04:46:12.738Z [DEBUG] Loaded 0 installed plugins from /Users/ben/.claude/plugins/installed_plugins.json
+2026-01-28T04:46:12.738Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-01-28T04:46:12.738Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-01-28T04:46:12.738Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:46:12.738Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2026-01-28T04:46:12.738Z [DEBUG] LSP server manager initialized successfully
+2026-01-28T04:46:12.738Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-28T04:46:12.740Z [DEBUG] [render] initYoga starting
+2026-01-28T04:46:12.740Z [DEBUG] [render] initYoga complete
+2026-01-28T04:46:12.741Z [DEBUG] [render] first ink render: 374ms since process start
+2026-01-28T04:46:12.752Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:46:12.752Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:46:12.754Z [DEBUG] [keybindings] KeybindingSetup initialized with 99 bindings, 0 warnings
+2026-01-28T04:46:12.775Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:46:12.775Z [DEBUG] [keybindings] Skipping file watcher - user customization disabled
+2026-01-28T04:46:12.775Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-28T04:46:12.776Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:46:12.776Z [DEBUG] Official marketplace auto-install skipped: already_attempted
+2026-01-28T04:46:12.776Z [DEBUG] performStartupChecks called
+2026-01-28T04:46:12.776Z [DEBUG] Starting background plugin installations
+2026-01-28T04:46:12.776Z [DEBUG] performBackgroundPluginInstallations called
+2026-01-28T04:46:12.777Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-28T04:46:12.911Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-01-28T04:46:12.911Z [DEBUG] [claudeai-mcp] Gate returned: false
+2026-01-28T04:46:12.911Z [DEBUG] [claudeai-mcp] Disabled via gate
+2026-01-28T04:46:12.911Z [DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+2026-01-28T04:46:12.912Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-28T04:46:12.917Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.19/claude
+2026-01-28T04:46:12.921Z [DEBUG] Writing to temp file: /Users/ben/.claude.json.tmp.37928.1769575572921
+2026-01-28T04:46:12.921Z [DEBUG] Preserving file permissions: 100600
+2026-01-28T04:46:12.921Z [DEBUG] Temp file written successfully, size: 7967 bytes
+2026-01-28T04:46:12.921Z [DEBUG] Applied original permissions to temp file
+2026-01-28T04:46:12.921Z [DEBUG] Renaming /Users/ben/.claude.json.tmp.37928.1769575572921 to /Users/ben/.claude.json
+2026-01-28T04:46:12.921Z [DEBUG] File /Users/ben/.claude.json written atomically
+2026-01-28T04:46:13.065Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:46:13.065Z [DEBUG] [ToolSearch:optimistic] mode=tst-auto, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-01-28T04:46:13.067Z [DEBUG] Skills and commands included in Skill tool:
+2026-01-28T04:46:13.067Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-28T04:46:13.067Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-28T04:46:13.067Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-28T04:46:13.162Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.1.19/claude)
+2026-01-28T04:46:13.167Z [DEBUG] PackageManagerAutoUpdater: Update available 2.1.19 -> 2.1.21
+2026-01-28T04:46:14.449Z [DEBUG] Getting matching hook commands for SessionEnd with query: prompt_input_exit
+2026-01-28T04:46:14.449Z [DEBUG] Found 0 hook matchers in settings
+2026-01-28T04:46:14.449Z [DEBUG] Matched 0 unique hooks for query "prompt_input_exit" (0 before deduplication)

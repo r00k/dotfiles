@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "sessionId": "793f6e5b-7007-4ebf-8d92-78d259a3a8d6",
+      "fullPath": "/Users/ben/.claude/projects/-Users-ben-code-agentrails/793f6e5b-7007-4ebf-8d92-78d259a3a8d6.jsonl",
+      "fileMtime": 1769574663716,
+      "firstPrompt": "make it so bun is in my path",
+      "summary": "Invalid API key · Please run /login",
+      "messageCount": 2,
+      "created": "2026-01-28T04:30:55.214Z",
+      "modified": "2026-01-28T04:30:55.384Z",
+      "gitBranch": "main",
+      "projectPath": "/Users/ben/code/agentrails",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "bb73034f-8e90-4717-a767-78fab8d6b5d1",
+      "fullPath": "/Users/ben/.claude/projects/-Users-ben-code-agentrails/bb73034f-8e90-4717-a767-78fab8d6b5d1.jsonl",
+      "fileMtime": 1769574725298,
+      "firstPrompt": "make it so bun is in my path",
+      "summary": "Adding Bun to System PATH",
+      "messageCount": 8,
+      "created": "2026-01-28T04:31:09.262Z",
+      "modified": "2026-01-28T04:31:50.562Z",
+      "gitBranch": "main",
+      "projectPath": "/Users/ben/code/agentrails",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "3b79be5c-a011-49e4-b96f-4789ed9fa28d",
+      "fullPath": "/Users/ben/.claude/projects/-Users-ben-code-agentrails/3b79be5c-a011-49e4-b96f-4789ed9fa28d.jsonl",
+      "fileMtime": 1769615927263,
+      "firstPrompt": "make it so bun is in my path. i just installedit via homebrew.",
+      "summary": "Adding Homebrew-installed Bun to PATH",
+      "messageCount": 3,
+      "created": "2026-01-28T04:32:04.736Z",
+      "modified": "2026-01-28T04:32:21.306Z",
+      "gitBranch": "main",
+      "projectPath": "/Users/ben/code/agentrails",
+      "isSidechain": false
+    }
+  ],
+  "originalPath": "/Users/ben/code/agentrails"
+}
