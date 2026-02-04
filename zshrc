@@ -44,3 +44,5 @@ export HOMEBREW_AUTO_UPDATE_SECS=600000
 
 # Enable mise (manages Ruby, Node, and other runtimes)
 eval "$(mise activate zsh)"
+alias python=python3
+alias python=python3
