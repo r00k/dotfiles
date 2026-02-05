@@ -12,6 +12,11 @@ Never instruct the user to do something you can do yourself.
 
 Don't keep unused code around.
 
+## File Length
+
+- Aim to keep files under ~500 lines. This is a soft guideline, not a hard rule.
+- Don't do anything forced or suboptimal just to hit this target—if a longer file makes more sense, that's fine.
+
 ## Testing
 
 Avoid trivial tests. Strive to write code that is easily tested. If you're struggling to test something, consider refactoring the code under test.
