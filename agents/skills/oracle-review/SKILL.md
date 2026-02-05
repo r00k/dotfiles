@@ -5,7 +5,7 @@ description: "Reviews the most recent commit using Oracle for high-confidence is
 
 # Oracle Review
 
-Reviews the most recent commit and fixes significant, high-confidence issues.
+Reviews the most recent commit, identifies significant high-confidence issues, and suggests fixes (but waits for user approval before implementing).
 
 ## Workflow
 
@@ -28,7 +28,8 @@ Review the most recent git commit and fix any significant issues.
    - Breaking API changes
    - Performance problems
 
-3. Only fix issues the Oracle is highly confident about
+3. Only report issues the Oracle is highly confident about
 4. Ignore style preferences, minor naming suggestions, or "nice to haves"
-5. After fixing, run the project's lint/typecheck commands to verify
+5. Present the issues with suggested fixes, but ASK the user before implementing any changes
+6. After user approves fixes, run the project's lint/typecheck commands to verify
 ```
