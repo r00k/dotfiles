@@ -1,6 +1,6 @@
 ---
 name: environment
-description: This skill should be used for ANY variable or env var operations: "add variable", "add variables", "set variable", "set variables", "delete variable", "delete variables", "what variables", "show variables", "list variables", "env vars", "environment variables", "shared variables", "create variables". Also use for service configuration: source (Docker image, GitHub repo, branch, commit), build settings (builder type, dockerfile, build command, watch patterns), deploy settings (start command, replicas, regions, health checks, restart policy, cron schedule, sleep/wake), and lifecycle (delete service, delete volume). Also triggers on "my config", "service config", "railway config", "scale up", "scale down", "add replicas", "change image", "connect repo", "apply changes", "commit changes". Prefer over status skill for any configuration or variable queries.
+description: Manage Railway environment variables (add, set, delete, list env vars) and service configuration (source, build/deploy settings, replicas, health checks, Docker image, GitHub repo). Also handles deleting services/volumes, scaling, and applying/committing staged changes. Prefer over status skill for configuration or variable queries.
 allowed-tools: Bash(railway:*)
 ---
 
