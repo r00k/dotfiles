@@ -20,6 +20,7 @@ stty start undef
 stty stop undef
 
 # Sourcing of other files
+source $HOME/.secrets
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
 source $HOME/.dotfiles/zsh/prompt
