@@ -33,6 +33,10 @@ task :install do
   system %Q{rm -rf "$HOME/bin"}
   system %Q{ln -s "$PWD/bin" "$HOME/bin"}
 
+  # Initialize git submodules (e.g., last30days skill)
+  puts "Initializing git submodules"
+  system %Q{git submodule update --init --recursive}
+
   # Link Amp configuration
   puts "Linking Amp configuration"
   system %Q{mkdir -p "$HOME/.config/amp"}
@@ -40,6 +44,12 @@ task :install do
   system %Q{ln -s "$PWD/amp/AGENTS.md" "$HOME/.config/amp/AGENTS.md"}
   system %Q{rm -f "$HOME/.config/amp/settings.json"}
   system %Q{ln -s "$PWD/amp/settings.json" "$HOME/.config/amp/settings.json"}
+
+  # Link agent skills
+  puts "Linking agent skills"
+  system %Q{mkdir -p "$HOME/.config/agents"}
+  system %Q{rm -rf "$HOME/.config/agents/skills"}
+  system %Q{ln -s "$PWD/agents/skills" "$HOME/.config/agents/skills"}
 
   # Link Claude Code commands and user instructions
   puts "Linking Claude Code configuration"

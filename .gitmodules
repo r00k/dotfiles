@@ -1,0 +1,3 @@
+[submodule "agents/skills/last30days"]
+	path = agents/skills/last30days
+	url = https://github.com/mvanhorn/last30days-skill.git
