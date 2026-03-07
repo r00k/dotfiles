@@ -8,3 +8,4 @@
 - When debugging, bisect. Divide the set of possibly-broken components in half with each test, like git bisect but for code paths. Don't trace linearly—isolate the fault fast.
 - When choosing an AI model for code you're writing: use Claude Sonnet 4.6 (`claude-sonnet-4-6`) for medium complexity tasks, and Claude Opus 4.6 (`claude-opus-4-6`) for high complexity tasks.
 - When changing Claude model versions in code, always consult the Anthropic docs for the correct tool versions and beta headers per model.
+- API keys for external services are already available as environment variables (exported from `~/.secrets` via the shell). Do not ask the user to provide or configure keys for: Anthropic (`ANTHROPIC_API_KEY`), OpenAI (`OPENAI_API_KEY`), xAI (`XAI_API_KEY`), Supabase (`SUPABASE_API_KEY`), Resend (`RESEND_API_KEY`), or Kernel (`KERNEL_API_KEY`). Just use them directly via `process.env` or equivalent.
