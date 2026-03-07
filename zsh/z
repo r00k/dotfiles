@@ -1,1 +1,4 @@
-. `brew --prefix`/etc/profile.d/z.sh
+if command -v brew >/dev/null 2>&1; then
+  z_sh="$(brew --prefix)/etc/profile.d/z.sh"
+  [[ -r "$z_sh" ]] && . "$z_sh"
+fi

@@ -16,34 +16,36 @@ autoload -U compinit
 compinit
 
 # Disable flow control commands (keeps C-s from freezing everything)
-stty start undef
-stty stop undef
+if [[ -t 0 ]]; then
+  stty start undef
+  stty stop undef
+fi
 
 # Sourcing of other files
-source $HOME/.secrets
+if [[ -f $HOME/.secrets ]]; then
+  source $HOME/.secrets
+fi
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
 source $HOME/.dotfiles/zsh/prompt
 source $HOME/.dotfiles/zsh/z
 
-# Add current directory bin
-export PATH=$PATH:bin
+# Add custom bins without duplicating existing entries
+typeset -U path PATH
+path=(
+  $HOME/.dotfiles/bin
+  $HOME/.local/bin
+  $HOME/bin
+  $path
+)
+export PATH
 
-# Add my own dotfiles bin
-export PATH=$PATH:$HOME/.dotfiles/bin
-
-# Homebrew bin is added via /opt/homebrew/bin in default PATH on Apple Silicon
-
-# Add stack's bin
-export PATH=$PATH:~/.local/bin
-
-# Add ~/bin
-export PATH=$PATH:$HOME/bin
-
-# Update hombrew once a week
+# Update Homebrew once a week
 export HOMEBREW_AUTO_UPDATE_SECS=600000
 
 # Enable mise (manages Ruby, Node, and other runtimes)
-eval "$(mise activate zsh)"
-alias python=python3
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
+
 alias python=python3

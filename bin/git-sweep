@@ -1,23 +1,56 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-git checkout master
-git fetch
-git remote prune origin
-git branch --merged master | grep -v 'master$' | xargs git branch -d
+if ! git rev-parse --git-dir >/dev/null 2>&1; then
+  echo "Not inside a git repository."
+  exit 1
+fi
 
-REMOVABLE=`git branch -r --merged master | sed 's/ *origin\///' | grep -v 'master$' | grep -v 'production$'`
+git fetch --prune origin
 
-if [[ -z "$REMOVABLE" ]]; then
+default_branch="$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null | sed 's#^origin/##')"
+if [[ -z "$default_branch" ]]; then
+  if git show-ref --verify --quiet refs/remotes/origin/main || git show-ref --verify --quiet refs/heads/main; then
+    default_branch="main"
+  else
+    default_branch="master"
+  fi
+fi
+
+if ! git show-ref --verify --quiet "refs/heads/$default_branch"; then
+  if git show-ref --verify --quiet "refs/remotes/origin/$default_branch"; then
+    git checkout -b "$default_branch" "origin/$default_branch"
+  else
+    echo "Could not find default branch '$default_branch'."
+    exit 1
+  fi
+fi
+
+git checkout "$default_branch"
+
+mapfile -t local_branches < <(
+  git for-each-ref --format='%(refname:short)' refs/heads --merged "$default_branch" \
+    | grep -v -E "^(${default_branch})$" || true
+)
+
+if [[ ${#local_branches[@]} -gt 0 ]]; then
+  git branch -d "${local_branches[@]}"
+fi
+
+mapfile -t removable_remote_branches < <(
+  git for-each-ref --format='%(refname:short)' refs/remotes/origin --merged "origin/$default_branch" \
+    | sed 's#^origin/##' \
+    | grep -v -E "^(HEAD|${default_branch}|production)$" || true
+)
+
+if [[ ${#removable_remote_branches[@]} -eq 0 ]]; then
   exit 0
 fi
 
 echo "The following remote branches are fully merged and will be removed:"
-for branch in $REMOVABLE; do
-  echo $branch
-done
+printf '  %s\n' "${removable_remote_branches[@]}"
 
-read -p "Continue (y/n)? " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-  echo $REMOVABLE | xargs git push origin --delete
+read -r -p "Continue (y/n)? " reply
+if [[ $reply =~ ^[Yy]$ ]]; then
+  git push origin --delete "${removable_remote_branches[@]}"
 fi

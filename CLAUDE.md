@@ -12,7 +12,7 @@ This is a personal dotfiles repository for macOS. Configuration files are symlin
 rake install
 ```
 
-This symlinks all config files to `~/.<filename>`, installs Vundle for vim plugins, z for directory jumping, and mise for runtime management.
+`rake install` is idempotent. It links top-level dotfiles into `~/.<filename>`, links managed config paths (Amp/agents/Claude), installs Vundle, initializes git submodules, and installs core tool dependencies.
 
 ## Key Configuration Files
 
@@ -25,7 +25,7 @@ This symlinks all config files to `~/.<filename>`, installs Vundle for vim plugi
 
 Shell setup chain: `zshenv` → `zlogin` → `zshrc` → sources `zsh/{aliases,functions,prompt,z}`
 
-Vim plugins managed via Vundle in `~/.vim/bundle/`. Run `:PluginInstall` in vim after adding plugins to vimrc.
+Vim plugins are managed via Vundle in `~/.vim/bundle/`. Run `:PluginInstall` in vim after adding plugins to `vimrc`.
 
 ## Notable Aliases and Functions
 
@@ -45,9 +45,11 @@ Use uv for Python projects and package management.
 
 ## Claude Code Configuration
 
-The following are symlinked to `~/.claude/`:
-- `claude/commands/` → `~/.claude/commands` (custom skills)
-- `claude/user-instructions.md` → `~/.claude/CLAUDE.md` (global user instructions)
-- `claude/statusline.sh` → `~/.claude/statusline.sh` (custom statusline)
+The following are managed by `rake install`:
+- `claude/user-instructions.md` → `~/.claude/CLAUDE.md`
+- `.claude/settings.json` → `~/.claude/settings.json`
+- `.claude/settings.local.json` → `~/.claude/settings.local.json`
+
+The `claude/` directory in this repo intentionally stores portable config content only (currently `user-instructions.md`). Runtime/session artifacts should stay in `~/.claude`, not in git.
 
 When editing these files from `~/.claude` as the working directory, the `/commit` skill won't work because it runs from cwd (which isn't a git repo). Use Bash with explicit `cd /Users/ben/.dotfiles && git ...` instead.
