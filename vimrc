@@ -337,6 +337,9 @@ autocmd FileType markdown setlocal nolist wrap lbr
 " Wrap the quickfix window
 autocmd FileType qf setlocal wrap linebreak
 
+" Prose settings for the journal
+autocmd BufNewFile,BufRead journal.txt setlocal wrap linebreak breakindent nonumber norelativenumber
+
 " Don't automatically continue comments after newline
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
