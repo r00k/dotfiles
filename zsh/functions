@@ -36,6 +36,20 @@ function rrg {
   bin/rake routes | grep $1
 }
 
+# Run the Heroku CLI with the API key pulled from the macOS Keychain on demand,
+# so the token is never sitting in the ambient environment (harder to exfil).
+# Falls through to normal heroku behavior when no key is stored (e.g. before
+# `heroku login`), so it never forces an empty/invalid credential.
+function heroku {
+  local key
+  key="$(security find-generic-password -s heroku-api-key -a ben@benorenstein.com -w 2>/dev/null)"
+  if [[ -n "$key" ]]; then
+    HEROKU_API_KEY="$key" command heroku "$@"
+  else
+    command heroku "$@"
+  fi
+}
+
 function take {
   mkdir $1
   cd $1
