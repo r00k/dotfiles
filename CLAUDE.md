@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Workflow
+
+Always `git commit` and `git push` after making a discrete change.
+
 ## Overview
 
 This is a personal dotfiles repository for macOS. Configuration files are symlinked to the home directory with a dot prefix (e.g., `zshrc` → `~/.zshrc`).
