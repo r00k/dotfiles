@@ -8,3 +8,5 @@ db/*.sqlite3
 project-notes.txt
 .bundle
 .stack-work
+
+**/.claude/.cc-writes/
