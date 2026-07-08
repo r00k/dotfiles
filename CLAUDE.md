@@ -23,6 +23,7 @@ rake install
 - **zshrc** - Main shell config, sources files from `zsh/` directory
 - **vimrc** - Extensive vim configuration using Vundle for plugin management
 - **gitconfig** - Git aliases and settings
+- **git-hooks/** - Global git hooks (via `core.hooksPath`). The pre-push hook runs gitleaks on outgoing commits and blocks the push if it finds a secret; fix the leak (or add a `gitleaks:allow` comment for a false positive) rather than bypassing with `--no-verify`
 - **tmux.conf** - tmux with C-a prefix (screen-style), vim keybindings
 
 ## Architecture

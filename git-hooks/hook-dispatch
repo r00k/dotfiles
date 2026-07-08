@@ -1,0 +1,52 @@
+#!/bin/sh
+# Global git hooks, wired up via core.hooksPath in gitconfig.
+# Every client-side hook name is symlinked to this script. It runs the
+# gitleaks secret scan on pre-push, then chains to the repository's own
+# .git/hooks/<name> so per-repo hooks keep working.
+
+hook_name=$(basename "$0")
+
+if [ "$hook_name" = "pre-push" ]; then
+  stdin=$(cat)
+
+  if ! command -v gitleaks >/dev/null 2>&1; then
+    echo "pre-push: gitleaks not found; refusing to push (brew install gitleaks)" >&2
+    exit 1
+  fi
+
+  zero=0000000000000000000000000000000000000000
+  while read -r local_ref local_sha remote_ref remote_sha; do
+    [ -z "$local_sha" ] && continue
+    [ "$local_sha" = "$zero" ] && continue # deleting a remote ref; nothing outgoing
+
+    if [ "$remote_sha" = "$zero" ]; then
+      # New ref: scan only commits not already on some remote
+      log_opts="$local_sha --not --remotes"
+    else
+      log_opts="$remote_sha..$local_sha"
+    fi
+
+    if ! gitleaks git -v --redact --no-banner --log-opts="$log_opts"; then
+      echo >&2
+      echo "pre-push: potential secret in outgoing commits; push blocked." >&2
+      echo "False positive? Add a 'gitleaks:allow' comment on that line, or bypass once with 'git push --no-verify'." >&2
+      exit 1
+    fi
+  done <<EOF
+$stdin
+EOF
+fi
+
+# Chain to the repository's own hook, if it has one.
+# Note: --git-common-dir, not --git-path hooks — the latter honors
+# core.hooksPath and would resolve back to this script (infinite loop).
+repo_hook="$(git rev-parse --git-common-dir)/hooks/$hook_name"
+if [ -x "$repo_hook" ] && ! [ "$repo_hook" -ef "$0" ]; then
+  if [ "$hook_name" = "pre-push" ]; then
+    printf '%s\n' "$stdin" | "$repo_hook" "$@"
+    exit $?
+  fi
+  exec "$repo_hook" "$@"
+fi
+
+exit 0

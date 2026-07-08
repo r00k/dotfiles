@@ -16,6 +16,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim --noplugin
+	hooksPath = ~/.dotfiles/git-hooks
 [apply]
 	whitespace = nowarn
 [help]
