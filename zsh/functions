@@ -42,6 +42,14 @@ function rrg {
 # `heroku login`), so it never forces an empty/invalid credential.
 function heroku {
   local key
+  # Auth management must bypass the stored key — injecting a stale
+  # HEROKU_API_KEY makes `heroku login` itself fail with "invalid credentials".
+  case "$1" in
+    login|logout|auth:*)
+      command heroku "$@"
+      return
+      ;;
+  esac
   key="$(security find-generic-password -s heroku-api-key -a ben@benorenstein.com -w 2>/dev/null)"
   if [[ -n "$key" ]]; then
     HEROKU_API_KEY="$key" command heroku "$@"
