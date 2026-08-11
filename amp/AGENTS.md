@@ -1,5 +1,15 @@
 # Global Agent Config
 
+## Papercuts
+
+When you hit small friction while working — missing docs sent you down the wrong path, a command took two tries, a setup step wasn't written down — record it and move on. Don't fix it now, and don't ask permission to record it:
+
+    papercut "ran 'make test' but this repo uses 'script/test'; README doesn't say"
+
+Write one sentence with enough context that a future session could fix it cold. Context (cwd, repo, branch) is captured automatically.
+
+When asked to fix papercuts, run `papercut list` (or `papercut list --here` for the current repo), fix them, and mark each with `papercut done <id> "how it was fixed"`.
+
 ## Missing Tools
 
 If a command fails because a tool isn't found (e.g., `psql`, `railway`, `gh`), install it using Homebrew (`brew install <tool>`) rather than asking the user to do it.
