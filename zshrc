@@ -43,6 +43,9 @@ export PATH
 # Update Homebrew once a week
 export HOMEBREW_AUTO_UPDATE_SECS=600000
 
+# Default 1Password CLI account (personal; use --account tuple.1password.com for work)
+export OP_ACCOUNT=my.1password.com
+
 # Enable mise (manages Ruby, Node, and other runtimes)
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
