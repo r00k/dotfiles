@@ -2,6 +2,7 @@
 
 ## Preferences
 
+- Always commit AND push after every discrete chunk of work. Don't ask permission or wait to be told — it's easy to revert, and work should never be stuck on one machine.
 - Use uv for Python projects and package management
 - Always use mise for runtime management (Ruby, Node, etc.)
 - Follow existing code conventions in each project
