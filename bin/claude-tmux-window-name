@@ -1,0 +1,22 @@
+#!/bin/bash
+# Called from the Claude Code statusLine command with the statusline JSON on
+# stdin. Names the tmux window after the project Claude is working in: the git
+# repo containing the current directory, falling back to the directory itself
+# until a repo is seen. Sticky per session so a stray `cd` back to the launch
+# directory doesn't flip the name.
+[ -n "$TMUX_PANE" ] || exit 0
+input=$(cat)
+sid=$(printf '%s' "$input" | jq -r '.session_id // empty')
+cur=$(printf '%s' "$input" | jq -r '.workspace.current_dir // .cwd // empty')
+[ -n "$sid" ] && [ -n "$cur" ] || exit 0
+state="${TMPDIR:-/tmp}/claude-tmux-window-name-$sid"
+top=$(git -C "$cur" rev-parse --show-toplevel 2>/dev/null)
+if [ -n "$top" ]; then
+  name=$(basename "$top")
+elif [ ! -e "$state" ]; then
+  name=$(basename "$cur")
+else
+  exit 0
+fi
+[ "$(cat "$state" 2>/dev/null)" = "$name" ] && exit 0
+tmux rename-window -t "$TMUX_PANE" "$name" && printf '%s' "$name" > "$state"
