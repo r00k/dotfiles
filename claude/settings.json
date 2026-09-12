@@ -416,5 +416,6 @@
   },
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "agentPushNotifEnabled": false
+  "agentPushNotifEnabled": false,
+  "awaySummaryEnabled": true
 }
