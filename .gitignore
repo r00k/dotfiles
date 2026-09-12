@@ -5,3 +5,4 @@ vim/doc/tags-ja
 # Keep only committed Claude configuration in this repo.
 claude/*
 !claude/user-instructions.md
+!claude/settings.json

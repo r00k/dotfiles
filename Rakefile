@@ -11,8 +11,7 @@ MANAGED_LINKS = {
   File.join(HOME_DIR, '.config', 'amp', 'settings.json') => File.join('amp', 'settings.json'),
   File.join(HOME_DIR, '.config', 'agents', 'skills') => File.join('agents', 'skills'),
   File.join(HOME_DIR, '.claude', 'CLAUDE.md') => File.join('claude', 'user-instructions.md'),
-  File.join(HOME_DIR, '.claude', 'settings.json') => File.join('.claude', 'settings.json'),
-  File.join(HOME_DIR, '.claude', 'settings.local.json') => File.join('.claude', 'settings.local.json')
+  File.join(HOME_DIR, '.claude', 'settings.json') => File.join('claude', 'settings.json')
 }.freeze
 
 def command_exists?(command)
