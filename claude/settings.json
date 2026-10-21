@@ -386,11 +386,21 @@
       "WebFetch(domain:docs.railway.com)"
     ],
     "deny": [
-      "Bash(rm -rf /:*)",
-      "Bash(rm -rf /*:*)",
-      "Bash(sudo rm -rf:*)",
-      "Bash(mkfs:*)",
-      "Bash(chmod -R 777 /:*)"
+      "Bash(rm -* /)",
+      "Bash(rm -* / *)",
+      "Bash(rm -* ~)",
+      "Bash(rm -* ~/)",
+      "Bash(rm -* ~ *)",
+      "Bash(rm -* $HOME)",
+      "Bash(rm -* $HOME/)",
+      "Bash(rm -* $HOME *)",
+      "Bash(sudo rm *)",
+      "Bash(mkfs*)",
+      "Bash(diskutil erase*)",
+      "Bash(diskutil partitionDisk *)",
+      "Bash(dd * of=/dev/*)",
+      "Bash(chmod -R * /)",
+      "Bash(chmod -R * / *)"
     ],
     "defaultMode": "auto"
   },
