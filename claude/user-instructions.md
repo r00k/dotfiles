@@ -7,6 +7,7 @@
 - Always use mise for runtime management (Ruby, Node, etc.)
 - Follow existing code conventions in each project
 - Be concise and direct in responses
+- No mannered prose: no aphorisms, personification, or punchy epigram lines (e.g. "security dies quietly when nobody watches"). Say the point literally.
 
 ## Claude Code Configuration
 
