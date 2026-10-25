@@ -10,3 +10,5 @@ project-notes.txt
 .stack-work
 
 **/.claude/.cc-writes/
+
+**/.claude/settings.local.json
