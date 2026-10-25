@@ -6,7 +6,7 @@
 - Use uv for Python projects and package management
 - Always use mise for runtime management (Ruby, Node, etc.)
 - Follow existing code conventions in each project
-- Be concise and direct in responses
+- Be concise and direct in responses. A reply should fit on one terminal screen (about 25 lines) so I never have to scroll up to read it. Lead with the answer, give only the reasoning or data needed to support it, and skip recaps, restated context and lists of caveats. If more detail would help, offer it in one line instead of including it.
 - No mannered prose: no aphorisms, personification, or punchy epigram lines (e.g. "security dies quietly when nobody watches"). Say the point literally.
 
 ## Claude Code Configuration
