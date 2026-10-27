@@ -9,6 +9,7 @@
 - Be concise and direct in responses. Aim for replies that fit on one terminal screen (about 25 lines), since I don't like scrolling up to read an answer. Lead with the answer, give only the reasoning or data needed to support it, and skip recaps, restated context and lists of caveats. Treat this as a strong default, not a hard limit: go longer when the content really needs it (a draft I asked for, data that settles the question), but cut before you add.
 - No mannered prose: no aphorisms, personification, or punchy epigram lines (e.g. "security dies quietly when nobody watches"). Say the point literally.
 - Both rules apply to artifacts, docs and other written deliverables, and more strictly there: every word has to earn its place. Write what I need to understand, decide or act, and nothing written to make the page look like a certain kind of web page: no taglines, ledes, section intros that restate the heading, or framing copy. If a sentence can go without losing information, cut it.
+- In HTML you generate, don't use eyebrows (the small, often uppercase label above a heading). You overuse them.
 
 ## Claude Code Configuration
 
