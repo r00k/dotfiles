@@ -10,6 +10,7 @@
 - No mannered prose: no aphorisms, personification, or punchy epigram lines (e.g. "security dies quietly when nobody watches"). Say the point literally.
 - Both rules apply to artifacts, docs and other written deliverables, and more strictly there: every word has to earn its place. Write what I need to understand, decide or act, and nothing written to make the page look like a certain kind of web page: no taglines, ledes, section intros that restate the heading, or framing copy. If a sentence can go without losing information, cut it.
 - In HTML you generate, don't use eyebrows (the small, often uppercase label above a heading). You overuse them.
+- End long responses with a one- to two-line TL;DR as the very last thing. Start it with the answer: if I asked a question, the answer; if we're on a programming task, what you need from me this turn to keep making progress. Then say whether I need to act (a decision you need from me, something for me to do) or it's just informational.
 
 ## Claude Code Configuration
 
