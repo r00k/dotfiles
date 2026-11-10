@@ -386,16 +386,9 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "input=$(cat); printf '%s' \"$input\" | ~/.dotfiles/bin/claude-tmux-window-name >/dev/null 2>&1; total_input=$(echo \"$input\" | jq -r '.context_window.total_input_tokens // 0'); total_output=$(echo \"$input\" | jq -r '.context_window.total_output_tokens // 0'); model_id=$(echo \"$input\" | jq -r '.model.id'); case \"$model_id\" in claude-fable-5*|claude-mythos*) input_price=10; output_price=50;; claude-opus-4-0*|claude-opus-4-1*|claude-opus-4-2025*) input_price=15; output_price=75;; claude-opus-*) input_price=5; output_price=25;; claude-sonnet-*) input_price=3; output_price=15;; claude-haiku-*) input_price=1; output_price=5;; *) input_price=3; output_price=15;; esac; total_cost=$(awk \"BEGIN {printf \\\"%.4f\\\", ($total_input * $input_price + $total_output * $output_price) / 1000000}\"); if (( $(awk \"BEGIN {print ($total_cost < 0.01)}\") )); then cost_display=$(printf \"%.4f\" \"$total_cost\"); else cost_display=$(printf \"%.2f\" \"$total_cost\"); fi; used_pct=$(echo \"$input\" | jq -r '.context_window.used_percentage // empty'); cwd=$(echo \"$input\" | jq -r '.workspace.current_dir'); short_cwd=$(basename \"$cwd\"); model=$(echo \"$input\" | jq -r '.model.display_name'); if [ -n \"$used_pct\" ]; then printf \"%s | %s | \\$%s | %s%% used\" \"$short_cwd\" \"$model\" \"$cost_display\" \"$(printf '%.0f' \"$used_pct\")\"; else printf \"%s | %s | \\$%s\" \"$short_cwd\" \"$model\" \"$cost_display\"; fi"
+    "command": "input=$(cat); printf \"%s\" \"$input\" | ~/.dotfiles/bin/claude-tmux-window-name >/dev/null 2>&1; used_pct=$(echo \"$input\" | jq -r \".context_window.used_percentage // empty\"); short_cwd=$(basename \"$(echo \"$input\" | jq -r \".workspace.current_dir\")\"); model=$(echo \"$input\" | jq -r \".model.display_name\"); effort=$(echo \"$input\" | jq -r \".effort.level // empty\"); out=\"$short_cwd | $model\"; [ -n \"$effort\" ] && out=\"$out ($effort)\"; [ -n \"$used_pct\" ] && out=\"$out | $(printf \"%.0f\" \"$used_pct\")% used\"; printf \"%s\" \"$out\""
   },
   "enabledPlugins": {
-    "code-simplifier@claude-plugins-official": false,
-    "feature-dev@claude-plugins-official": false,
-    "commit-commands@claude-plugins-official": false,
-    "frontend-design@claude-code-plugins": false,
-    "ralph-loop@claude-plugins-official": false,
-    "code-review@claude-plugins-official": false,
-    "rust-analyzer-lsp@claude-plugins-official": false,
     "swift-lsp@claude-plugins-official": true,
     "cc-plugin-you-should-know@builtin": true
   },
@@ -408,9 +401,10 @@
       "effortLevel": "medium"
     },
     "claude-fable-5-2": {
-      "effortLevel": "medium"
+      "effortLevel": "high"
     }
   },
+  "fastMode": true,
   "awaySummaryEnabled": true,
   "tui": "fullscreen",
   "voice": {
@@ -425,29 +419,28 @@
       "**Organization**: None configured",
       "**Cloud provider(s)**: None configured",
       "**Repository visibility**: assume private unless the remote host and repo name indicate otherwise, or a visibility check in the transcript shows public",
-      "**Internal sharing / snippet hosting**: None configured \u2014 treat public paste/gist services as outside the trust boundary",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
       "**Secrets management**: None configured",
-      "**Default / protected branches**: unknown \u2014 no git remotes configured for this repo, and gh lookup was not queryable (no remote to derive owner/repo from)",
+      "**Default / protected branches**: unknown — no git remotes configured for this repo, and gh lookup was not queryable (no remote to derive owner/repo from)",
       "**CI/CD deploy targets**: None configured",
       "**Network posture**: None configured",
-      "**Host containment**: None configured \u2014 assume Claude Code runs on an ordinary developer machine or CI runner with open internet",
-      "**Source control**: The trusted repo and its remote(s) only (no additional orgs configured) \u2014 note this repo currently has no remotes configured",
+      "**Host containment**: None configured — assume Claude Code runs on an ordinary developer machine or CI runner with open internet",
+      "**Source control**: The trusted repo and its remote(s) only (no additional orgs configured) — note this repo currently has no remotes configured",
       "**Trusted internal domains**: None configured",
-      "**Trusted cloud buckets**: None configured \u2014 `tuple-client-releases` and `chrome-bot-traces` appeared in config scans across multiple files but are not corroborated by transcript-mining bucket usage, so they are omitted per provenance rules",
+      "**Trusted cloud buckets**: None configured — `tuple-client-releases` and `chrome-bot-traces` appeared in config scans across multiple files but are not corroborated by transcript-mining bucket usage, so they are omitted per provenance rules",
       "**Key internal services**: None configured",
-      "**Internal package registry**: npm.pkg.github.com (config-derived \u2014 not a confirmed upload destination; uploads of local data still require confirmation)",
+      "**Internal package registry**: npm.pkg.github.com (config-derived — not a confirmed upload destination; uploads of local data still require confirmation)",
       "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar; note repo-tree scan shows numerous .env files and Terraform infrastructure directories (app/, app-setup-docs/, app-spike-window-share/, actors/, allyourbills/, backend/) that likely hold credentials or infra state",
       "**Data retention / declassification**: None configured",
       "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment",
-      "**Protected deployment namespaces / environments**: None configured \u2014 fall back to the Sensitive remote targets heuristic",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
       "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment; note Terraform directories under app*/infrastructure/* in this repo touch cloud/github-actions/linux-cicd/windows-cicd scopes",
       "### User-specific",
       "**Primary use of Claude Code**: software development",
-      "**Trusted repo**: /Users/ben/code \u2014 this repo currently has no remotes and no tracked files (empty/new checkout)",
-      "**Org-specific CLIs**: None configured \u2014 `bd`, `op`, `uv`, `brew`, `tuple-staging`, and `railway` appear frequently in this project's usage but no org affiliation was established",
-      "**routine under <user>/ prefix qualifiers**: none found \u2014 ~/.claude/CLAUDE.md instructs committing/pushing from `~/.dotfiles` via explicit `cd` when working in `~/.claude`, but that is a user doc instruction, not verified recon evidence"
+      "**Trusted repo**: /Users/ben/code — this repo currently has no remotes and no tracked files (empty/new checkout)",
+      "**Org-specific CLIs**: None configured — `bd`, `op`, `uv`, `brew`, `tuple-staging`, and `railway` appear frequently in this project's usage but no org affiliation was established",
+      "**routine under <user>/ prefix qualifiers**: none found — ~/.claude/CLAUDE.md instructs committing/pushing from `~/.dotfiles` via explicit `cd` when working in `~/.claude`, but that is a user doc instruction, not verified recon evidence"
     ]
   },
-  "voiceEnabled": false,
-  "fastMode": true
+  "voiceEnabled": false
 }
