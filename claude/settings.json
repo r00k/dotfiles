@@ -186,7 +186,6 @@
       "Bash(pg_dump:*)",
       "Bash(redis-cli:*)",
       "Bash(mongosh:*)",
-      "Bash(curl:*)",
       "Bash(wget:*)",
       "Bash(http:*)",
       "Bash(nc:*)",
@@ -359,7 +358,6 @@
       "Bash(docker-compose down:*)",
       "Bash(kubectl apply:*)",
       "Bash(kubectl exec:*)",
-      "Bash(terraform apply:*)",
       "Bash(bd:*)",
       "WebFetch(domain:docs.railway.com)"
     ],
