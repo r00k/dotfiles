@@ -426,7 +426,8 @@
   "tui": "fullscreen",
   "voice": {
     "enabled": true,
-    "mode": "hold"
+    "mode": "hold",
+    "autoSubmit": true
   },
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
